@@ -14,7 +14,7 @@
   }
 
   .footer-inner {
-    grid-template-columns: 1.15fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .footer-links-grid {
@@ -22,11 +22,20 @@
   }
 
   .contact-band {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
   }
 
   .case-layout {
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .case-gallery-heading {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .brand-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .brand-grid,
@@ -36,7 +45,7 @@
   }
 
   .brand-split {
-    grid-template-columns: 0.95fr 1.05fr;
+    grid-template-columns: 1fr 1fr;
     align-items: start;
   }
 
@@ -49,7 +58,12 @@
   }
 
   .process-showcase {
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-hero-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
   }
 }
 
@@ -80,7 +94,11 @@
   }
 
   .hero {
-    grid-template-columns: 0.95fr 1.05fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-visual {
+    justify-self: end;
   }
 
   .service-grid {
@@ -103,12 +121,25 @@
   }
 
   .project-grid-featured .project-card:first-child {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .project-grid-featured .project-card:first-child img {
     height: 100%;
     aspect-ratio: auto;
+  }
+
+  .gallery-shell {
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    align-items: stretch;
+  }
+
+  .gallery-thumbs {
+    max-height: 530px;
+    overflow: auto;
+    grid-template-columns: 1fr;
+    align-content: start;
+    padding-right: 4px;
   }
 }
 
@@ -135,6 +166,32 @@
     min-width: 0;
     padding-inline: 10px;
   }
+
+  .case-gallery {
+    padding: 16px;
+  }
+
+  .case-gallery-heading {
+    margin-bottom: 14px;
+  }
+
+  .gallery-controls {
+    display: grid;
+    grid-template-columns: 44px 1fr 44px;
+  }
+
+  .gallery-control {
+    width: 100%;
+  }
+
+  .gallery-caption {
+    display: grid;
+    align-items: start;
+  }
+
+  .gallery-thumbs {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -149,6 +206,28 @@
   .hero {
     min-height: 100svh;
     padding-top: 104px;
+  }
+
+  .hero .hero-content h1 {
+    font-size: 2.55rem;
+  }
+
+  .hero-media-frame {
+    animation: none;
+  }
+
+  .hero-dashboard {
+    position: static;
+    width: auto;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .hero-dashboard-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero-metrics,
