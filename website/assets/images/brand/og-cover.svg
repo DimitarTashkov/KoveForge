@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">KoveForge social preview</title>
+  <desc id="desc">Social preview for KoveForge custom software studio.</desc>
+  <rect width="1200" height="630" fill="#f6f1e8"/>
+  <rect x="70" y="70" width="1060" height="490" rx="28" fill="#0f1720"/>
+  <rect x="118" y="120" width="120" height="120" rx="22" fill="#53b99f"/>
+  <path d="M148 210v-60h18v22l24-22h24l-32 30 35 30h-27l-24-22v22h-18Z" fill="#0f1720"/>
+  <text x="118" y="315" fill="#f6f1e8" font-family="Arial, sans-serif" font-size="72" font-weight="700">KoveForge</text>
+  <text x="118" y="392" fill="#d7ded8" font-family="Arial, sans-serif" font-size="38">Персонализиран софтуер за реален бизнес растеж</text>
+  <text x="118" y="462" fill="#93d1bf" font-family="Arial, sans-serif" font-size="30">Уебсайтове • Резервации • E-commerce • AI асистенти</text>
+  <rect x="820" y="130" width="230" height="76" rx="16" fill="#e5aa42"/>
+  <rect x="820" y="234" width="190" height="76" rx="16" fill="#53b99f"/>
+  <rect x="820" y="338" width="260" height="76" rx="16" fill="#ef775f"/>
+  <rect x="820" y="442" width="150" height="76" rx="16" fill="#f6f1e8"/>
+</svg>
