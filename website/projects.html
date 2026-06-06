@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Проекти | KoveForge портфолио от софтуерни решения</title>
-  <meta name="description" content="Разгледайте портфолиото на KoveForge: бизнес уебсайтове, системи за резервации, e-commerce решения, real-time приложения и интерактивни проекти.">
+  <title>Проекти | KoveForge case studies</title>
+  <meta name="description" content="Разгледайте KoveForge case studies: уебсайтове, системи за резервации, e-commerce, real-time приложения и интерактивни решения.">
   <link rel="canonical" href="https://koveforge.tech/projects.html">
-  <meta property="og:title" content="KoveForge проекти | Софтуерни решения за бизнеси">
-  <meta property="og:description" content="Портфолио от уебсайтове, резервационни системи, e-commerce платформи и real-time приложения.">
+  <meta property="og:title" content="KoveForge проекти | Case studies">
+  <meta property="og:description" content="Портфолио от персонализирани софтуерни решения за реални бизнес процеси.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://koveforge.tech/projects.html">
   <meta property="og:image" content="https://koveforge.tech/assets/images/brand/og-cover.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KoveForge проекти">
-  <meta name="twitter:description" content="Бизнес портфолио с персонализирани софтуерни решения.">
-  <meta name="twitter:image" content="https://koveforge.tech/assets/images/brand/og-cover.svg">
   <link rel="icon" href="assets/images/brand/koveforge-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/project-filters.js" defer></script>
 </head>
 <body>
   <header class="site-header" data-header>
     <nav class="nav" aria-label="Основна навигация">
       <a class="brand" href="index.html" aria-label="KoveForge начална страница">
-        <img src="assets/images/brand/koveforge-logo.svg" alt="KoveForge дигитална агенция" width="165" height="48">
+        <img src="assets/images/brand/koveforge-logo.svg" alt="KoveForge custom software studio" width="165" height="48">
       </a>
       <button class="nav-toggle" type="button" aria-label="Отвори меню" aria-expanded="false" data-nav-toggle>
         <span></span>
@@ -32,8 +33,9 @@
       </button>
       <div class="nav-links" data-nav-links>
         <a href="index.html#services">Услуги</a>
-        <a href="index.html#why">Защо ние</a>
+        <a href="index.html#why">Предимства</a>
         <a href="projects.html" aria-current="page">Проекти</a>
+        <a href="index.html#contact">Контакт</a>
         <a href="mailto:studio@koveforge.tech" class="nav-cta">Започни проект</a>
       </div>
     </nav>
@@ -41,9 +43,9 @@
 
   <main>
     <section class="page-hero">
-      <p class="eyebrow">Портфолио</p>
-      <h1>Проекти, преведени на езика на бизнес ползите</h1>
-      <p>Всеки проект тук показва конкретна операционна стойност: по-лесни резервации, по-бързи продажби, по-добра комуникация или по-ясно управление.</p>
+      <p class="eyebrow">CASE STUDIES</p>
+      <h1>Портфолио от системи, сайтове и интерактивни продукти.</h1>
+      <p>Всеки проект е преформулиран през бизнес стойност: по-малко ръчна работа, по-ясна администрация, повече доверие и по-добро потребителско преживяване.</p>
     </section>
 
     <section class="section projects-section" aria-labelledby="projects-title">
@@ -56,167 +58,141 @@
           <button class="filter-btn" type="button" data-filter="ecommerce">E-commerce</button>
           <button class="filter-btn" type="button" data-filter="booking">Резервации</button>
           <button class="filter-btn" type="button" data-filter="realtime">Real-time</button>
-          <button class="filter-btn" type="button" data-filter="interactive">Интерактивни приложения</button>
+          <button class="filter-btn" type="button" data-filter="interactive">Интерактивни</button>
         </div>
       </div>
 
       <div class="project-grid" data-project-grid>
         <article class="project-card" data-categories="business booking">
-          <img src="assets/images/projects/gocetransportapp.png" alt="SaaS платформа за транспортни компании с маршрути, билети и управление на автопарк" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/gocetransportapp.png" alt="SaaS платформа за транспортни компании с маршрути и билети" width="520" height="320" loading="lazy">
           <div class="project-body">
             <p class="project-sector">SaaS / транспорт</p>
             <h3>GoceTransportApp</h3>
-            <p>Платформа, която свързва пътници и транспортни компании в единна система за маршрути, разписания, билети и управление на автопарк.</p>
-            <p class="project-value">Ключова полза: по-малко ръчна координация и по-добро обслужване на пътниците.</p>
-            <div class="project-actions">
-              <a href="https://gocetransport.app/" target="_blank" rel="noopener">Live demo</a>
-              <a href="https://github.com/DimitarTashkov/GoceTransportApp" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Платформа за маршрути, разписания, билети и управление на автопарк.</p>
+            <p class="project-value">По-малко ръчна координация и по-добро обслужване.</p>
+            <div class="card-tags"><span class="tag">SaaS</span><span class="tag">booking</span><span class="tag">dashboard</span></div>
+            <div class="project-actions"><a href="projects/gocetransportapp.html">Case study</a><a href="https://gocetransport.app/" target="_blank" rel="noopener">Live</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="realtime interactive">
-          <img src="assets/images/projects/chat-app.png" alt="Real-time платформа за чат стаи, директни съобщения и онлайн статус" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/chat-app.png" alt="Real-time платформа за чат стаи и директни съобщения" width="520" height="320" loading="lazy">
           <div class="project-body">
             <p class="project-sector">Real-time комуникация</p>
             <h3>Chat App</h3>
-            <p>Комуникационна платформа с публични и частни пространства, директни съобщения и статус на потребителите.</p>
-            <p class="project-value">Ключова полза: по-бърза комуникация за общности, екипи и клиентска поддръжка.</p>
-            <div class="project-actions">
-              <a href="https://chat-app-267e7.web.app" target="_blank" rel="noopener">Live demo</a>
-              <a href="https://github.com/DimitarTashkov/Chat-App-SAP" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Комуникационна платформа с публични пространства, директни съобщения и presence статус.</p>
+            <p class="project-value">По-бърза комуникация за общности, екипи и поддръжка.</p>
+            <div class="card-tags"><span class="tag">real-time</span><span class="tag">auth</span><span class="tag">rooms</span></div>
+            <div class="project-actions"><a href="projects/chat-app.html">Case study</a><a href="https://chat-app-267e7.web.app" target="_blank" rel="noopener">Live</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="websites ecommerce">
-          <img src="assets/images/projects/resurs11.webp" alt="Продуктов уебсайт за локален доставчик с каталог, галерия и SEO оптимизация" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/resurs11.webp" alt="Продуктов уебсайт за локален доставчик с каталог и SEO" width="520" height="320" loading="lazy">
           <div class="project-body">
-            <p class="project-sector">Бизнес уебсайт / локално SEO</p>
+            <p class="project-sector">Бизнес уебсайт / SEO</p>
             <h3>Resurs 11</h3>
-            <p>Модерен продуктов сайт за локален доставчик, който представя каталога ясно и улеснява клиентските запитвания.</p>
-            <p class="project-value">Ключова полза: по-добра видимост в Google и по-ясен път до покупка.</p>
-            <div class="project-actions">
-              <a href="https://resurs11.com" target="_blank" rel="noopener">Live site</a>
-            </div>
+            <p>Продуктов сайт с каталог, галерия, мобилен UX и локално SEO.</p>
+            <p class="project-value">По-ясна оферта и по-добра видимост в Google.</p>
+            <div class="card-tags"><span class="tag">website</span><span class="tag">catalog</span><span class="tag">SEO</span></div>
+            <div class="project-actions"><a href="projects/resurs11.html">Case study</a><a href="https://resurs11.com" target="_blank" rel="noopener">Live</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="business booking">
-          <img src="assets/images/projects/dentora.png" alt="Система за стоматологична практика с пациенти, часове, лечения и наличности" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/dentora.png" alt="Система за стоматологична практика с пациенти и часове" width="520" height="320" loading="lazy">
           <div class="project-body">
             <p class="project-sector">Клиника / резервации</p>
             <h3>Dentora</h3>
-            <p>Система за стоматологична практика, която обединява пациенти, часове, лечения, наличности и обратна връзка.</p>
-            <p class="project-value">Ключова полза: по-организирана клиника с по-малко административни пропуски.</p>
-            <div class="project-actions">
-              <a href="https://github.com/DimitarTashkov/Dentora" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Пациенти, часове, лечения, наличности и обратна връзка в един работен поток.</p>
+            <p class="project-value">По-малко административни пропуски в клиниката.</p>
+            <div class="card-tags"><span class="tag">clinic</span><span class="tag">appointments</span></div>
+            <div class="project-actions"><a href="projects/dentora.html">Case study</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="business booking">
-          <img src="assets/images/projects/hotel-oazis.png" alt="Хотелска система за стаи, резервации, услуги, потребители и отзиви" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/hotel-oazis.png" alt="Хотелска система за стаи и резервации" width="520" height="320" loading="lazy">
           <div class="project-body">
             <p class="project-sector">Хотелски мениджмънт</p>
             <h3>Hotel Oazis</h3>
-            <p>Хотелска система за управление на стаи, резервации, услуги, потребители и отзиви.</p>
-            <p class="project-value">Ключова полза: централизирани ежедневни операции и по-добър административен контрол.</p>
-            <div class="project-actions">
-              <a href="https://github.com/DimitarTashkov/Hotel-Oazis" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Стаи, услуги, резервации, потребители и отзиви в централизирана система.</p>
+            <p class="project-value">По-добър контрол върху ежедневните хотелски операции.</p>
+            <div class="card-tags"><span class="tag">hotel</span><span class="tag">rooms</span><span class="tag">reviews</span></div>
+            <div class="project-actions"><a href="projects/hotel-oazis.html">Case study</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="business booking ecommerce">
-          <img src="assets/images/projects/prizma-studio.png" alt="Система за фото студио с резервации, онлайн продажби и управление на наличности" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/prizma-studio.png" alt="Система за фото студио с резервации и магазин" width="520" height="320" loading="lazy">
           <div class="project-body">
-            <p class="project-sector">Фото студио / резервации + магазин</p>
+            <p class="project-sector">Фото студио / магазин</p>
             <h3>Prisma Studio</h3>
-            <p>Цялостно решение за фото бизнес, което комбинира резервации на сесии, онлайн продажби, наличности и административен контрол.</p>
-            <p class="project-value">Ключова полза: един работен процес вместо отделни инструменти за график и продажби.</p>
-            <div class="project-actions">
-              <a href="https://github.com/DimitarTashkov/Prisma-studio" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Резервации на сесии, онлайн продажби, наличности и административен контрол.</p>
+            <p class="project-value">Един процес вместо отделни инструменти за график и продажби.</p>
+            <div class="card-tags"><span class="tag">booking</span><span class="tag">shop</span><span class="tag">inventory</span></div>
+            <div class="project-actions"><a href="projects/prizma-studio.html">Case study</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="business booking ecommerce">
-          <img src="assets/images/projects/retrorides.png" alt="Музейна система с каталог на експонати, резервации и магазин за сувенири" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/retrorides.png" alt="Музейна система с резервации и магазин за сувенири" width="520" height="320" loading="lazy">
           <div class="project-body">
-            <p class="project-sector">Музей / резервации + магазин</p>
+            <p class="project-sector">Музей / резервации</p>
             <h3>RetroRides</h3>
-            <p>Система за музей, която позволява разглеждане на експонати, резервации на посещения и покупка на сувенири.</p>
-            <p class="project-value">Ключова полза: по-добро преживяване за посетителите и ясен контрол за екипа.</p>
-            <div class="project-actions">
-              <a href="https://github.com/DimitarTashkov/RetroRides" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Каталог на експонати, резервации за посещения и сувенирен магазин.</p>
+            <p class="project-value">По-добро преживяване за посетителите и ясен контрол за екипа.</p>
+            <div class="card-tags"><span class="tag">museum</span><span class="tag">booking</span><span class="tag">store</span></div>
+            <div class="project-actions"><a href="projects/retrorides.html">Case study</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="business booking ecommerce">
-          <img src="assets/images/projects/stagenova.png" alt="Театрална платформа за репертоар, билети, мърчандайз и администрация" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/stagenova.png" alt="Театрална платформа за репертоар и билети" width="520" height="320" loading="lazy">
           <div class="project-body">
-            <p class="project-sector">Театър / билети + магазин</p>
+            <p class="project-sector">Театър / билети</p>
             <h3>StageNova</h3>
-            <p>Платформа за театър, която улеснява разглеждането на репертоар, резервацията на билети и продажбата на мърчандайз.</p>
-            <p class="project-value">Ключова полза: по-лесно обслужване на зрители и по-ясно управление на представления.</p>
-            <div class="project-actions">
-              <a href="https://github.com/DimitarTashkov/StageNova" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Репертоар, билети, мърчандайз и управление на представления.</p>
+            <p class="project-value">По-лесно обслужване на зрители и администрация.</p>
+            <div class="card-tags"><span class="tag">tickets</span><span class="tag">catalog</span><span class="tag">shop</span></div>
+            <div class="project-actions"><a href="projects/stagenova.html">Case study</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="business ecommerce">
-          <img src="assets/images/projects/zoozen.png" alt="E-commerce система за зоомагазин с каталог, промо кодове, поръчки и фактури" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/zoozen.png" alt="E-commerce система за зоомагазин" width="520" height="320" loading="lazy">
           <div class="project-body">
             <p class="project-sector">Pet shop / e-commerce</p>
             <h3>ZooZen</h3>
-            <p>Търговска система за зоомагазин с каталог, промо кодове, количка, поръчки, фактури и администрация.</p>
-            <p class="project-value">Ключова полза: по-бързо обслужване и по-ясен контрол на продажбите.</p>
-            <div class="project-actions">
-              <a href="https://github.com/DimitarTashkov/ZooZen" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Каталог, промо кодове, количка, поръчки, фактури и администрация.</p>
+            <p class="project-value">По-бързо обслужване и по-ясен контрол на продажбите.</p>
+            <div class="card-tags"><span class="tag">e-commerce</span><span class="tag">orders</span><span class="tag">admin</span></div>
+            <div class="project-actions"><a href="projects/zoozen.html">Case study</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="interactive">
-          <img src="assets/images/projects/shooter-game.png" alt="Интерактивно приложение с динамична логика, състояния и запазване на прогрес" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/shooter-game.png" alt="Интерактивно приложение с динамична логика" width="520" height="320" loading="lazy">
           <div class="project-body">
             <p class="project-sector">Интерактивно приложение</p>
             <h3>Shooter Game</h3>
-            <p>Демонстрационен интерактивен проект, който показва изграждане на сложна логика, състояния и динамично потребителско преживяване.</p>
-            <p class="project-value">Ключова полза: доказателство за архитектурно мислене при сложни сценарии.</p>
-            <div class="project-actions">
-              <a href="https://github.com/DimitarTashkov/Shooter-Game-Project" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Демонстрация на сложна логика, състояния, динамични механики и прогрес.</p>
+            <p class="project-value">Доказателство за архитектурно мислене при сложни сценарии.</p>
+            <div class="card-tags"><span class="tag">game logic</span><span class="tag">state</span></div>
+            <div class="project-actions"><a href="projects/shooter-game.html">Case study</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="ecommerce business">
-          <img src="assets/images/projects/fitness-application.svg" alt="E-commerce прототип за фитнес продукти с каталог и административно управление" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/fitness-application.svg" alt="E-commerce прототип за фитнес продукти" width="520" height="320" loading="lazy">
           <div class="project-body">
             <p class="project-sector">E-commerce прототип</p>
             <h3>Fitness Application</h3>
-            <p>Прототип за онлайн продажба на фитнес продукти с потребителски профили, каталог и административно управление.</p>
-            <p class="project-value">Ключова полза: основа за малък специализиран онлайн магазин.</p>
-            <div class="project-actions">
-              <a href="https://github.com/DimitarTashkov/Fitness-Application" target="_blank" rel="noopener">Repository</a>
-            </div>
+            <p>Прототип за онлайн продажби с профили, каталог и администраторски контрол.</p>
+            <p class="project-value">Основа за малък специализиран онлайн магазин.</p>
+            <div class="card-tags"><span class="tag">prototype</span><span class="tag">shop</span></div>
+            <div class="project-actions"><a href="projects/fitness-application.html">Case study</a></div>
           </div>
         </article>
-
         <article class="project-card" data-categories="websites interactive">
-          <img src="assets/images/projects/bulgarian-talk-norms.svg" alt="Образователен уебсайт за езикови норми, дебати и учебно съдържание" width="520" height="320" loading="lazy">
+          <img src="assets/images/projects/bulgarian-talk-norms.svg" alt="Образователен уебсайт за езикови норми и дебати" width="520" height="320" loading="lazy">
           <div class="project-body">
             <p class="project-sector">Образователен уебсайт</p>
-            <h3>Bulgarian Talk Norms and Debates</h3>
-            <p>Образователен сайт, който структурира съдържание за езикови норми и дебати в достъпен формат.</p>
-            <p class="project-value">Ключова полза: полезен ресурс за ученици, преподаватели и учебни инициативи.</p>
-            <div class="project-actions">
-              <a href="https://github.com/Nas-k-o/Bulgarian-Talk-Norms-and-Debate" target="_blank" rel="noopener">Repository</a>
-              <a href="https://nas-k-o.github.io/Bulgarian-Talk-Norms-and-Debate/" target="_blank" rel="noopener">Demo</a>
-            </div>
+            <h3>Bulgarian Talk Norms</h3>
+            <p>Учебно съдържание за езикови норми и дебати в достъпен формат.</p>
+            <p class="project-value">Полезен ресурс за ученици, преподаватели и учебни инициативи.</p>
+            <div class="card-tags"><span class="tag">education</span><span class="tag">content</span></div>
+            <div class="project-actions"><a href="projects/bulgarian-talk-norms.html">Case study</a><a href="https://nas-k-o.github.io/Bulgarian-Talk-Norms-and-Debate/" target="_blank" rel="noopener">Demo</a></div>
           </div>
         </article>
       </div>
@@ -225,12 +201,24 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <a class="footer-brand" href="index.html">KoveForge</a>
-      <div class="footer-links">
+      <div class="footer-brand-block">
+        <a class="footer-brand" href="index.html">KoveForge</a>
+        <p>Custom software studio за уебсайтове, резервации, e-commerce, AI асистенти и business dashboards за малки и средни компании.</p>
+        <div class="footer-mini-grid">
+          <span class="tag">web platforms</span>
+          <span class="tag">booking systems</span>
+          <span class="tag">AI assistants</span>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h2>Контакти</h2>
         <a href="mailto:studio@koveforge.tech">studio@koveforge.tech</a>
         <a href="mailto:hello@koveforge.tech">hello@koveforge.tech</a>
         <a href="https://koveforge.tech">koveforge.tech</a>
       </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 KoveForge. Built for businesses that need systems, not templates.</p>
     </div>
   </footer>
 </body>

@@ -1,0 +1,91 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 40;
+  background: rgba(13, 17, 23, 0.82);
+  border-bottom: 1px solid rgba(48, 54, 61, 0.72);
+  backdrop-filter: blur(16px) saturate(150%);
+}
+
+.nav {
+  width: min(100% - 32px, var(--max));
+  min-height: 76px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.hero,
+.section,
+.page-hero,
+.case-hero {
+  width: min(100% - 32px, var(--max));
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  gap: 48px;
+  padding: 126px 0 80px;
+}
+
+.section {
+  padding: 92px 0;
+}
+
+.section-full {
+  width: 100%;
+  max-width: none;
+  padding-left: max(16px, calc((100% - var(--max)) / 2));
+  padding-right: max(16px, calc((100% - var(--max)) / 2));
+}
+
+.section-tint {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-dark {
+  background: var(--bg-primary);
+}
+
+.section-heading {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.section-heading p {
+  max-width: 720px;
+  color: var(--text-secondary);
+}
+
+.benefit-grid,
+.service-grid,
+.project-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  background: #090d13;
+  color: var(--text-primary);
+}
+
+.footer-inner {
+  width: min(100% - 32px, var(--max));
+  margin: 0 auto;
+  display: grid;
+  gap: 44px;
+  align-items: start;
+  padding: 72px 0 50px;
+}

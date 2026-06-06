@@ -3,27 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KoveForge | Персонализиран софтуер за малък и среден бизнес</title>
+  <title>KoveForge | Custom Software Studio</title>
   <meta name="description" content="KoveForge изгражда персонализирани уебсайтове, системи за резервации, e-commerce платформи и AI асистенти за малки и средни бизнеси в България.">
   <link rel="canonical" href="https://koveforge.tech/">
-  <meta property="og:title" content="KoveForge | Персонализиран софтуер за бизнес растеж">
-  <meta property="og:description" content="Дигитална агенция за уебсайтове, резервации, e-commerce и AI асистенти.">
+  <meta property="og:title" content="KoveForge | Custom Software Studio">
+  <meta property="og:description" content="Уебсайтове, резервации, e-commerce и AI асистенти за бизнеси, които искат реална дигитализация.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://koveforge.tech/">
   <meta property="og:image" content="https://koveforge.tech/assets/images/brand/og-cover.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KoveForge | Персонализиран софтуер">
+  <meta name="twitter:title" content="KoveForge | Custom Software Studio">
   <meta name="twitter:description" content="Софтуерни решения за малки и средни бизнеси в България.">
   <meta name="twitter:image" content="https://koveforge.tech/assets/images/brand/og-cover.svg">
   <link rel="icon" href="assets/images/brand/koveforge-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
 </head>
 <body>
   <header class="site-header" data-header>
     <nav class="nav" aria-label="Основна навигация">
       <a class="brand" href="index.html" aria-label="KoveForge начална страница">
-        <img src="assets/images/brand/koveforge-logo.svg" alt="KoveForge дигитална агенция" width="165" height="48">
+        <img src="assets/images/brand/koveforge-logo.svg" alt="KoveForge custom software studio" width="165" height="48">
       </a>
       <button class="nav-toggle" type="button" aria-label="Отвори меню" aria-expanded="false" data-nav-toggle>
         <span></span>
@@ -31,9 +34,10 @@
         <span></span>
       </button>
       <div class="nav-links" data-nav-links>
-        <a href="index.html#services">Услуги</a>
-        <a href="index.html#why">Защо ние</a>
+        <a href="#services">Услуги</a>
+        <a href="#why">Предимства</a>
         <a href="projects.html">Проекти</a>
+        <a href="#contact">Контакт</a>
         <a href="mailto:studio@koveforge.tech" class="nav-cta">Започни проект</a>
       </div>
     </nav>
@@ -42,29 +46,34 @@
   <main>
     <section class="hero">
       <div class="hero-content">
-        <p class="eyebrow">Дигитална агенция за бизнес системи</p>
-        <h1>Дигитализирай бизнеса си с персонализиран софтуер</h1>
-        <p class="hero-copy">KoveForge създава уебсайтове, системи за резервации, e-commerce платформи и AI асистенти, които заменят ръчната работа с ясни, надеждни процеси.</p>
+        <p class="eyebrow">CUSTOM SOFTWARE STUDIO / BULGARIA</p>
+        <h1>Софтуерни системи за бизнеси, които са надраснали шаблоните.</h1>
+        <p class="hero-copy">KoveForge проектира и изгражда уебсайтове, резервационни системи, e-commerce платформи и AI асистенти с фокус върху реални операции, не върху декоративни страници.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:studio@koveforge.tech?subject=Запитване%20за%20нов%20проект">Започни проект</a>
-          <a class="btn btn-secondary" href="projects.html">Виж портфолиото</a>
+          <a class="btn btn-primary" href="mailto:studio@koveforge.tech?subject=Запитване%20за%20нов%20проект">Обсъди проект</a>
+          <a class="btn btn-secondary" href="projects.html">Виж case studies</a>
         </div>
-        <dl class="hero-metrics" aria-label="Основни силни страни">
+        <dl class="hero-metrics" aria-label="KoveForge показатели">
           <div>
-            <dt>6+</dt>
+            <dt>12</dt>
+            <dd>портфолио проекта</dd>
+          </div>
+          <div>
+            <dt>6</dt>
             <dd>бизнес вертикали</dd>
           </div>
           <div>
             <dt>24/7</dt>
-            <dd>AI обслужване</dd>
-          </div>
-          <div>
-            <dt>100%</dt>
-            <dd>персонален подход</dd>
+            <dd>AI и автоматизация</dd>
           </div>
         </dl>
       </div>
-      <figure class="hero-showcase" aria-label="Примери за дигитални решения">
+
+      <figure class="hero-showcase system-card" aria-label="Примери за дигитални решения">
+        <div class="system-card-header">
+          <span>koveforge.pipeline</span>
+          <span class="system-status">● operational</span>
+        </div>
         <img class="showcase-main" src="assets/images/projects/gocetransportapp.png" alt="SaaS платформа за управление на транспортни маршрути и билети" width="760" height="460">
         <div class="showcase-strip">
           <img src="assets/images/projects/resurs11.webp" alt="Бизнес уебсайт с продуктов каталог и локално SEO" width="210" height="130">
@@ -74,72 +83,87 @@
       </figure>
     </section>
 
-    <section class="section section-tint" id="why">
+    <section class="section section-full section-tint" id="why">
       <div class="section-heading">
-        <p class="eyebrow">Защо KoveForge</p>
-        <h2>Софтуер, създаден около начина, по който работи твоят бизнес</h2>
+        <p class="eyebrow">WHY KOVEFORGE</p>
+        <h2>Сайтът не е брошура. Той трябва да работи като система.</h2>
+        <p>Затова планираме потребителски пътеки, администраторски процеси, автоматизации и бъдещо разширяване още преди първия ред код.</p>
       </div>
       <div class="benefit-grid">
         <article class="info-card">
           <span class="icon-box">01</span>
-          <h3>Персонализирана архитектура</h3>
-          <p>Изграждаме решения според реалните процеси, не според ограниченията на готов шаблон.</p>
+          <h3>Архитектура преди визуален шум</h3>
+          <p>Първо подреждаме процесите, ролите, данните и целите. После правим интерфейса.</p>
+          <div class="tag-row"><span class="tag">process mapping</span><span class="tag">flows</span></div>
         </article>
         <article class="info-card">
-          <span class="icon-box accent-green">02</span>
-          <h3>AI интеграции</h3>
-          <p>Виртуални асистенти, автоматизирани отговори и по-бърза обработка на клиентски запитвания.</p>
+          <span class="icon-box">02</span>
+          <h3>Системи, не готови шаблони</h3>
+          <p>Изграждаме решения около конкретния бизнес модел: резервации, поръчки, каталози, табла, известия.</p>
+          <div class="tag-row"><span class="tag">custom build</span><span class="tag">scalable</span></div>
         </article>
         <article class="info-card">
-          <span class="icon-box accent-gold">03</span>
-          <h3>Облачна готовност</h3>
-          <p>Планираме решенията така, че да могат да растат заедно с натоварването и екипа.</p>
+          <span class="icon-box">03</span>
+          <h3>AI като полезна функция</h3>
+          <p>Интегрираме асистенти и автоматизирани отговори там, където пестят време и намаляват повторяемата работа.</p>
+          <div class="tag-row"><span class="tag">AI assistants</span><span class="tag">automation</span></div>
         </article>
         <article class="info-card">
-          <span class="icon-box accent-coral">04</span>
+          <span class="icon-box">04</span>
           <h3>Дългосрочна поддръжка</h3>
-          <p>След старта можем да оптимизираме, разширяваме и поддържаме системата без хаос.</p>
+          <p>Проектът не приключва при публикуване. Може да се оптимизира, разширява и поддържа без хаос.</p>
+          <div class="tag-row"><span class="tag">iteration</span><span class="tag">support</span></div>
         </article>
       </div>
     </section>
 
     <section class="section" id="services">
       <div class="section-heading">
-        <p class="eyebrow">Услуги</p>
-        <h2>Практични дигитални решения за ежедневните операции</h2>
+        <p class="eyebrow">SERVICES</p>
+        <h2>Какво изграждаме</h2>
+        <p>Фокусът е върху малки и средни бизнеси, които имат нужда от работеща дигитална инфраструктура.</p>
       </div>
       <div class="service-grid">
         <article class="service-card">
           <h3>Персонализирани уебсайтове</h3>
-          <p>Бързи, ясни и убедителни сайтове, които представят услугите ти и превръщат посетителите в запитвания.</p>
+          <p>Бързи, модерни сайтове с ясна структура, доверие и конкретни пътеки към запитване.</p>
+          <div class="tag-row"><span class="tag">websites</span><span class="tag">SEO</span></div>
         </article>
         <article class="service-card">
           <h3>Системи за резервации</h3>
-          <p>Онлайн запазване на часове, проверка за конфликти и административни панели за клиники, салони и хотели.</p>
+          <p>Онлайн часове, конфликтни проверки, потребителски роли и административни панели.</p>
+          <div class="tag-row"><span class="tag">booking</span><span class="tag">RBAC</span></div>
         </article>
         <article class="service-card">
           <h3>E-commerce платформи</h3>
-          <p>Каталози, колички, поръчки, наличности и плащания за бизнеси, които искат да продават онлайн.</p>
+          <p>Каталози, колички, поръчки, наличности, промоции и готовност за плащания.</p>
+          <div class="tag-row"><span class="tag">catalog</span><span class="tag">checkout</span></div>
         </article>
         <article class="service-card">
           <h3>AI чатботове и асистенти</h3>
-          <p>Денонощни виртуални помощници за чести въпроси, първична консултация и насочване към правилната услуга.</p>
+          <p>24/7 помощници за чести въпроси, първична квалификация и по-бърза реакция.</p>
+          <div class="tag-row"><span class="tag">AI</span><span class="tag">support</span></div>
         </article>
         <article class="service-card">
-          <h3>Известия в реално време</h3>
-          <p>Съобщения, статуси, табла и нотификации, когато бизнесът има нужда от моментална видимост.</p>
+          <h3>Real-time функционалности</h3>
+          <p>Съобщения, статуси, табла и известия, когато бизнесът има нужда от моментална видимост.</p>
+          <div class="tag-row"><span class="tag">live data</span><span class="tag">messages</span></div>
         </article>
         <article class="service-card">
-          <h3>Поддръжка и подобрение</h3>
-          <p>Оптимизация, нови функционалности и техническа грижа за вече съществуващи платформи.</p>
+          <h3>Поддръжка и подобрения</h3>
+          <p>Оптимизация, нови функции и техническа грижа за вече съществуващи платформи.</p>
+          <div class="tag-row"><span class="tag">maintenance</span><span class="tag">growth</span></div>
         </article>
       </div>
     </section>
 
-    <section class="section section-dark" id="featured-projects">
-      <div class="section-heading">
-        <p class="eyebrow">Избрани проекти</p>
-        <h2>От локално SEO до сложни системи за резервации и продажби</h2>
+    <section class="section section-full section-dark" id="featured-projects">
+      <div class="projects-preview-header">
+        <div>
+          <p class="eyebrow">FEATURED WORK</p>
+          <h2>Подбрани системи от портфолиото</h2>
+        </div>
+        <p>Всяка карта води към отделна case-study страница с бизнес стойност, функции и ключови резултати.</p>
       </div>
       <div class="project-grid project-grid-featured">
         <article class="project-card">
@@ -147,15 +171,18 @@
           <div class="project-body">
             <p class="project-sector">SaaS / транспорт</p>
             <h3>GoceTransportApp</h3>
-            <p>Единна система за маршрути, разписания, билети и управление на автопарк, която намалява ръчната координация.</p>
+            <p>Единна система за маршрути, разписания, билети и управление на автопарк.</p>
+            <p class="project-value">По-малко ръчна координация и по-добро обслужване на пътниците.</p>
+            <div class="project-actions"><a href="projects/gocetransportapp.html">Case study</a></div>
           </div>
         </article>
         <article class="project-card">
           <img src="assets/images/projects/resurs11.webp" alt="Локален продуктов сайт с каталог и SEO оптимизация" width="520" height="320" loading="lazy">
           <div class="project-body">
-            <p class="project-sector">Бизнес уебсайт / локално SEO</p>
+            <p class="project-sector">Бизнес уебсайт / SEO</p>
             <h3>Resurs 11</h3>
-            <p>Продуктов сайт, който представя офертата ясно, улеснява запитванията и подобрява видимостта в Google.</p>
+            <p>Продуктов сайт за локален доставчик с каталог, галерия и контактен път.</p>
+            <div class="project-actions"><a href="projects/resurs11.html">Case study</a></div>
           </div>
         </article>
         <article class="project-card">
@@ -163,32 +190,46 @@
           <div class="project-body">
             <p class="project-sector">Клиника / резервации</p>
             <h3>Dentora</h3>
-            <p>Решение за пациенти, часове, лечения и наличности, което прави работата на клиниката по-организирана.</p>
+            <p>Пациенти, часове, лечения, наличности и обратна връзка в една система.</p>
+            <div class="project-actions"><a href="projects/dentora.html">Case study</a></div>
           </div>
         </article>
       </div>
       <div class="section-action">
-        <a class="btn btn-light" href="projects.html">Виж всички проекти</a>
+        <a class="btn btn-primary" href="projects.html">Всички проекти</a>
       </div>
     </section>
 
     <section class="section contact-band" id="contact">
       <div>
-        <p class="eyebrow">Готов ли си за следващата стъпка?</p>
-        <h2>Нека превърнем ръчните процеси в работеща дигитална система.</h2>
+        <p class="eyebrow">START A PROJECT</p>
+        <h2>Имаш процес, който още се случва на ръка?</h2>
+        <p class="hero-copy">Нека го превърнем в ясна, поддържана и мащабируема дигитална система.</p>
       </div>
-      <a class="btn btn-primary" href="mailto:studio@koveforge.tech?subject=Искам%20софтуерно%20решение%20за%20моя%20бизнес">Пиши ни за проект</a>
+      <a class="btn btn-primary" href="mailto:studio@koveforge.tech?subject=Искам%20софтуерно%20решение%20за%20моя%20бизнес">Пиши ни</a>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <a class="footer-brand" href="index.html">KoveForge</a>
-      <div class="footer-links">
+      <div class="footer-brand-block">
+        <a class="footer-brand" href="index.html">KoveForge</a>
+        <p>Custom software studio за уебсайтове, резервации, e-commerce, AI асистенти и business dashboards за малки и средни компании.</p>
+        <div class="footer-mini-grid">
+          <span class="tag">web platforms</span>
+          <span class="tag">booking systems</span>
+          <span class="tag">AI assistants</span>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h2>Контакти</h2>
         <a href="mailto:studio@koveforge.tech">studio@koveforge.tech</a>
         <a href="mailto:hello@koveforge.tech">hello@koveforge.tech</a>
         <a href="https://koveforge.tech">koveforge.tech</a>
       </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 KoveForge. Built for businesses that need systems, not templates.</p>
     </div>
   </footer>
 </body>

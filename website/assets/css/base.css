@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 880px;
+  font-size: 3.1rem;
+}
+
+h2 {
+  max-width: 760px;
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.14rem;
+}
+
+p {
+  margin: 0;
+}
+
+.mono,
+code {
+  font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--tag-text);
+  font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}

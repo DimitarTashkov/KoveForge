@@ -1,0 +1,105 @@
+@media (min-width: 720px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  .benefit-grid,
+  .service-grid,
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-inner {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .contact-band {
+    grid-template-columns: 1fr auto;
+  }
+
+  .case-layout {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}
+
+@media (min-width: 980px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    visibility: visible;
+    backdrop-filter: none;
+  }
+
+  .nav-cta {
+    margin-left: 8px;
+  }
+
+  .hero {
+    grid-template-columns: 1.03fr 0.97fr;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .projects-toolbar,
+  .projects-preview-header {
+    grid-template-columns: 260px 1fr;
+    align-items: start;
+  }
+
+  .project-grid-featured .project-card:first-child {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .project-grid-featured .project-card:first-child img {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.65rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding-top: 112px;
+  }
+
+  .hero-metrics,
+  .showcase-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .btn,
+  .contact-band .btn {
+    width: 100%;
+  }
+}
