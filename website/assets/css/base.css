@@ -59,7 +59,7 @@ h3 {
   color: var(--text-primary);
   font-weight: 800;
   line-height: 1.08;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }
 
 h1 {
@@ -94,4 +94,91 @@ code {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* Calm Aero refresh */
+html {
+  scroll-padding-top: 92px;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    linear-gradient(116deg, rgb(255 255 255 / 0.72) 0 12%, transparent 12% 100%),
+    linear-gradient(128deg, transparent 0 58%, rgb(255 255 255 / 0.46) 58% 66%, transparent 66% 100%),
+    linear-gradient(180deg, var(--aero-sky-top) 0%, var(--aero-sky-mid) 46%, var(--aero-sky-low) 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: "Inter", "Segoe UI", Frutiger, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 0.16) 1px, transparent 1px),
+    linear-gradient(180deg, rgb(255 255 255 / 0.18) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: linear-gradient(180deg, rgb(0 0 0 / 0.32), transparent 78%);
+  mask-image: linear-gradient(180deg, rgb(0 0 0 / 0.32), transparent 78%);
+}
+
+body::after {
+  z-index: -1;
+  background:
+    linear-gradient(115deg, transparent 0 28%, rgb(255 255 255 / 0.28) 29%, transparent 43%),
+    linear-gradient(180deg, transparent 0 72%, rgb(209 242 229 / 0.42) 100%);
+  opacity: 1;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.06;
+  text-shadow: 0 1px 0 rgb(255 255 255 / 0.62);
+}
+
+h1 {
+  font-size: clamp(2.35rem, 4.8vw, 4.7rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+h3 {
+  font-size: 1.08rem;
+  line-height: 1.28;
+}
+
+p {
+  color: var(--text-secondary);
+  text-shadow: none;
+}
+
+.eyebrow {
+  padding: 6px 10px;
+  border-color: rgb(123 180 204 / 0.24);
+  border-radius: var(--radius-sm);
+  background: rgb(255 255 255 / 0.56);
+  color: var(--accent-hover);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.78);
+  text-shadow: none;
 }

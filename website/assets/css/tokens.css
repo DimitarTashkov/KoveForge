@@ -1,18 +1,20 @@
 :root {
   --color-white: #ffffff;
-  --color-slate-50: #f8fafc;
-  --color-slate-100: #f1f5f9;
-  --color-slate-200: #e2e8f0;
-  --color-slate-300: #cbd5e1;
-  --color-slate-500: #64748b;
-  --color-slate-600: #475569;
-  --color-slate-700: #334155;
-  --color-slate-900: #0f172a;
-  --color-blue-50: #eff6ff;
-  --color-blue-600: #2563eb;
-  --color-blue-700: #1d4ed8;
-  --color-indigo-500: #6366f1;
-  --color-cyan-500: #06b6d4;
+  --color-slate-50: #f6fbfd;
+  --color-slate-100: #e8f6fb;
+  --color-slate-200: #cae5ef;
+  --color-slate-300: #a4cfdd;
+  --color-slate-500: #668293;
+  --color-slate-600: #486577;
+  --color-slate-700: #28495e;
+  --color-slate-900: #163247;
+  --color-blue-50: #eefaff;
+  --color-blue-600: #168ccf;
+  --color-blue-700: #0c6faa;
+  --color-indigo-500: #5ab8df;
+  --color-cyan-500: #74dbe6;
+  --color-lime-500: #71c66b;
+  --color-lime-600: #3f9f61;
 
   --bg-primary: var(--color-white);
   --bg-secondary: var(--color-slate-50);
@@ -24,7 +26,7 @@
   --border: var(--color-slate-200);
   --border-strong: var(--color-slate-300);
   --accent: var(--color-blue-600);
-  --accent-secondary: var(--color-indigo-500);
+  --accent-secondary: var(--color-lime-500);
   --accent-tertiary: var(--color-cyan-500);
   --accent-hover: var(--color-blue-700);
   --tag-bg: var(--color-blue-50);
@@ -33,12 +35,25 @@
   --warning: var(--color-slate-600);
   --danger: var(--color-slate-600);
 
+  --aero-sky-top: #eaf9ff;
+  --aero-sky-mid: #cbefff;
+  --aero-sky-low: #f6fff5;
+  --aero-green: var(--color-lime-500);
+  --aero-green-dark: var(--color-lime-600);
+  --aero-glass: rgb(255 255 255 / 0.6);
+  --aero-glass-blue: rgb(226 246 255 / 0.58);
+  --aero-glass-green: rgb(223 250 226 / 0.32);
+  --aero-border: rgb(255 255 255 / 0.74);
+  --aero-border-soft: rgb(119 176 203 / 0.22);
+  --aero-text-shadow: 0 1px 1px rgb(255 255 255 / 0.72);
+  --aero-dark-shadow: 0 1px 2px rgb(24 75 108 / 0.18);
+
   --radius: 8px;
   --radius-sm: 6px;
-  --radius-lg: 12px;
-  --shadow: 0 4px 6px -1px rgb(15 23 42 / 0.05), 0 2px 4px -2px rgb(15 23 42 / 0.03);
-  --shadow-hover: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.05);
-  --shadow-accent: 0 10px 15px -3px rgb(37 99 235 / 0.12), 0 4px 6px -4px rgb(37 99 235 / 0.10);
+  --radius-lg: 10px;
+  --shadow: inset 0 1px 0 rgb(255 255 255 / 0.82), 0 12px 28px rgb(22 68 95 / 0.1);
+  --shadow-hover: inset 0 1px 0 rgb(255 255 255 / 0.9), 0 18px 38px rgb(22 83 119 / 0.16);
+  --shadow-accent: inset 0 1px 0 rgb(255 255 255 / 0.72), 0 12px 24px rgb(16 117 180 / 0.22);
   --transition-fast: 150ms ease-in-out;
   --transition-normal: 300ms ease-out;
   --max: 1160px;
