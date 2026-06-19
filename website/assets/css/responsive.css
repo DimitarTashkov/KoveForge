@@ -26,7 +26,7 @@
   }
 
   .case-layout {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1fr);
   }
 
   .case-gallery-heading {
@@ -150,6 +150,18 @@
     align-content: start;
     padding-right: 4px;
   }
+
+  .case-layout {
+    grid-template-columns: minmax(240px, 0.54fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .case-meta {
+    grid-row: span 1;
+  }
+
+  .case-story-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 719px) {
@@ -228,6 +240,50 @@
     padding: 16px;
   }
 
+  .case-story {
+    margin-bottom: var(--space-8);
+  }
+
+  .case-story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-story-card {
+    min-height: auto;
+  }
+
+  .case-story-highlights {
+    padding: var(--space-3);
+  }
+
+  .case-hero {
+    min-height: auto;
+    padding-top: 112px;
+    padding-bottom: var(--space-16);
+  }
+
+  .case-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .case-hero p:not(.eyebrow) {
+    font-size: 1.04rem;
+  }
+
+  .case-hero .back-link {
+    margin-bottom: var(--space-6);
+  }
+
+  .case-image {
+    margin-top: calc(-1 * var(--space-8));
+    margin-bottom: var(--space-8);
+  }
+
+  .case-image img {
+    min-height: 220px;
+    aspect-ratio: 16 / 10;
+  }
+
   .case-gallery-heading {
     margin-bottom: 14px;
   }
@@ -246,8 +302,21 @@
     align-items: start;
   }
 
+  .gallery-main-link img {
+    min-height: 220px;
+  }
+
   .gallery-thumbs {
     grid-template-columns: 1fr;
+  }
+
+  .case-layout {
+    grid-template-columns: 1fr;
+    padding-bottom: var(--space-16);
+  }
+
+  .case-panel {
+    padding: var(--space-6);
   }
 
   .about-page .brand-hero {
@@ -390,6 +459,10 @@
   .contact-layout {
     grid-template-columns: 1fr;
   }
+
+  .case-story-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -509,6 +582,15 @@
   .about-page .brand-split > .service-feature p:not(.eyebrow),
   .about-page .brand-split .brand-card p,
   .about-page .process-step p {
+    font-size: 1rem;
+  }
+
+  .case-story-intro h2 {
+    font-size: 1.85rem;
+  }
+
+  .case-story-intro p:not(.eyebrow),
+  .case-story-card p {
     font-size: 1rem;
   }
 

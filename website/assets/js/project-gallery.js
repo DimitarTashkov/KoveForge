@@ -8,7 +8,7 @@ const projectGalleries = {
                              },
     "chat-app":  {
                      "title":  "Chat App",
-                     "sector":  "Real-time комуникация",
+                     "sector":  "Комуникация в реално време",
                      "images":  [
                                     "01-app-demo-clean-1773094435078.webp",
                                     "02-browse-rooms-modal-1773093310522.png",
@@ -66,14 +66,14 @@ const projectGalleries = {
                 },
     "fitness-application":  {
                                 "title":  "Fitness Application",
-                                "sector":  "E-commerce прототип",
+                                "sector":  "Прототип за онлайн магазин",
                                 "images":  [
                                                "01-fitness-application.svg"
                                            ]
                             },
     "gocetransportapp":  {
                              "title":  "GoceTransportApp",
-                             "sector":  "SaaS / транспорт",
+                             "sector":  "Транспортна платформа",
                              "images":  [
                                             "01-screenshot-2026-04-16-101330.png"
                                         ]
@@ -134,7 +134,7 @@ const projectGalleries = {
                       },
     "resurs11":  {
                      "title":  "Resurs 11",
-                     "sector":  "Бизнес уебсайт / SEO",
+                     "sector":  "Бизнес уебсайт / търсачки",
                      "images":  [
                                     "01-scene1-homepage-desktop.webp",
                                     "02-scene2-products-desktop.webp",
@@ -228,7 +228,7 @@ const projectGalleries = {
                   },
     "zoozen":  {
                    "title":  "ZooZen",
-                   "sector":  "Pet shop / e-commerce",
+                   "sector":  "Зоомагазин / онлайн магазин",
                    "images":  [
                                   "01-about-us-form.png",
                                   "02-background.png",
@@ -251,18 +251,11 @@ const projectGalleries = {
                               ]
                }
 };
+
 const galleries = document.querySelectorAll("[data-project-gallery]");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const formatCaption = (fileName) => {
-  const cleanName = fileName
-    .replace(/\.[^.]+$/, "")
-    .replace(/^\d+-/, "")
-    .replace(/-/g, " ")
-    .trim();
-
-  return cleanName || "project screenshot";
-};
+const formatCaption = (index) => `Снимка ${index + 1}`;
 
 galleries.forEach((gallery) => {
   const currentSlug = gallery.dataset.currentProject;
@@ -281,7 +274,7 @@ galleries.forEach((gallery) => {
   gallery.innerHTML = `
     <div class="case-gallery-heading">
       <div>
-        <p class="eyebrow">PROJECT GALLERY</p>
+        <p class="eyebrow">ГАЛЕРИЯ НА ПРОЕКТА</p>
         <h2>Галерия на ${project.title}</h2>
         <p>Снимки от реалните екрани на проекта: основни страници, администраторски панели, форми и работни потоци.</p>
       </div>
@@ -329,7 +322,7 @@ galleries.forEach((gallery) => {
   const renderThumbs = () => {
     thumbs.innerHTML = project.images
       .map((fileName, index) => {
-        const caption = formatCaption(fileName);
+        const caption = formatCaption(index);
 
         return `
           <button class="gallery-thumb" type="button" data-gallery-thumb="${index}" aria-label="Покажи ${caption}">
@@ -344,7 +337,7 @@ galleries.forEach((gallery) => {
   const updateGallery = (index) => {
     activeIndex = (index + project.images.length) % project.images.length;
     const fileName = project.images[activeIndex];
-    const caption = formatCaption(fileName);
+    const caption = formatCaption(activeIndex);
     const source = getImageSource(fileName);
 
     image.src = source;
