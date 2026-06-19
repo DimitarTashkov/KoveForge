@@ -532,7 +532,6 @@
 .process-step,
 .premium-panel,
 .case-gallery,
-.contact-link-card,
 .image-card,
 .service-feature,
 .mini-timeline div,
@@ -557,7 +556,6 @@
 .premium-panel::before,
 .brand-metric::before,
 .case-gallery::before,
-.contact-link-card::before,
 .image-card::before,
 .service-feature::before {
   content: "";
@@ -573,8 +571,7 @@
 .service-card:hover,
 .project-card:hover,
 .project-card:focus-within,
-.image-card:hover,
-.contact-link-card:hover {
+.image-card:hover {
   transform: translateY(-3px);
   border-color: rgb(13 111 170 / 0.22);
   box-shadow: var(--shadow-hover);
@@ -678,7 +675,6 @@
 .process-step,
 .premium-panel,
 .case-gallery,
-.contact-link-card,
 .image-card,
 .service-feature {
   transition:
@@ -760,7 +756,6 @@
 .process-step,
 .premium-panel,
 .case-gallery,
-.contact-link-card,
 .image-card,
 .service-feature {
   box-shadow: var(--shadow-premium);
@@ -774,7 +769,6 @@
 .process-step::after,
 .premium-panel::after,
 .case-gallery::after,
-.contact-link-card::after,
 .image-card::after,
 .service-feature::after {
   content: "";
@@ -798,7 +792,6 @@
 .process-step:hover,
 .premium-panel:hover,
 .case-gallery:hover,
-.contact-link-card:hover,
 .image-card:hover,
 .service-feature:hover {
   transform: translateY(-6px);
@@ -815,7 +808,6 @@
 .process-step:hover::after,
 .premium-panel:hover::after,
 .case-gallery:hover::after,
-.contact-link-card:hover::after,
 .image-card:hover::after,
 .service-feature:hover::after {
   opacity: 1;

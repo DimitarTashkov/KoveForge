@@ -32,6 +32,7 @@ a {
 
 button,
 input,
+select,
 textarea {
   font: inherit;
 }
@@ -206,7 +207,6 @@ button,
 .project-card,
 .info-card,
 .service-card,
-.contact-link-card,
 .image-card {
   -webkit-tap-highlight-color: transparent;
 }

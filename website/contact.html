@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/contact-form.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -29,43 +30,94 @@
     </nav>
   </header>
 
-  <main>
-    <section class="brand-hero">
+  <main class="contact-page">
+    <section class="brand-hero contact-hero">
       <p class="eyebrow">КОНТАКТ</p>
       <h1>Да обсъдим сайта или системата, която искаш да изградиш.</h1>
-      <p>Пишеш ни. Връщаме се с ясен отговор и следваща стъпка. Без сложни форми и излишни условия.</p>
+      <p>Изпрати кратко описание на идеята, от какво имаш нужда и какъв е най-удобният начин да се върнем към теб.</p>
       <div class="brand-hero-actions">
-        <a class="btn btn-primary" href="mailto:studio@koveforge.tech?subject=Нов%20проект%20за%20KoveForge">studio@koveforge.tech</a>
-        <a class="btn btn-secondary" href="mailto:hello@koveforge.tech">hello@koveforge.tech</a>
+        <a class="btn btn-primary" href="#contact-form">Попълни формуляра</a>
+        <a class="btn btn-secondary" href="mailto:studio@koveforge.tech?subject=Нов%20проект%20за%20KoveForge">studio@koveforge.tech</a>
       </div>
     </section>
 
-    <section class="contact-hero-grid" aria-label="Контакт с KoveForge">
-      <a class="contact-link-card" href="mailto:studio@koveforge.tech?subject=Нов%20проект%20за%20KoveForge">
-        <span>Нови проекти</span>
-        <strong>studio@koveforge.tech</strong>
-        <p>За уебсайтове, резервации, онлайн магазини, AI асистенти и вътрешни панели.</p>
-      </a>
-      <a class="contact-link-card" href="mailto:hello@koveforge.tech">
-        <span>Обща комуникация</span>
-        <strong>hello@koveforge.tech</strong>
-        <p>За разговори, партньорства и последваща комуникация.</p>
-      </a>
-    </section>
+    <section class="contact-layout" aria-label="Форма за контакт с KoveForge">
+      <article class="premium-panel contact-form-panel">
+        <p class="eyebrow">ЗАПИТВАНЕ</p>
+        <h2>Разкажи ни накратко какво трябва да построим.</h2>
+        <form id="contact-form" class="contact-form" action="mailto:studio@koveforge.tech" method="post" enctype="text/plain" data-contact-form>
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Име</span>
+              <input type="text" name="Име" autocomplete="name" placeholder="Иван Петров" required>
+            </label>
+            <label class="form-field">
+              <span>Имейл</span>
+              <input type="email" name="Имейл" autocomplete="email" placeholder="name@example.com" required>
+            </label>
+          </div>
 
-    <section class="visual-strip visual-strip-compact" aria-label="Примери за проекти">
-      <figure class="image-card">
-        <img src="assets/images/projects/hotel-oazis.png" alt="Хотелска система за стаи и резервации" loading="lazy">
-        <figcaption>Хотели и резервации</figcaption>
-      </figure>
-      <figure class="image-card">
-        <img src="assets/images/projects/zoozen.png" alt="Онлайн магазин със зоопродукти и поръчки" loading="lazy">
-        <figcaption>Онлайн магазини</figcaption>
-      </figure>
-      <figure class="image-card">
-        <img src="assets/images/projects/dentora.png" alt="Система за клиника с пациенти и часове" loading="lazy">
-        <figcaption>Клиники и услуги</figcaption>
-      </figure>
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Тип проект</span>
+              <select name="Тип проект" required>
+                <option value="">Избери</option>
+                <option>Уебсайт</option>
+                <option>Система за резервации</option>
+                <option>Онлайн магазин</option>
+                <option>AI асистент</option>
+                <option>Вътрешен панел</option>
+                <option>Друго</option>
+              </select>
+            </label>
+            <label class="form-field">
+              <span>Бюджет</span>
+              <select name="Бюджет">
+                <option value="">Не е уточнен</option>
+                <option>До 1000 лв.</option>
+                <option>1000 - 3000 лв.</option>
+                <option>3000 - 6000 лв.</option>
+                <option>6000+ лв.</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="form-field">
+            <span>Съобщение</span>
+            <textarea name="Съобщение" rows="7" placeholder="Опиши проекта, целта, страниците/функциите и кога искаш да стартира." required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Изпрати запитване</button>
+            <p>Отговор с конкретна следваща стъпка.</p>
+          </div>
+        </form>
+      </article>
+
+      <aside class="contact-sidebar" aria-label="Имейли за връзка">
+        <div class="contact-sidebar-card">
+          <p class="eyebrow">ИМЕЙЛИ</p>
+          <h2>Пиши директно, ако ти е по-удобно.</h2>
+          <div class="contact-email-list">
+            <a href="mailto:studio@koveforge.tech?subject=Нов%20проект%20за%20KoveForge">
+              <span>Нови проекти</span>
+              <strong>studio@koveforge.tech</strong>
+            </a>
+            <a href="mailto:hello@koveforge.tech">
+              <span>Обща комуникация</span>
+              <strong>hello@koveforge.tech</strong>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          <span class="icon-box">24</span>
+          <div>
+            <h3>Ясен отговор</h3>
+            <p>Връщаме се с конкретна следваща стъпка и въпроси, ако има нужда от уточнение.</p>
+          </div>
+        </div>
+      </aside>
     </section>
   </main>
 
