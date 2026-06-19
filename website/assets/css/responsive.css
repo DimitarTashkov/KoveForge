@@ -39,14 +39,17 @@
   }
 
   .brand-grid,
-  .process-grid,
-  .contact-grid {
+  .process-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .brand-split {
     grid-template-columns: 1fr 1fr;
     align-items: start;
+  }
+
+  .about-page .brand-split > .brand-grid {
+    grid-template-columns: 1fr;
   }
 
   .visual-strip {
@@ -247,15 +250,92 @@
   .gallery-thumbs {
     grid-template-columns: 1fr;
   }
+
+  .about-page .brand-hero {
+    min-height: auto;
+    padding-top: 118px;
+    padding-bottom: var(--space-16);
+  }
+
+  .about-page .brand-hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .about-page .brand-hero p:not(.eyebrow) {
+    font-size: 1.04rem;
+  }
+
+  .about-page .brand-metrics {
+    margin-top: calc(-1 * var(--space-8));
+    margin-bottom: var(--space-12);
+  }
+
+  .about-page .brand-metric {
+    min-height: auto;
+  }
+
+  .about-page .brand-metric span {
+    max-width: none;
+  }
+
+  .about-page .section-full.section-tint {
+    margin-top: var(--space-12);
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+
+  .about-page .brand-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .about-page .brand-split > .service-feature {
+    min-height: auto;
+    padding: var(--space-6);
+  }
+
+  .about-page .brand-split .brand-card {
+    min-height: auto;
+    padding: var(--space-6);
+    padding-left: calc(var(--space-6) + 14px);
+  }
+
+  .about-page .brand-split .brand-card::after {
+    font-size: 2rem;
+  }
+
+  .about-page > .section:not(.section-full) {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+
+  .about-page .section-heading {
+    margin-bottom: var(--space-8);
+  }
+
+  .about-page .process-step {
+    min-height: auto;
+  }
 }
 
 @media (min-width: 720px) and (max-width: 979px) {
-  .home-page #why .benefit-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .home-page .section-heading,
+  .home-page .projects-preview-header,
+  .home-page #services .section-heading,
+  .home-page #why .section-heading {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
   }
 
-  .home-page #services .section-heading {
-    grid-template-columns: minmax(0, 0.74fr) minmax(320px, 0.56fr);
+  .home-page .section-heading p:not(.eyebrow),
+  .home-page .projects-preview-header p:not(.eyebrow),
+  .home-page #services .section-heading p:not(.eyebrow) {
+    max-width: 680px;
+    justify-self: stretch;
+  }
+
+  .home-page #why .benefit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .home-page #services .service-grid {
@@ -273,6 +353,30 @@
   .home-page #featured-projects .project-card:first-child img {
     min-height: 0;
     aspect-ratio: 16 / 9;
+  }
+
+  .about-page .brand-hero {
+    min-height: 500px;
+  }
+
+  .about-page .brand-split {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page .brand-split > .service-feature {
+    min-height: auto;
+  }
+
+  .about-page .brand-split .brand-card {
+    min-height: 146px;
+  }
+
+  .about-page .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page .process-step {
+    min-height: auto;
   }
 }
 
@@ -323,6 +427,11 @@
     box-shadow: none;
   }
 
+  .home-page .hero-media-frame::before {
+    opacity: 0.26;
+    animation: none;
+  }
+
   .home-page .hero-visual {
     width: 100%;
   }
@@ -331,8 +440,7 @@
     grid-template-columns: 1fr;
   }
 
-  .home-page .hero-metrics,
-  .showcase-strip {
+  .home-page .hero-metrics {
     grid-template-columns: 1fr;
   }
 
@@ -354,6 +462,60 @@
   .home-page .service-card p,
   .home-page .project-card p {
     font-size: 1rem;
+  }
+
+  .home-page #why,
+  .home-page #services,
+  .home-page #featured-projects {
+    padding-inline: max(16px, calc((100% - var(--max)) / 2));
+  }
+
+  .home-page #why .info-card,
+  .home-page #services .service-card,
+  .home-page #featured-projects .project-card:not(:first-child) .project-body {
+    min-height: auto;
+  }
+
+  .about-page .brand-hero {
+    padding-top: 108px;
+    padding-bottom: var(--space-12);
+  }
+
+  .about-page .brand-hero-actions .btn {
+    width: 100%;
+  }
+
+  .about-page .visual-strip .image-card:not(.image-card-large) img {
+    min-height: 0;
+  }
+
+  .about-page .brand-split > .service-feature h2,
+  .about-page .section-heading h2 {
+    font-size: 1.85rem;
+  }
+
+  .about-page .brand-split > .service-feature p:not(.eyebrow),
+  .about-page .brand-split .brand-card p,
+  .about-page .process-step p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-page .hero .hero-content h1 {
+    font-size: 2.08rem;
+  }
+
+  .home-page #why,
+  .home-page #services,
+  .home-page #featured-projects {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  .home-page #featured-projects .project-body,
+  .project-body {
+    padding: var(--space-5);
   }
 }
 

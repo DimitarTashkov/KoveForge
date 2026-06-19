@@ -54,6 +54,11 @@
   --shadow: inset 0 1px 0 rgb(255 255 255 / 0.82), 0 12px 28px rgb(22 68 95 / 0.1);
   --shadow-hover: inset 0 1px 0 rgb(255 255 255 / 0.9), 0 18px 38px rgb(22 83 119 / 0.16);
   --shadow-accent: inset 0 1px 0 rgb(255 255 255 / 0.72), 0 12px 24px rgb(16 117 180 / 0.22);
+  --shadow-premium: 0 1px 0 rgb(255 255 255 / 0.78) inset, 0 18px 48px rgb(19 67 94 / 0.13);
+  --shadow-premium-hover: 0 1px 0 rgb(255 255 255 / 0.88) inset, 0 28px 68px rgb(13 72 108 / 0.2);
+  --ring-premium: 0 0 0 1px rgb(255 255 255 / 0.7) inset, 0 0 0 4px rgb(116 219 230 / 0.16);
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
   --transition-fast: 150ms ease-in-out;
   --transition-normal: 300ms ease-out;
   --max: 1160px;
