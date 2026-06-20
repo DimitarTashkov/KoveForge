@@ -13,12 +13,16 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/navigation.js" defer></script>
   <script src="assets/js/contact-form.js" defer></script>
+  <script src="assets/js/theme.js"></script>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Основна навигация">
       <a class="brand" href="index.html" aria-label="KoveForge начална страница"><img src="assets/images/brand/koveforge-logo.svg" alt="KoveForge" width="165" height="48"></a>
-      <button class="nav-toggle" type="button" aria-label="Отвори меню" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
+      <div class="nav-controls">
+        <button class="theme-toggle" type="button" aria-label="Смени темата"></button>
+        <button class="nav-toggle" type="button" aria-label="Отвори меню" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
+      </div>
       <div class="nav-links" data-nav-links>
         <a href="about.html">За нас</a>
         <a href="services.html">Услуги</a>

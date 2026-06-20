@@ -1,0 +1,139 @@
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   KOVEFORGE â€” UTILITY CLASSES
+   Reusable helpers for layout, visibility, and effects
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+/* â”€â”€â”€ SCREEN READER ONLY â”€â”€â”€ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* â”€â”€â”€ SKIP LINK â”€â”€â”€ */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: var(--sp-4);
+  z-index: 9999;
+  padding: var(--sp-3) var(--sp-5);
+  border-radius: var(--radius-sm);
+  background: var(--accent-violet);
+  color: white;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  transition: top var(--dur-fast) ease;
+}
+
+.skip-link:focus {
+  top: var(--sp-4);
+}
+
+/* â”€â”€â”€ GLASS PANEL â”€â”€â”€ */
+.glass-panel {
+  position: relative;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-card);
+}
+
+/* Inner top highlight for 3D illusion */
+.glass-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, var(--glass-highlight), transparent 50%);
+  pointer-events: none;
+}
+
+/* â”€â”€â”€ GLASS PANEL DENSE (footer, nav) â”€â”€â”€ */
+.glass-dense {
+  background: var(--glass-bg-dense);
+}
+
+/* â”€â”€â”€ GLOWING BORDER (hover reveal) â”€â”€â”€ */
+.glow-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--gradient-accent);
+  opacity: 0;
+  transition: opacity var(--dur-normal) var(--ease-out-expo);
+}
+
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+/* â”€â”€â”€ TEXT GRADIENT â”€â”€â”€ */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-violet-light), var(--accent-cyan), var(--accent-teal));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 6s ease infinite alternate;
+}
+
+/* â”€â”€â”€ GRADIENT ACCENT LINE (top of cards) â”€â”€â”€ */
+.accent-line-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--gradient-accent);
+  opacity: 0.7;
+}
+
+/* â”€â”€â”€ GLOW ORB (background decoration) â”€â”€â”€ */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.glow-orb--violet {
+  background: var(--glow-violet);
+}
+
+.glow-orb--cyan {
+  background: var(--glow-cyan);
+}
+
+.glow-orb--pink {
+  background: var(--glow-pink);
+}
+
+/* â”€â”€â”€ TEXT ALIGNMENT â”€â”€â”€ */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+/* â”€â”€â”€ CONTAINER â”€â”€â”€ */
+.container {
+  width: min(100% - var(--sp-8), var(--max-width));
+  margin-inline: auto;
+}
+
