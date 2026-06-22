@@ -233,8 +233,8 @@ html.dark-theme {
       inset 0 1px 0 rgb(var(--glass-highlight-rgb) / 0.06);
 
     --section-bg-image: url('../images/section-bg-dark.jpg');
-    --section-bg-overlay-hero:   rgba(6, 7, 11, 0.55);
-    --section-bg-overlay-tint:   rgba(11, 13, 20, 0.72);
+    --section-bg-overlay-hero:   rgba(6, 7, 11, 0.60);
+    --section-bg-overlay-tint:   rgba(6, 7, 11, 0.60);
     --section-bg-overlay-dark:   rgba(6, 7, 11, 0.60);
-    --section-bg-overlay-page:   rgba(11, 13, 20, 0.68);
+    --section-bg-overlay-page:   rgba(6, 7, 11, 0.60);
 }

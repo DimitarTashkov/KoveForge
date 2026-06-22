@@ -242,6 +242,18 @@ main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.
   font-size: var(--fs-sm);
 }
 
+html.dark-theme body,
+html.dark-theme .site-header,
+html.dark-theme main > section,
+html.dark-theme main.home-page #featured-projects.section-dark,
+html.dark-theme .section-dark.ai-owner-section,
+html.dark-theme .footer {
+  background:
+    linear-gradient(var(--section-bg-overlay-dark), var(--section-bg-overlay-dark)),
+    var(--section-bg-image) center / cover no-repeat fixed,
+    var(--surface-900) !important;
+}
+
 @media (max-width: 768px) {
   body,
   .section-tint,
@@ -250,6 +262,15 @@ main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.
   .section-dark.ai-owner-section,
   main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.section-tint):not(.section-dark) {
     background-attachment: scroll;
+  }
+
+  html.dark-theme body,
+  html.dark-theme .site-header,
+  html.dark-theme main > section,
+  html.dark-theme main.home-page #featured-projects.section-dark,
+  html.dark-theme .section-dark.ai-owner-section,
+  html.dark-theme .footer {
+    background-attachment: scroll !important;
   }
 }
 
