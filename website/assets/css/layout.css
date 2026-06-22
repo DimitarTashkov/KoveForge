@@ -12,6 +12,14 @@ html.dark-theme .hero-media-light {
   display: none;
 }
 
+body {
+  background:
+    var(--gradient-hero-mesh),
+    linear-gradient(var(--section-bg-overlay-hero), var(--section-bg-overlay-hero)),
+    var(--section-bg-image) center / cover no-repeat fixed,
+    var(--bg-body);
+}
+
 /* â”€â”€â”€ HEADER â”€â”€â”€ */
 .site-header {
   position: fixed;
@@ -19,7 +27,10 @@ html.dark-theme .hero-media-light {
   right: 0;
   left: 0;
   z-index: 100;
-  background: rgb(var(--surface-800-rgb) /  0.7);
+  background:
+    linear-gradient(var(--section-bg-overlay-page), var(--section-bg-overlay-page)),
+    var(--section-bg-image) center / cover no-repeat,
+    rgb(var(--surface-800-rgb) / 0.7);
   border-bottom: 1px solid var(--border-subtle);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
@@ -188,7 +199,9 @@ main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.
   position: relative;
   border-top: 1px solid var(--border-subtle);
   background:
-    linear-gradient(180deg, var(--surface-900), var(--surface-900));
+    linear-gradient(var(--section-bg-overlay-dark), var(--section-bg-overlay-dark)),
+    var(--section-bg-image) center / cover no-repeat,
+    var(--surface-900);
 }
 
 /* Gradient glow line at top of footer */
@@ -230,6 +243,7 @@ main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.
 }
 
 @media (max-width: 768px) {
+  body,
   .section-tint,
   .section-dark,
   main.home-page #featured-projects.section-dark,
