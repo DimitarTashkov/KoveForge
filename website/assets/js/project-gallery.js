@@ -75,7 +75,13 @@ const projectGalleries = {
     "title": "GoceTransportApp",
     "sector": "Транспортна платформа",
     "images": [
-      "01-screenshot-2026-04-16-101330.png"
+      "01-screenshot-2026-04-16-101330.png",
+      "Screenshot 2026-06-22 230749.png",
+      "Screenshot 2026-06-22 230802.png",
+      "Screenshot 2026-06-22 230815.png",
+      "Screenshot 2026-06-22 230832.png",
+      "Screenshot 2026-06-22 230846.png",
+      "Screenshot 2026-06-22 231049.png"
     ]
   },
   "hotel-oazis": {

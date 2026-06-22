@@ -10,8 +10,9 @@
 }
 
 .brand img {
-  width: 164px;
-  height: auto;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
   filter: brightness(1.1) drop-shadow(0 0 12px rgb(var(--accent-violet-rgb) /  0.2));
 }
 
