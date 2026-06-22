@@ -78,6 +78,11 @@
   --gradient-accent: linear-gradient(135deg, var(--accent-violet), var(--accent-indigo), var(--accent-cyan));
   --gradient-accent-subtle: linear-gradient(135deg, rgb(var(--accent-violet-rgb) / 0.1), rgb(var(--accent-cyan-rgb) / 0.1));
   --gradient-surface: linear-gradient(180deg, var(--surface-700), var(--surface-800));
+  --section-bg-image: url('../images/section-bg-light.jpg');
+  --section-bg-overlay-hero:   rgba(241, 245, 249, 0.25);
+  --section-bg-overlay-tint:   rgba(248, 250, 252, 0.34);
+  --section-bg-overlay-dark:   rgba(226, 232, 240, 0.30);
+  --section-bg-overlay-page:   rgba(241, 245, 249, 0.30);
   --gradient-hero-mesh:
     radial-gradient(ellipse 80% 60% at 20% 30%, rgb(var(--accent-violet-rgb) / 0.1), transparent),
     radial-gradient(ellipse 60% 50% at 80% 20%, rgb(var(--accent-cyan-rgb) / 0.1), transparent),
@@ -226,4 +231,10 @@ html.dark-theme {
       0 32px 80px rgb(var(--shadow-base-rgb) / 0.2);
     --shadow-inset-highlight:
       inset 0 1px 0 rgb(var(--glass-highlight-rgb) / 0.06);
+
+    --section-bg-image: url('../images/section-bg-dark.jpg');
+    --section-bg-overlay-hero:   rgba(6, 7, 11, 0.55);
+    --section-bg-overlay-tint:   rgba(11, 13, 20, 0.72);
+    --section-bg-overlay-dark:   rgba(6, 7, 11, 0.60);
+    --section-bg-overlay-page:   rgba(11, 13, 20, 0.68);
 }
