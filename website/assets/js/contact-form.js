@@ -7,6 +7,7 @@ if (contactForm) {
     const data = new FormData(contactForm);
     const name = data.get("Име") || "";
     const email = data.get("Имейл") || "";
+    const businessType = data.get("Тип бизнес") || "";
     const projectType = data.get("Тип проект") || "";
     const budget = data.get("Бюджет") || "";
     const message = data.get("Съобщение") || "";
@@ -15,6 +16,7 @@ if (contactForm) {
     const body = [
       `Име: ${name}`,
       `Имейл: ${email}`,
+      `Тип бизнес: ${businessType}`,
       `Тип проект: ${projectType}`,
       `Бюджет: ${budget || "Не е уточнен"}`,
       "",

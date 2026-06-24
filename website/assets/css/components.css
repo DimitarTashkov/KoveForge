@@ -526,6 +526,36 @@
   box-shadow: 0 0 16px rgb(var(--accent-violet-rgb) /  0.2);
 }
 
+.case-study-list {
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.case-study-list p {
+  margin: 0;
+}
+
+.case-study-list strong {
+  color: var(--text-primary);
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: var(--sp-1);
+}
+
+.tech-list span {
+  padding: 6px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--surface-600);
+  color: var(--text-secondary);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+}
+
 /* â”€â”€â”€ FILTER BAR â”€â”€â”€ */
 .filter-bar {
   display: flex;
@@ -876,4 +906,3 @@
   transform: scale(1.03);
   filter: saturate(1.06) contrast(1.03);
 }
-
