@@ -74,11 +74,25 @@
    â‰¥ 1024px â€” DESKTOP
    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (min-width: 1024px) {
+  .nav {
+    justify-content: flex-end;
+    gap: var(--sp-2);
+  }
+
+  .brand {
+    margin-right: auto;
+  }
+
+  .nav-controls {
+    order: 2;
+  }
+
   .nav-toggle {
     display: none;
   }
 
   .nav-links {
+    order: 1;
     position: static;
     padding: 6px;
     display: flex;
@@ -453,6 +467,19 @@
 
   .case-story-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .site-header {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .glow-blob {
+    display: none;
   }
 }
 

@@ -18,6 +18,9 @@
   <link rel="icon" href="assets/images/brand/koveforge-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="preload" as="style" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/navigation.js" defer></script>
@@ -56,7 +59,7 @@
       
       <div class="hero-content">
         <p class="eyebrow animate-entrance">УЕБСАЙТОВЕ И СОФТУЕР ПО ПОРЪЧКА</p>
-        <h1 class="animate-entrance delay-1"><span class="text-gradient">Сайт, система за резервации или вътрешен панел —</span> направени около вашия бизнес.</h1>
+        <h1 class="animate-entrance delay-1"><span class="text-gradient">Уебсайтове и системи</span> направени около вашия бизнес.</h1>
         <p class="hero-copy animate-entrance delay-2">KoveForge изработва уебсайтове, системи за резервации, онлайн магазини, клиентски портали и вътрешни панели за клиники, салони, ресторанти, хотели и локални услуги.</p>
         <div class="hero-actions animate-entrance delay-3">
           <a class="btn btn-primary" href="mailto:studio@koveforge.tech?subject=Запитване%20за%20нов%20проект">Свържи се с нас</a>
@@ -80,7 +83,19 @@
 
       <figure class="hero-visual" aria-label="Модерен софтуерен табло за управление на бизнес процеси">
         <div class="hero-media-frame">
-          <img class="hero-media" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Модерен табло с данни и бизнес метрики на екран" width="960" height="640">
+          <img
+            class="hero-media"
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=75&fm=webp"
+            srcset="
+              https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=70&fm=webp 600w,
+              https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=75&fm=webp 900w,
+              https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=75&fm=webp 1200w"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="Модерен табло с данни и бизнес метрики на екран"
+            width="960"
+            height="640"
+            fetchpriority="high"
+            decoding="async">
           <div class="hero-табло" aria-hidden="true">
             <div class="hero-табло-header">
               <span>Работно табло на KoveForge</span>
