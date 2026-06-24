@@ -13,11 +13,7 @@ html.dark-theme .hero-media-light {
 }
 
 body {
-  background:
-    var(--gradient-hero-mesh),
-    linear-gradient(var(--section-bg-overlay-hero), var(--section-bg-overlay-hero)),
-    var(--section-bg-image) center / cover no-repeat fixed,
-    var(--bg-body);
+  background: var(--body-bg-stack);
 }
 
 /* â”€â”€â”€ HEADER â”€â”€â”€ */
@@ -27,10 +23,7 @@ body {
   right: 0;
   left: 0;
   z-index: 100;
-  background:
-    linear-gradient(var(--section-bg-overlay-page), var(--section-bg-overlay-page)),
-    var(--section-bg-image) center / cover no-repeat,
-    rgb(var(--surface-800-rgb) / 0.7);
+  background: var(--site-header-bg-stack);
   border-bottom: 1px solid var(--border-subtle);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
@@ -113,13 +106,7 @@ main {
     calc(var(--header-height) + var(--sp-12))
     max(var(--sp-4), calc((100% - var(--max-width)) / 2))
     var(--sp-16);
-  background:
-    radial-gradient(ellipse 80% 60% at 25% 35%, rgb(var(--accent-violet-rgb) /  0.12), transparent),
-    radial-gradient(ellipse 60% 50% at 75% 25%, rgb(var(--accent-cyan-rgb) /  0.1), transparent),
-    radial-gradient(ellipse 50% 40% at 55% 80%, rgb(var(--accent-pink-rgb) /  0.06), transparent),
-    linear-gradient(var(--section-bg-overlay-hero), var(--section-bg-overlay-hero)),
-    var(--section-bg-image) center / cover no-repeat,
-    var(--gradient-surface);
+  background: var(--hero-bg-stack);
 }
 
 /* â”€â”€â”€ PAGE HERO (sub-pages) â”€â”€â”€ */
@@ -134,12 +121,7 @@ main {
     calc(var(--header-height) + var(--sp-16))
     max(var(--sp-4), calc((100% - var(--max-width)) / 2))
     var(--sp-12);
-  background:
-    radial-gradient(ellipse 60% 50% at 70% 30%, rgb(var(--accent-violet-rgb) /  0.08), transparent),
-    radial-gradient(ellipse 40% 40% at 20% 60%, rgb(var(--accent-cyan-rgb) /  0.06), transparent),
-    linear-gradient(var(--section-bg-overlay-page), var(--section-bg-overlay-page)),
-    var(--section-bg-image) center / cover no-repeat,
-    var(--gradient-surface);
+  background: var(--page-hero-bg-stack);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -158,46 +140,29 @@ main {
 }
 
 .section-tint {
-  background:
-    linear-gradient(var(--section-bg-overlay-tint), var(--section-bg-overlay-tint)),
-    var(--section-bg-image) center / cover no-repeat fixed,
-    rgb(var(--surface-700-rgb) / 0.5);
+  background: var(--section-tint-bg-stack);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .section-dark {
-  background:
-    linear-gradient(var(--section-bg-overlay-dark), var(--section-bg-overlay-dark)),
-    var(--section-bg-image) center / cover no-repeat fixed,
-    var(--surface-900);
+  background: var(--section-dark-bg-stack);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
 
 /* Preserve shared backgrounds against page-specific rules loaded later. */
 .page-hero.page-hero {
-  background:
-    radial-gradient(ellipse 60% 50% at 70% 30%, rgb(var(--accent-violet-rgb) /  0.08), transparent),
-    radial-gradient(ellipse 40% 40% at 20% 60%, rgb(var(--accent-cyan-rgb) /  0.06), transparent),
-    linear-gradient(var(--section-bg-overlay-page), var(--section-bg-overlay-page)),
-    var(--section-bg-image) center / cover no-repeat,
-    var(--gradient-surface);
+  background: var(--page-hero-bg-stack);
 }
 
 main.home-page #featured-projects.section-dark,
 .section-dark.ai-owner-section {
-  background:
-    linear-gradient(var(--section-bg-overlay-dark), var(--section-bg-overlay-dark)),
-    var(--section-bg-image) center / cover no-repeat fixed,
-    var(--surface-900);
+  background: var(--section-dark-bg-stack);
 }
 
 main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.section-tint):not(.section-dark) {
-  background:
-    linear-gradient(var(--section-bg-overlay-tint), var(--section-bg-overlay-tint)),
-    var(--section-bg-image) center / cover no-repeat fixed,
-    var(--bg-body);
+  background: var(--section-default-bg-stack);
 }
 
 .section-heading {
@@ -231,10 +196,7 @@ main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.
 .footer {
   position: relative;
   border-top: 1px solid var(--border-subtle);
-  background:
-    linear-gradient(var(--section-bg-overlay-dark), var(--section-bg-overlay-dark)),
-    var(--section-bg-image) center / cover no-repeat,
-    var(--surface-900);
+  background: var(--footer-bg-stack);
 }
 
 /* Gradient glow line at top of footer */
@@ -275,35 +237,16 @@ main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.
   font-size: var(--fs-sm);
 }
 
-html.dark-theme body,
-html.dark-theme .site-header,
-html.dark-theme main > section,
-html.dark-theme main.home-page #featured-projects.section-dark,
-html.dark-theme .section-dark.ai-owner-section,
-html.dark-theme .footer {
-  background:
-    linear-gradient(var(--section-bg-overlay-dark), var(--section-bg-overlay-dark)),
-    var(--section-bg-image) center / cover no-repeat fixed,
-    var(--surface-900) !important;
-}
-
 @media (max-width: 768px) {
   body,
+  .site-header,
   .section-tint,
   .section-dark,
   main.home-page #featured-projects.section-dark,
   .section-dark.ai-owner-section,
-  main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.section-tint):not(.section-dark) {
+  main > section,
+  .footer {
     background-attachment: scroll;
-  }
-
-  html.dark-theme body,
-  html.dark-theme .site-header,
-  html.dark-theme main > section,
-  html.dark-theme main.home-page #featured-projects.section-dark,
-  html.dark-theme .section-dark.ai-owner-section,
-  html.dark-theme .footer {
-    background-attachment: scroll !important;
   }
 }
 

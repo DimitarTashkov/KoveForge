@@ -79,10 +79,57 @@
   --gradient-accent-subtle: linear-gradient(135deg, rgb(var(--accent-violet-rgb) / 0.1), rgb(var(--accent-cyan-rgb) / 0.1));
   --gradient-surface: linear-gradient(180deg, var(--surface-700), var(--surface-800));
   --section-bg-image: url('../images/section-bg-light.jpg');
-  --section-bg-overlay-hero:   rgba(241, 245, 249, 0.25);
-  --section-bg-overlay-tint:   rgba(248, 250, 252, 0.34);
-  --section-bg-overlay-dark:   rgba(226, 232, 240, 0.30);
-  --section-bg-overlay-page:   rgba(241, 245, 249, 0.30);
+  --section-overlay-hero-rgb: 241 245 249;
+  --section-overlay-tint-rgb: 248 250 252;
+  --section-overlay-dark-rgb: 226 232 240;
+  --section-overlay-page-rgb: 241 245 249;
+  --section-overlay-hero-alpha: 0.25;
+  --section-overlay-tint-alpha: 0.34;
+  --section-overlay-dark-alpha: 0.30;
+  --section-overlay-page-alpha: 0.30;
+  --section-bg-overlay-hero: rgb(var(--section-overlay-hero-rgb) / var(--section-overlay-hero-alpha));
+  --section-bg-overlay-tint: rgb(var(--section-overlay-tint-rgb) / var(--section-overlay-tint-alpha));
+  --section-bg-overlay-dark: rgb(var(--section-overlay-dark-rgb) / var(--section-overlay-dark-alpha));
+  --section-bg-overlay-page: rgb(var(--section-overlay-page-rgb) / var(--section-overlay-page-alpha));
+  --global-glass-bg:
+    linear-gradient(var(--section-bg-overlay-dark), var(--section-bg-overlay-dark)),
+    var(--section-bg-image) center / cover no-repeat fixed,
+    var(--surface-900);
+  --body-bg-stack:
+    var(--gradient-hero-mesh),
+    linear-gradient(var(--section-bg-overlay-hero), var(--section-bg-overlay-hero)),
+    var(--section-bg-image) center / cover no-repeat fixed,
+    var(--bg-body);
+  --site-header-bg-stack:
+    linear-gradient(var(--section-bg-overlay-page), var(--section-bg-overlay-page)),
+    var(--section-bg-image) center / cover no-repeat,
+    rgb(var(--surface-800-rgb) / 0.7);
+  --hero-bg-stack:
+    radial-gradient(ellipse 80% 60% at 25% 35%, rgb(var(--accent-violet-rgb) / 0.12), transparent),
+    radial-gradient(ellipse 60% 50% at 75% 25%, rgb(var(--accent-cyan-rgb) / 0.1), transparent),
+    radial-gradient(ellipse 50% 40% at 55% 80%, rgb(var(--accent-pink-rgb) / 0.06), transparent),
+    linear-gradient(var(--section-bg-overlay-hero), var(--section-bg-overlay-hero)),
+    var(--section-bg-image) center / cover no-repeat,
+    var(--gradient-surface);
+  --page-hero-bg-stack:
+    radial-gradient(ellipse 60% 50% at 70% 30%, rgb(var(--accent-violet-rgb) / 0.08), transparent),
+    radial-gradient(ellipse 40% 40% at 20% 60%, rgb(var(--accent-cyan-rgb) / 0.06), transparent),
+    linear-gradient(var(--section-bg-overlay-page), var(--section-bg-overlay-page)),
+    var(--section-bg-image) center / cover no-repeat,
+    var(--gradient-surface);
+  --section-tint-bg-stack:
+    linear-gradient(var(--section-bg-overlay-tint), var(--section-bg-overlay-tint)),
+    var(--section-bg-image) center / cover no-repeat fixed,
+    rgb(var(--surface-700-rgb) / 0.5);
+  --section-dark-bg-stack: var(--global-glass-bg);
+  --section-default-bg-stack:
+    linear-gradient(var(--section-bg-overlay-tint), var(--section-bg-overlay-tint)),
+    var(--section-bg-image) center / cover no-repeat fixed,
+    var(--bg-body);
+  --footer-bg-stack:
+    linear-gradient(var(--section-bg-overlay-dark), var(--section-bg-overlay-dark)),
+    var(--section-bg-image) center / cover no-repeat,
+    var(--surface-900);
   --gradient-hero-mesh:
     radial-gradient(ellipse 80% 60% at 20% 30%, rgb(var(--accent-violet-rgb) / 0.1), transparent),
     radial-gradient(ellipse 60% 50% at 80% 20%, rgb(var(--accent-cyan-rgb) / 0.1), transparent),
@@ -233,8 +280,22 @@ html.dark-theme {
       inset 0 1px 0 rgb(var(--glass-highlight-rgb) / 0.06);
 
     --section-bg-image: url('../images/section-bg-dark.jpg');
-    --section-bg-overlay-hero:   rgba(6, 7, 11, 0.60);
-    --section-bg-overlay-tint:   rgba(6, 7, 11, 0.60);
-    --section-bg-overlay-dark:   rgba(6, 7, 11, 0.60);
-    --section-bg-overlay-page:   rgba(6, 7, 11, 0.60);
+    --section-overlay-rgb: 6 7 11;
+    --section-overlay-alpha: 0.60;
+    --section-bg-overlay-hero: rgb(var(--section-overlay-rgb) / var(--section-overlay-alpha));
+    --section-bg-overlay-tint: rgb(var(--section-overlay-rgb) / var(--section-overlay-alpha));
+    --section-bg-overlay-dark: rgb(var(--section-overlay-rgb) / var(--section-overlay-alpha));
+    --section-bg-overlay-page: rgb(var(--section-overlay-rgb) / var(--section-overlay-alpha));
+    --global-glass-bg:
+      linear-gradient(var(--section-bg-overlay-dark), var(--section-bg-overlay-dark)),
+      var(--section-bg-image) center / cover no-repeat fixed,
+      var(--surface-900);
+    --body-bg-stack: var(--global-glass-bg);
+    --site-header-bg-stack: var(--global-glass-bg);
+    --hero-bg-stack: var(--global-glass-bg);
+    --page-hero-bg-stack: var(--global-glass-bg);
+    --section-tint-bg-stack: var(--global-glass-bg);
+    --section-dark-bg-stack: var(--global-glass-bg);
+    --section-default-bg-stack: var(--global-glass-bg);
+    --footer-bg-stack: var(--global-glass-bg);
 }

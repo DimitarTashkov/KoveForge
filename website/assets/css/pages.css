@@ -795,16 +795,6 @@
   margin-bottom: var(--sp-4);
 }
 
-/* Premium Panel / Service Feature */
-.premium-panel {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  background: var(--glass-bg);
-  box-shadow: var(--shadow-card);
-}
-
 .service-feature {
   padding: var(--sp-8);
   display: grid;
