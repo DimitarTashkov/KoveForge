@@ -1,4 +1,5 @@
 const contactForm = document.querySelector("[data-contact-form]");
+const contactSuccess = document.querySelector("#contact-success");
 
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
@@ -23,6 +24,11 @@ if (contactForm) {
       "Съобщение:",
       message,
     ].join("\n");
+
+    if (contactSuccess) {
+      contactForm.hidden = true;
+      contactSuccess.style.display = "";
+    }
 
     window.location.href = `mailto:studio@koveforge.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
