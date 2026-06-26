@@ -52,7 +52,7 @@
         <p class="eyebrow">ЗАПИТВАНЕ</p>
         <h2>Разкажи ни накратко какво трябва да построим.</h2>
         <p>Опишете накратко идеята си. Ще получите отговор с първоначални насоки, възможен подход и ориентировъчна сложност.</p>
-        <form id="contact-form" class="contact-form" action="mailto:studio@koveforge.tech" method="post" enctype="text/plain" data-contact-form>
+        <form id="contact-form" class="contact-form" action="/api/contact" method="post" data-contact-form>
           <div class="form-grid">
             <label class="form-field">
               <span>Име</span>
@@ -113,7 +113,7 @@
 
           <div class="form-actions">
             <button class="btn btn-primary" type="submit">Изпрати запитване</button>
-            <p>Формата използва имейл fallback, докато бъде свързана с backend услуга.</p>
+            <p>Ще се свържем с вас до 24 часа.</p>
           </div>
         </form>
         <div class="contact-success" style="display:none;" id="contact-success">

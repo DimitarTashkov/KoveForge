@@ -1,35 +1,40 @@
 const contactForm = document.querySelector("[data-contact-form]");
-const contactSuccess = document.querySelector("#contact-success");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const data = new FormData(contactForm);
-    const name = data.get("Име") || "";
-    const email = data.get("Имейл") || "";
-    const businessType = data.get("Тип бизнес") || "";
-    const projectType = data.get("Тип проект") || "";
-    const budget = data.get("Бюджет") || "";
-    const message = data.get("Съобщение") || "";
-
-    const subject = `Запитване от сайта - ${projectType || "нов проект"}`;
-    const body = [
-      `Име: ${name}`,
-      `Имейл: ${email}`,
-      `Тип бизнес: ${businessType}`,
-      `Тип проект: ${projectType}`,
-      `Бюджет: ${budget || "Не е уточнен"}`,
-      "",
-      "Съобщение:",
-      message,
-    ].join("\n");
-
-    if (contactSuccess) {
-      contactForm.hidden = true;
-      contactSuccess.style.display = "";
+    if (!submitButton) {
+      return;
     }
 
-    window.location.href = `mailto:studio@koveforge.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const originalButtonText = submitButton.textContent;
+    submitButton.textContent = "Изпращане...";
+    submitButton.disabled = true;
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: new FormData(contactForm),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Contact form request failed with status ${response.status}`);
+      }
+
+      alert("Успешно изпратихте запитването! Ще се свържем с вас скоро.");
+      contactForm.reset();
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+      alert("Не успяхме да изпратим запитването. Моля, опитайте отново или ни пишете директно по имейл.");
+    } finally {
+      submitButton.textContent = originalButtonText;
+      submitButton.disabled = false;
+    }
   });
 }
