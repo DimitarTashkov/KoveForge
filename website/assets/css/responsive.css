@@ -302,7 +302,7 @@
   }
 
   .home-page #why .benefit-grid,
-  .home-page #services .service-grid,
+  .home-page :is(#services, #for-whom) .service-grid,
   .home-page #featured-projects .project-grid,
   .home-page #featured-projects .project-card:first-child {
     grid-template-columns: 1fr;
@@ -549,7 +549,7 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .home-page .section-heading,
   .home-page .projects-preview-header,
-  .home-page #services .section-heading,
+  .home-page :is(#services, #for-whom) .section-heading,
   .home-page #why .section-heading {
     grid-template-columns: 1fr;
     gap: var(--sp-5);

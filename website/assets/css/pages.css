@@ -256,35 +256,36 @@
 }
 
 /* â”€â”€â”€ Services Section â”€â”€â”€ */
-.home-page #services {
+.home-page :is(#services, #for-whom) {
   width: 100%;
   max-width: none;
   padding: 100px max(var(--sp-4), calc((100% - var(--max-width)) / 2));
 }
 
-.home-page #services .section-heading {
+.home-page :is(#services, #for-whom) .section-heading {
   max-width: var(--max-width);
   margin: 0 auto var(--sp-12);
 }
 
-.home-page #services .service-grid {
+.home-page :is(#services, #for-whom) .service-grid {
   width: min(100%, var(--max-width));
   margin: 0 auto;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--sp-6);
 }
 
-.home-page #services .service-card {
+.home-page :is(#services, #for-whom) .service-card {
   min-height: 280px;
 }
 
 /* Accent color differentiation per card */
-.home-page #services .service-card:nth-child(1)::before { background: linear-gradient(90deg, var(--accent-violet), var(--accent-indigo)); }
-.home-page #services .service-card:nth-child(2)::before { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-teal)); }
-.home-page #services .service-card:nth-child(3)::before { background: linear-gradient(90deg, var(--accent-pink), var(--accent-violet)); }
-.home-page #services .service-card:nth-child(4)::before { background: linear-gradient(90deg, var(--accent-indigo), var(--accent-cyan)); }
-.home-page #services .service-card:nth-child(5)::before { background: linear-gradient(90deg, var(--accent-amber), var(--accent-pink)); }
-.home-page #services .service-card:nth-child(6)::before { background: linear-gradient(90deg, var(--accent-lime), var(--accent-teal)); }
+.home-page :is(#services, #for-whom) .service-card:nth-child(1)::before { background: linear-gradient(90deg, var(--accent-violet), var(--accent-indigo)); }
+.home-page :is(#services, #for-whom) .service-card:nth-child(2)::before { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-teal)); }
+.home-page :is(#services, #for-whom) .service-card:nth-child(3)::before { background: linear-gradient(90deg, var(--accent-pink), var(--accent-violet)); }
+.home-page :is(#services, #for-whom) .service-card:nth-child(4)::before { background: linear-gradient(90deg, var(--accent-indigo), var(--accent-cyan)); }
+.home-page :is(#services, #for-whom) .service-card:nth-child(5)::before { background: linear-gradient(90deg, var(--accent-amber), var(--accent-pink)); }
+.home-page :is(#services, #for-whom) .service-card:nth-child(6)::before { background: linear-gradient(90deg, var(--accent-lime), var(--accent-teal)); }
+.home-page :is(#services, #for-whom) .service-card:nth-child(7)::before { background: linear-gradient(90deg, var(--accent-violet), var(--accent-pink)); }
 
 /* â”€â”€â”€ Featured Projects Section â”€â”€â”€ */
 .home-page #featured-projects {
