@@ -1,4 +1,4 @@
-﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    KOVEFORGE â€” UTILITY CLASSES
    Reusable helpers for layout, visibility, and effects
    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
@@ -61,14 +61,14 @@
   opacity: 1;
 }
 
-/* â”€â”€â”€ TEXT GRADIENT â”€â”€â”€ */
+/* ─── TEXT GRADIENT ─── */
 .text-gradient {
   background: linear-gradient(135deg, var(--accent-violet-light), var(--accent-cyan), var(--accent-teal));
-  background-size: 200% 100%;
+  background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: gradient-shift 6s ease infinite alternate;
+  animation: gradient-shift 4s ease infinite alternate;
 }
 
 /* â”€â”€â”€ GRADIENT ACCENT LINE (top of cards) â”€â”€â”€ */
@@ -105,14 +105,123 @@
   background: var(--glow-pink);
 }
 
-/* â”€â”€â”€ TEXT ALIGNMENT â”€â”€â”€ */
+/* ─── TEXT ALIGNMENT ─── */
 .text-center { text-align: center; }
 .text-left   { text-align: left; }
 .text-right  { text-align: right; }
 
-/* â”€â”€â”€ CONTAINER â”€â”€â”€ */
+/* ─── CONTAINER ─── */
 .container {
   width: min(100% - var(--sp-8), var(--max-width));
   margin-inline: auto;
 }
 
+/* ─── GLASS SHINE (hover diagonal sweep) ─── */
+.glass-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-shine::after {
+  content: "";
+  position: absolute;
+  inset: -100% -50%;
+  z-index: 1;
+  background: linear-gradient(115deg, transparent 40%, rgb(255 255 255 / 0.12) 48%, transparent 56%);
+  opacity: 0;
+  transform: translateX(-60%) rotate(12deg);
+  transition:
+    opacity var(--dur-fast) ease,
+    transform var(--dur-slow) var(--ease-out-expo);
+  pointer-events: none;
+}
+
+.glass-shine:hover::after {
+  opacity: 1;
+  transform: translateX(60%) rotate(12deg);
+}
+
+/* ─── GRADIENT BORDER (animated conic) ─── */
+.gradient-border {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    var(--accent-violet),
+    var(--accent-cyan),
+    var(--accent-teal),
+    var(--accent-violet)
+  );
+  opacity: 0;
+  animation: gradient-shift 3s linear infinite;
+  transition: opacity var(--dur-normal) var(--ease-out-expo);
+  pointer-events: none;
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* ─── FADE EDGES (mask for scrollable panels) ─── */
+.fade-edges {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+/* ─── ANIMATE ON VISIBLE (@starting-style fallback) ─── */
+@supports (transition-behavior: allow-discrete) {
+  .animate-on-visible {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity var(--dur-slower) var(--ease-out-expo),
+      transform var(--dur-slower) var(--ease-out-expo);
+    transition-behavior: allow-discrete;
+  }
+
+  .animate-on-visible.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @starting-style {
+    .animate-on-visible.is-visible {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-shine::after,
+  .gradient-border::before {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .animate-on-visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

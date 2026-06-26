@@ -48,6 +48,15 @@
   backdrop-filter: var(--glass-blur-light);
   -webkit-backdrop-filter: var(--glass-blur-light);
   box-shadow: var(--shadow-sm);
+  animation: float-y 4s var(--ease-smooth) infinite;
+}
+
+.hero-metrics div:nth-child(2) {
+  animation-delay: -1.3s;
+}
+
+.hero-metrics div:nth-child(3) {
+  animation-delay: -2.6s;
 }
 
 .hero-metrics dt {
@@ -74,6 +83,13 @@
   border-radius: var(--radius-lg);
   background: var(--glass-bg);
   box-shadow: var(--shadow-elevated);
+  transition: box-shadow var(--dur-normal) ease;
+}
+
+.hero-media-frame:hover {
+  box-shadow:
+    var(--shadow-elevated),
+    0 0 40px rgb(var(--accent-violet-rgb) / 0.08);
 }
 
 /* Glass inner ring */
@@ -106,6 +122,7 @@
   box-shadow: var(--shadow-card);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
+  animation: float-y 5s var(--ease-smooth) infinite;
 }
 
 .hero-dashboard-header {
@@ -151,11 +168,11 @@
 /* â”€â”€â”€ Gradient Text â”€â”€â”€ */
 .text-gradient {
   background: linear-gradient(135deg, var(--accent-violet-light), var(--accent-cyan), var(--accent-teal));
-  background-size: 200% 100%;
+  background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: gradient-shift 6s ease infinite alternate;
+  animation: gradient-shift 4s ease infinite alternate;
 }
 
 /* â”€â”€â”€ Glow Blobs (hero background) â”€â”€â”€ */
@@ -419,7 +436,11 @@
   backdrop-filter: var(--glass-blur-light);
   -webkit-backdrop-filter: var(--glass-blur-light);
   box-shadow: var(--shadow-sm);
+  animation: float-y 4.5s var(--ease-smooth) infinite;
 }
+
+.projects-stat:nth-child(2) { animation-delay: -1.5s; }
+.projects-stat:nth-child(3) { animation-delay: -3s; }
 
 .projects-stat strong {
   display: block;
@@ -1303,7 +1324,11 @@
   backdrop-filter: var(--glass-blur-light);
   -webkit-backdrop-filter: var(--glass-blur-light);
   box-shadow: var(--shadow-card);
+  animation: float-y 4.5s var(--ease-smooth) infinite;
 }
+
+.brand-metric:nth-child(2) { animation-delay: -1.5s; }
+.brand-metric:nth-child(3) { animation-delay: -3s; }
 
 .brand-metric strong {
   display: block;
@@ -2130,7 +2155,10 @@
 .form-field textarea:focus {
   outline: none;
   border-color: var(--accent-violet);
-  box-shadow: var(--shadow-input-focus);
+  box-shadow:
+    0 0 0 2px rgb(var(--accent-violet-rgb) / 0.4),
+    0 0 20px rgb(var(--accent-violet-rgb) / 0.1),
+    0 0 40px rgb(var(--accent-violet-rgb) / 0.04);
 }
 
 .form-actions {
@@ -2486,10 +2514,12 @@
   padding: 0 var(--sp-5);
   border-top: 1px solid transparent;
   overflow: hidden;
+  opacity: 0.4;
   transition:
     grid-template-rows var(--dur-normal) var(--ease-out-expo),
     padding var(--dur-normal) var(--ease-out-expo),
-    border-color var(--dur-fast) ease;
+    border-color var(--dur-fast) ease,
+    opacity var(--dur-normal) var(--ease-out-expo);
 }
 
 .faq-answer p {
@@ -2511,6 +2541,7 @@
   padding-top: var(--sp-4);
   padding-bottom: var(--sp-4);
   border-top-color: var(--border-subtle);
+  opacity: 1;
 }
 
 .faq-item:hover,
@@ -2522,7 +2553,11 @@
 @media (prefers-reduced-motion: reduce) {
   .glow-blob,
   .text-gradient,
-  .hero-media-frame::before {
+  .hero-media-frame::before,
+  .hero-dashboard,
+  .hero-metrics div,
+  .brand-metric,
+  .projects-stat {
     animation: none !important;
   }
 }

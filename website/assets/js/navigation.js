@@ -33,6 +33,7 @@ if (siteHeader) {
 
     if (currentScrollY <= scrollThreshold || isNavigationOpen()) {
       siteHeader.classList.remove("is-hidden");
+      siteHeader.classList.toggle("is-scrolled", currentScrollY > 10);
       lastScrollY = currentScrollY;
       isTicking = false;
       return;
@@ -44,6 +45,7 @@ if (siteHeader) {
     }
 
     siteHeader.classList.toggle("is-hidden", scrollDelta > 0);
+    siteHeader.classList.add("is-scrolled");
     lastScrollY = currentScrollY;
     isTicking = false;
   };

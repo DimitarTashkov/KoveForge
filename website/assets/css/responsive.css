@@ -610,6 +610,19 @@
   .glow-blob {
     display: none;
   }
+
+  /* Disable ambient float animations on mobile for performance */
+  .hero-dashboard,
+  .hero-metrics div,
+  .brand-metric,
+  .projects-stat {
+    animation: none !important;
+  }
+
+  /* Simplify footer glow shimmer */
+  .footer::before {
+    animation: none;
+  }
 }
 
 @media (max-width: 767px) {

@@ -125,18 +125,22 @@
       right: 14px;
       height: 2px;
       border-radius: var(--radius-full);
-      background: var(--gradient-accent);
+      background: linear-gradient(90deg, var(--accent-violet), var(--accent-cyan));
+      background-size: 200% 100%;
+      background-position: 0% 50%;
       opacity: 0;
       transform: scaleX(0);
       transition:
         opacity var(--dur-normal) var(--ease-out-expo),
-        transform var(--dur-normal) var(--ease-out-expo);
+        transform var(--dur-normal) var(--ease-out-expo),
+        background-position var(--dur-slow) ease;
     }
 
     &:hover::after,
     &[aria-current="page"]::after {
       opacity: 1;
       transform: scaleX(1);
+      background-position: 100% 50%;
     }
   }
 
@@ -208,7 +212,7 @@
 }
 
 .btn:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.97);
   transition-duration: var(--dur-fast);
 }
 
@@ -267,7 +271,8 @@
   transition:
     transform var(--dur-normal) var(--ease-out-expo),
     border-color var(--dur-normal) var(--ease-out-expo),
-    box-shadow var(--dur-normal) var(--ease-out-expo);
+    box-shadow var(--dur-normal) var(--ease-out-expo),
+    background-color var(--dur-theme) var(--ease-smooth);
 }
 
 /* Top highlight line */
@@ -302,7 +307,7 @@
 /* Card hover */
 :is(.info-card, .service-card, .brand-card, .process-step):hover,
 .project-card:is(:hover, :focus-within) {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.02);
   border-color: rgb(var(--accent-violet-rgb) /  0.25);
   box-shadow: var(--shadow-card-hover);
 }
@@ -337,6 +342,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  contain: content;
 }
 
 /* â”€â”€â”€ ICON BOX â”€â”€â”€ */
@@ -368,9 +374,10 @@
 .info-card:hover .icon-box,
 .service-card:hover .icon-box,
 .process-step:hover .icon-box {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.08);
   background: rgb(var(--accent-violet-rgb) /  0.18);
   box-shadow: 0 0 24px rgb(var(--accent-violet-rgb) /  0.2);
+  transition-timing-function: var(--ease-bounce);
 }
 
 /* â”€â”€â”€ TAGS / PILLS â”€â”€â”€ */
@@ -417,6 +424,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  contain: content;
 }
 
 .project-card[hidden] {
@@ -915,6 +923,7 @@
   border-radius: 50%;
   background: var(--accent-violet-light);
   box-shadow: 0 0 8px var(--glow-violet);
+  animation: glow-pulse 2.5s var(--ease-smooth) infinite;
 }
 
 .project-status-badge--live::before {
