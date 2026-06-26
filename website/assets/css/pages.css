@@ -210,15 +210,10 @@
 .home-page .section-heading,
 .home-page .projects-preview-header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr);
-  gap: var(--sp-6) var(--sp-10);
-  align-items: end;
-  max-width: var(--max-width);
-}
-
-.home-page .section-heading .eyebrow,
-.home-page .projects-preview-header .eyebrow {
-  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-4);
+  align-items: start;
+  max-width: 820px;
 }
 
 .home-page .section-heading h2,
@@ -230,9 +225,9 @@
 
 .home-page .section-heading p:not(.eyebrow),
 .home-page .projects-preview-header p:not(.eyebrow) {
-  max-width: 520px;
+  max-width: 720px;
   margin-top: 0;
-  justify-self: end;
+  justify-self: start;
   font-size: var(--fs-base);
 }
 
@@ -293,10 +288,6 @@
   overflow: hidden;
   padding-top: 100px;
   padding-bottom: 100px;
-  background:
-    radial-gradient(ellipse 50% 40% at 20% 20%, rgb(var(--accent-violet-rgb) /  0.08), transparent),
-    radial-gradient(ellipse 40% 30% at 80% 30%, rgb(var(--accent-cyan-rgb) /  0.06), transparent),
-    var(--surface-900);
 }
 
 .projects-preview-header,
@@ -392,10 +383,6 @@
     calc(var(--header-height) + var(--sp-16))
     max(var(--sp-4), calc((100% - var(--max-width)) / 2))
     var(--sp-12);
-  background:
-    radial-gradient(ellipse 60% 50% at 70% 30%, rgb(var(--accent-violet-rgb) /  0.08), transparent),
-    radial-gradient(ellipse 40% 40% at 20% 60%, rgb(var(--accent-cyan-rgb) /  0.06), transparent),
-    var(--gradient-surface);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -1725,7 +1712,6 @@
 
 .ai-owner-section {
   color: var(--text-primary);
-  background: var(--surface-900);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -1735,6 +1721,18 @@
   margin: 0 auto;
   display: grid;
   gap: var(--sp-10);
+}
+
+.ai-owner-section .projects-preview-header {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-4);
+  max-width: 820px;
+  margin-bottom: 0;
+}
+
+.ai-owner-section .projects-preview-header p:not(.eyebrow) {
+  max-width: 720px;
+  justify-self: start;
 }
 
 .ai-scenario-grid {

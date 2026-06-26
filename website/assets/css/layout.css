@@ -89,6 +89,7 @@ body {
 /* â”€â”€â”€ MAIN â”€â”€â”€ */
 main {
   position: relative;
+  background: var(--section-default-bg-stack);
 }
 
 /* â”€â”€â”€ HERO â”€â”€â”€ */
@@ -106,7 +107,6 @@ main {
     calc(var(--header-height) + var(--sp-12))
     max(var(--sp-4), calc((100% - var(--max-width)) / 2))
     var(--sp-16);
-  background: var(--hero-bg-stack);
 }
 
 /* â”€â”€â”€ PAGE HERO (sub-pages) â”€â”€â”€ */
@@ -121,7 +121,6 @@ main {
     calc(var(--header-height) + var(--sp-16))
     max(var(--sp-4), calc((100% - var(--max-width)) / 2))
     var(--sp-12);
-  background: var(--page-hero-bg-stack);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -140,29 +139,18 @@ main {
 }
 
 .section-tint {
-  background: var(--section-tint-bg-stack);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .section-dark {
-  background: var(--section-dark-bg-stack);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
 
-/* Preserve shared backgrounds against page-specific rules loaded later. */
-.page-hero.page-hero {
-  background: var(--page-hero-bg-stack);
-}
-
-main.home-page #featured-projects.section-dark,
-.section-dark.ai-owner-section {
-  background: var(--section-dark-bg-stack);
-}
-
-main > section:not(.hero):not(.page-hero):not(.brand-hero):not(.case-hero):not(.section-tint):not(.section-dark) {
-  background: var(--section-default-bg-stack);
+/* Every page uses one continuous background; sections stay transparent above it. */
+main > section {
+  background: transparent !important;
 }
 
 .section-heading {
