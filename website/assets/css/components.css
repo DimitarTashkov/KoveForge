@@ -542,9 +542,9 @@
 
 .filter-btn {
   min-height: 38px;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-full);
   background: var(--glass-bg);
   color: var(--text-secondary);
   font-weight: 700;
@@ -553,7 +553,13 @@
   transition:
     background var(--dur-fast) ease,
     border-color var(--dur-fast) ease,
-    color var(--dur-fast) ease;
+    color var(--dur-fast) ease,
+    box-shadow var(--dur-fast) ease;
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid var(--accent-violet);
+  outline-offset: 2px;
 }
 
 .filter-btn:hover {
@@ -882,4 +888,88 @@
 .image-card:hover img {
   transform: scale(1.03);
   filter: saturate(1.06) contrast(1.03);
+}
+
+/* ─── PROJECT STATUS BADGE ─── */
+.project-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  background: rgb(var(--accent-violet-rgb) / 0.08);
+  color: var(--accent-violet-light);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.project-status-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-violet-light);
+  box-shadow: 0 0 8px var(--glow-violet);
+}
+
+.project-status-badge--live::before {
+  background: var(--accent-teal);
+  box-shadow: 0 0 8px rgb(13 148 136 / 0.4);
+}
+
+.project-status-badge--concept {
+  background: rgb(var(--accent-cyan-rgb) / 0.08);
+  color: var(--accent-cyan-light);
+  border-color: rgb(var(--accent-cyan-rgb) / 0.15);
+}
+
+.project-status-badge--concept::before {
+  background: var(--accent-cyan-light);
+  box-shadow: 0 0 8px var(--glow-cyan);
+}
+
+/* ─── FEATURE CHIP ─── */
+.feature-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  background: var(--surface-600);
+  color: var(--text-secondary);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.feature-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+/* ─── PROJECT CARD FILTER ANIMATION ─── */
+.project-card.is-hiding {
+  opacity: 0;
+  transform: scale(0.95) translateY(8px);
+  pointer-events: none;
+}
+
+.project-card.is-showing {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.project-card {
+  transition:
+    transform var(--dur-normal) var(--ease-out-expo),
+    border-color var(--dur-normal) var(--ease-out-expo),
+    box-shadow var(--dur-normal) var(--ease-out-expo),
+    opacity var(--dur-normal) var(--ease-out-expo);
 }

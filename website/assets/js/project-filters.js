@@ -7,7 +7,9 @@ const updateProjectCount = () => {
     return;
   }
 
-  const visibleProjects = Array.from(projectCards).filter((card) => !card.hidden).length;
+  const visibleProjects = Array.from(projectCards).filter(
+    (card) => !card.hidden && !card.classList.contains("is-hiding")
+  ).length;
   const label = visibleProjects === 1 ? "проект" : "проекта";
 
   projectCount.textContent = `Показани са ${visibleProjects} ${label}`;
@@ -31,7 +33,20 @@ filterButtons.forEach((button) => {
       const categories = (card.dataset.categories || "").split(" ");
       const shouldShow = filter === "all" || categories.includes(filter);
 
-      card.hidden = !shouldShow;
+      if (shouldShow) {
+        card.hidden = false;
+        card.classList.remove("is-hiding");
+        card.classList.add("is-showing");
+      } else {
+        card.classList.add("is-hiding");
+        card.classList.remove("is-showing");
+        // Wait for transition to finish, then hide
+        setTimeout(() => {
+          if (card.classList.contains("is-hiding")) {
+            card.hidden = true;
+          }
+        }, 280);
+      }
     });
 
     updateProjectCount();
