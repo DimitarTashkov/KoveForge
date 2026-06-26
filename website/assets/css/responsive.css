@@ -314,6 +314,10 @@
     grid-template-columns: 1fr;
   }
 
+  .process-map {
+    min-height: 340px;
+  }
+
   .filter-bar {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -333,6 +337,21 @@
 
   .projects-stats {
     grid-template-columns: 1fr;
+  }
+
+  .process-map-canvas {
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+    padding: var(--sp-5) 0;
+  }
+
+  .process-map-canvas::before,
+  .process-map-brief::after {
+    display: none;
+  }
+
+  .process-map-stage:nth-child(n) {
+    margin-left: 0;
   }
 
   .capabilities-grid {
@@ -590,5 +609,40 @@
 @media (max-width: 768px) {
   .glow-blob {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-visual-wide {
+    min-height: auto;
+  }
+
+  .visual-faq-path {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .visual-faq-path > span {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .clinic-schedule-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hotel-availability-grid,
+  .home-system-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .home-system-board {
+    aspect-ratio: auto;
+    min-height: 400px;
+  }
+
+  .home-system-flow {
+    gap: 7px;
+    font-size: var(--fs-xs);
   }
 }
