@@ -1784,6 +1784,112 @@
   color: var(--accent-violet-light);
 }
 
+/* ─── FAQ ─── */
+.faq-section {
+  padding-top: calc(var(--header-height) + var(--sp-12));
+  padding-bottom: var(--sp-20);
+}
+
+.faq-list {
+  width: min(100%, 860px);
+  margin: 0 auto;
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.faq-item {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  background: var(--glass-bg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: border-color var(--dur-fast) ease, box-shadow var(--dur-fast) ease;
+}
+
+.faq-item summary {
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: var(--fs-base);
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-toggle {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-default);
+  border-radius: 50%;
+  color: var(--accent-violet);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  line-height: 1;
+  transition: background var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+
+.faq-toggle::before {
+  content: "+";
+}
+
+.faq-item[open] .faq-toggle {
+  background: var(--accent-violet);
+  color: var(--surface-600);
+}
+
+.faq-item[open] .faq-toggle::before {
+  content: "−";
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  padding: 0 var(--sp-5);
+  border-top: 1px solid transparent;
+  overflow: hidden;
+  transition:
+    grid-template-rows var(--dur-normal) var(--ease-out-expo),
+    padding var(--dur-normal) var(--ease-out-expo),
+    border-color var(--dur-fast) ease;
+}
+
+.faq-answer p {
+  max-width: 720px;
+  min-height: 0;
+  overflow: hidden;
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+}
+
+/* Override the native hidden state so the answer can animate closed as well. */
+.faq-item:not([open]) > .faq-answer {
+  display: grid;
+}
+
+.faq-item[open] .faq-answer {
+  grid-template-rows: 1fr;
+  padding-top: var(--sp-4);
+  padding-bottom: var(--sp-4);
+  border-top-color: var(--border-subtle);
+}
+
+.faq-item:hover,
+.faq-item:has(summary:focus-visible) {
+  border-color: rgb(var(--accent-violet-rgb) / 0.3);
+}
+
 /* â”€â”€â”€ Reduced motion for all pages â”€â”€â”€ */
 @media (prefers-reduced-motion: reduce) {
   .glow-blob,
