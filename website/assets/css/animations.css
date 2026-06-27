@@ -318,6 +318,27 @@
   animation-delay: -8s;
 }
 
+/* ─── HOVER INTERACTIONS ─── */
+
+.hover-lift {
+  transition: transform var(--ease-bounce), box-shadow var(--ease-bounce);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 24px rgb(0 0 0 / 0.15), 0 0 20px rgb(var(--accent-violet-rgb) / 0.1);
+  z-index: 10;
+}
+
+.hover-glow {
+  transition: border-color var(--ease-smooth), box-shadow var(--ease-smooth);
+}
+
+.hover-glow:hover {
+  border-color: rgb(var(--accent-cyan-rgb) / 0.4);
+  box-shadow: 0 0 20px rgb(var(--accent-cyan-rgb) / 0.2);
+}
+
 /* ─── REDUCED MOTION — disable all animation classes ─── */
 
 @media (prefers-reduced-motion: reduce) {

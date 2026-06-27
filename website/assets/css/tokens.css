@@ -225,6 +225,27 @@
 
   --max-width: 1200px;
   --header-height: 100px;
+
+  /* ─── TECH-STACK BRAND COLOURS ─── */
+  --tag-dotnet:   #512BD4;
+  --tag-js:       #F7DF1E;
+  --tag-firebase: #FFA000;
+  --tag-html:     #E34F26;
+  --tag-sql:      #00758F;
+  --tag-wp:       #21759B;
+  --tag-azure:    #0078D4;
+  --tag-csharp:   #68217A;
+  --tag-css-lang: #264de4;
+  --tag-proto:    #9c27b0;
+  --tag-ef:       #512BD4;
+  --tag-ghpages:  #24292e;
+  --tag-oop:      #68217A;
+  --tag-rtdb:     #FFA000;
+  --tag-game:     #E34F26;
+
+  /* ─── CONCURRENT VIEW LAYOUT ─── */
+  --split-pane-gap: 2rem;
+  --split-services-width: 360px;
 }
 
 /* ─── DARK MODE ─── */
