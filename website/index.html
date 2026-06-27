@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/navigation.js" defer></script>
   <script src="assets/js/theme.js"></script>
+  <script src="assets/js/concurrent-view.js" defer></script>
 </head>
 <body>
   <header class="site-header" data-header>
@@ -81,13 +82,365 @@
 
       <figure class="hero-visual" aria-label="Модерен софтуерен табло за управление на бизнес процеси">
         <div class="hero-media-frame">
-          <div class="home-system-board">
-            <div class="home-system-board-header"><span>РАБОТНО ТАБЛО</span><strong><i></i> активно</strong></div>
-            <div class="home-system-metrics"><div><span>Запитвания</span><strong>46</strong><b></b></div><div><span>Резервации</span><strong>128</strong><b></b></div><div><span>Обработени</span><strong>92%</strong><b></b></div></div>
-            <div class="home-system-flow"><span>Нова заявка</span><i>→</i><span>Екип</span><i>→</i><span>Готово</span></div>
-          </div>
+          <img src="assets/images/visuals/hero_dashboard_ui_light_1782566450159.png" alt="Модерно софтуерно табло" class="hero-image" width="800" height="450" loading="eager" style="width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);">
         </div>
       </figure>
+    </section>
+
+    <!-- ═══ SECTOR STRIP ═══ -->
+    <section class="section" id="sector-section">
+      <div class="section-heading" style="text-align:center;max-width:680px;margin:0 auto var(--sp-6);">
+        <p class="eyebrow">ЗА КАКЪВ БИЗНЕС ТЪРСИТЕ?</p>
+        <h2>Изберете сектор и вижте какво можем да изградим.</h2>
+      </div>
+      <nav id="sector-strip" aria-label="Филтър по бизнес сектор">
+        <button class="sector-btn" type="button" data-sector="all">Всички</button>
+        <button class="sector-btn" type="button" data-sector="клиники">🏥 Клиники</button>
+        <button class="sector-btn" type="button" data-sector="салони">💇 Салони</button>
+        <button class="sector-btn" type="button" data-sector="ресторанти">🍽️ Ресторанти</button>
+        <button class="sector-btn" type="button" data-sector="хотели">🏨 Хотели</button>
+        <button class="sector-btn" type="button" data-sector="строителни">🏗️ Строителни</button>
+        <button class="sector-btn" type="button" data-sector="магазини">🛒 Магазини</button>
+        <button class="sector-btn" type="button" data-sector="локални">📍 Локални услуги</button>
+      </nav>
+    </section>
+
+    <!-- ═══ CONCURRENT VIEW ═══ -->
+    <section class="section section-full section-tint" id="concurrent-view">
+      <div class="section-heading" style="text-align:center;max-width:720px;margin:0 auto var(--sp-6);">
+        <p class="eyebrow">УСЛУГИ + ПРОЕКТИ</p>
+        <h2>Какво правим и какво сме направили — на едно място.</h2>
+        <p>Изберете категория и вижте кои услуги покриват нуждата и кои проекти го доказват.</p>
+      </div>
+
+      <!-- Shared filter bar -->
+      <div class="cv-filter-bar" role="group" aria-label="Филтрирай услуги и проекти">
+        <button class="filter-btn active" type="button" data-cv-filter="all">Всички</button>
+        <button class="filter-btn" type="button" data-cv-filter="websites">Уебсайтове</button>
+        <button class="filter-btn" type="button" data-cv-filter="booking">Резервации</button>
+        <button class="filter-btn" type="button" data-cv-filter="ecommerce">Магазини</button>
+        <button class="filter-btn" type="button" data-cv-filter="business">Бизнес системи</button>
+        <button class="filter-btn" type="button" data-cv-filter="realtime">Реално време</button>
+        <button class="filter-btn" type="button" data-cv-filter="interactive">Интерактивни</button>
+      </div>
+
+      <!-- Animated stats bar -->
+      <div class="cv-stats-bar" aria-label="Статистики">
+        <div class="cv-stat">
+          <span class="cv-stat-number" data-cv-target="12" data-cv-stat="projects">0</span>
+          <span class="cv-stat-label">проекта</span>
+        </div>
+        <div class="cv-stat">
+          <span class="cv-stat-number" data-cv-target="6" data-cv-stat="services">0</span>
+          <span class="cv-stat-label">типа решения</span>
+        </div>
+        <div class="cv-stat">
+          <span class="cv-stat-number" data-cv-target="4" data-cv-stat="stacks">0</span>
+          <span class="cv-stat-label">технологични стека</span>
+        </div>
+      </div>
+
+      <!-- Process stepper -->
+      <div class="cv-stepper" data-cv-stepper>
+        <div class="cv-step">
+          <div class="cv-step-circle">01</div>
+          <span class="cv-step-title">Разбираме</span>
+          <span class="cv-step-desc">Изясняваме процеса и нуждите.</span>
+        </div>
+        <div class="cv-step">
+          <div class="cv-step-circle">02</div>
+          <span class="cv-step-title">Правим</span>
+          <span class="cv-step-desc">Изграждаме сайт или система.</span>
+        </div>
+        <div class="cv-step">
+          <div class="cv-step-circle">03</div>
+          <span class="cv-step-title">Автоматизираме</span>
+          <span class="cv-step-desc">Добавяме автоматизации и ИИ.</span>
+        </div>
+        <div class="cv-step">
+          <div class="cv-step-circle">04</div>
+          <span class="cv-step-title">Развиваме</span>
+          <span class="cv-step-desc">Надграждаме с нови функции.</span>
+        </div>
+      </div>
+
+      <!-- Split pane: Services (left) + Projects (right) -->
+      <div class="cv-split-pane">
+        <!-- LEFT: Services column -->
+        <div class="cv-services-col">
+          <div class="cv-service-card hover-lift" data-category="websites">
+            <div class="cv-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <div class="cv-service-info">
+              <h4>Бизнес уебсайтове</h4>
+              <p>Сайтове с ясна структура, SEO и лесен контакт.</p>
+            </div>
+          </div>
+          <div class="cv-service-card hover-lift" data-category="booking">
+            <div class="cv-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <div class="cv-service-info">
+              <h4>Системи за резервации</h4>
+              <p>Онлайн часове, наличност и административен панел.</p>
+            </div>
+          </div>
+          <div class="cv-service-card hover-lift" data-category="ecommerce">
+            <div class="cv-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </div>
+            <div class="cv-service-info">
+              <h4>Онлайн магазини</h4>
+              <p>Каталог, количка, поръчки и управление на продукти.</p>
+            </div>
+          </div>
+          <div class="cv-service-card hover-lift" data-category="business">
+            <div class="cv-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2a2 2 0 0 1-2-2c0-1.1.9-2 2-2z"></path><path d="M12 6c4.4 0 8 3.6 8 8v8H4v-8c0-4.4 3.6-8 8-8z"></path><path d="M9 14v-2"></path><path d="M15 14v-2"></path></svg>
+            </div>
+            <div class="cv-service-info">
+              <h4>ИИ агенти</h4>
+              <p>Виртуални агенти за чести въпроси и запитвания.</p>
+            </div>
+          </div>
+          <div class="cv-service-card hover-lift" data-category="business">
+            <div class="cv-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            </div>
+            <div class="cv-service-info">
+              <h4>Вътрешни панели</h4>
+              <p>Табла за заявки, клиенти, поръчки и статуси.</p>
+            </div>
+          </div>
+          <div class="cv-service-card hover-lift" data-category="all">
+            <div class="cv-service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 9.36l-7.1 7.1a1 1 0 0 1-1.42 0l-1.4-1.4a1 1 0 0 1 0-1.42l7.1-7.1a6 6 0 0 1 9.36-7.94l-3.77 3.77a1 1 0 0 0 0 1.4z"></path></svg>
+            </div>
+            <div class="cv-service-info">
+              <h4>Поддръжка и развитие</h4>
+              <p>Подобрения, нови функции и техническа поддръжка.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Projects column -->
+        <div class="cv-projects-col" data-cv-projects>
+          <!-- GoceTransportApp -->
+          <article class="cv-project-card" data-categories="business booking">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/gocetransportapp.png" alt="GoceTransportApp" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Транспорт</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>GoceTransportApp</h4>
+              <p>Платформа за маршрути, разписания, билети и управление на автопарк.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--dotnet">ASP.NET</span>
+                <span class="tech-tag tech-tag--ef">EF Core</span>
+                <span class="tech-tag tech-tag--sql">SQL</span>
+              </div>
+              <a class="cv-project-link" href="projects/gocetransportapp.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- Chat App -->
+          <article class="cv-project-card" data-categories="realtime interactive">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/chat-app.png" alt="Chat App" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Реално време</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>Chat App</h4>
+              <p>Платформа за съобщения в реално време с чат стаи и статуси.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--js">JavaScript</span>
+                <span class="tech-tag tech-tag--firebase">Firebase</span>
+                <span class="tech-tag tech-tag--rtdb">Real-time DB</span>
+              </div>
+              <a class="cv-project-link" href="projects/chat-app.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- Resurs 11 -->
+          <article class="cv-project-card" data-categories="websites ecommerce">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/resurs11.webp" alt="Resurs 11" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Уебсайт</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>Resurs 11</h4>
+              <p>Продуктов сайт с каталог, галерия и SEO оптимизация.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--html">HTML</span>
+                <span class="tech-tag tech-tag--css-lang">CSS</span>
+                <span class="tech-tag tech-tag--js">JavaScript</span>
+              </div>
+              <a class="cv-project-link" href="projects/resurs11.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- Dentora -->
+          <article class="cv-project-card" data-categories="business booking">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/dentora.png" alt="Dentora" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Клиника</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>Dentora</h4>
+              <p>Система за стоматологична практика с пациенти и графици.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--dotnet">ASP.NET</span>
+                <span class="tech-tag tech-tag--ef">EF Core</span>
+                <span class="tech-tag tech-tag--sql">SQL</span>
+              </div>
+              <a class="cv-project-link" href="projects/dentora.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- Hotel Oazis -->
+          <article class="cv-project-card" data-categories="business booking">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/hotel-oazis.png" alt="Hotel Oazis" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Хотел</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>Hotel Oazis</h4>
+              <p>Хотелска система за стаи, резервации и отзиви.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--dotnet">ASP.NET</span>
+                <span class="tech-tag tech-tag--ef">EF Core</span>
+                <span class="tech-tag tech-tag--sql">SQL</span>
+              </div>
+              <a class="cv-project-link" href="projects/hotel-oazis.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- Prisma Studio -->
+          <article class="cv-project-card" data-categories="business booking ecommerce">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/prizma-studio.png" alt="Prisma Studio" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Студио</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>Prisma Studio</h4>
+              <p>Платформа за фото студио с резервации и онлайн магазин.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--dotnet">ASP.NET</span>
+                <span class="tech-tag tech-tag--ef">EF Core</span>
+                <span class="tech-tag tech-tag--sql">SQL</span>
+              </div>
+              <a class="cv-project-link" href="projects/prizma-studio.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- RetroRides -->
+          <article class="cv-project-card" data-categories="business booking ecommerce">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/retrorides.png" alt="RetroRides" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Музей</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>RetroRides</h4>
+              <p>Музейна система с каталог, резервации и сувенирен магазин.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--dotnet">ASP.NET</span>
+                <span class="tech-tag tech-tag--ef">EF Core</span>
+                <span class="tech-tag tech-tag--sql">SQL</span>
+              </div>
+              <a class="cv-project-link" href="projects/retrorides.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- StageNova -->
+          <article class="cv-project-card" data-categories="business booking ecommerce">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/stagenova.png" alt="StageNova" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Театър</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>StageNova</h4>
+              <p>Театрална платформа с репертоар, билети и магазин.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--dotnet">ASP.NET</span>
+                <span class="tech-tag tech-tag--ef">EF Core</span>
+                <span class="tech-tag tech-tag--sql">SQL</span>
+              </div>
+              <a class="cv-project-link" href="projects/stagenova.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- ZooZen -->
+          <article class="cv-project-card" data-categories="business ecommerce">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/zoozen.png" alt="ZooZen" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Магазин</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>ZooZen</h4>
+              <p>Онлайн магазин за зоопродукти с каталог и промо кодове.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--dotnet">ASP.NET</span>
+                <span class="tech-tag tech-tag--ef">EF Core</span>
+                <span class="tech-tag tech-tag--sql">SQL</span>
+              </div>
+              <a class="cv-project-link" href="projects/zoozen.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- Shooter Game -->
+          <article class="cv-project-card" data-categories="interactive">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/shooter-game.png" alt="Shooter Game" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Интерактивно</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>Shooter Game</h4>
+              <p>Интерактивно приложение с динамична логика и сценарии.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--csharp">C#</span>
+                <span class="tech-tag tech-tag--oop">OOP</span>
+                <span class="tech-tag tech-tag--game">Game Logic</span>
+              </div>
+              <a class="cv-project-link" href="projects/shooter-game.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- Fitness Application -->
+          <article class="cv-project-card" data-categories="ecommerce business">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/fitness-application.svg" alt="Fitness Application" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Прототип</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>Fitness Application</h4>
+              <p>Прототип за онлайн магазин за фитнес продукти.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--proto">UI Prototype</span>
+              </div>
+              <a class="cv-project-link" href="projects/fitness-application.html">Разгледай</a>
+            </div>
+          </article>
+
+          <!-- Bulgarian Talk Norms -->
+          <article class="cv-project-card" data-categories="websites interactive">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/images/projects/bulgarian-talk-norms.svg" alt="Bulgarian Talk Norms" width="520" height="320" loading="lazy">
+              <span class="cv-project-badge">Образование</span>
+            </div>
+            <div class="cv-project-body">
+              <h4>Bulgarian Talk Norms</h4>
+              <p>Образователен сайт за езикови норми и дебати.</p>
+              <div class="tech-tags">
+                <span class="tech-tag tech-tag--html">HTML</span>
+                <span class="tech-tag tech-tag--css-lang">CSS</span>
+                <span class="tech-tag tech-tag--ghpages">GitHub Pages</span>
+              </div>
+              <a class="cv-project-link" href="projects/bulgarian-talk-norms.html">Разгледай</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="section section-full section-tint" id="why">
