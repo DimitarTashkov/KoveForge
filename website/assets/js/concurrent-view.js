@@ -21,6 +21,7 @@
 
   // ─── ACTIVE FILTERS (Set for multi-select support) ───
   const activeFilters = new Set();
+  let activeSector = 'all';
 
   // ─── SECTOR → CATEGORY MAPPING ───
   const sectorMap = {
@@ -35,12 +36,20 @@
 
   // ─── SHARED FILTER LOGIC ───
   function applyFilter() {
-    const hasFilters = activeFilters.size > 0;
+    const hasCategoryFilters = activeFilters.size > 0;
+    const hasSectorFilter = activeSector !== 'all';
 
     // Filter project cards
     projectCards.forEach(card => {
       const cats = (card.dataset.categories || '').split(' ');
-      const shouldShow = !hasFilters || cats.some(c => activeFilters.has(c));
+      const sectors = (card.dataset.sectors || '').split(' ');
+
+      let shouldShow = true;
+      if (hasSectorFilter) {
+        shouldShow = sectors.includes(activeSector);
+      } else if (hasCategoryFilters) {
+        shouldShow = cats.some(c => activeFilters.has(c));
+      }
 
       if (shouldShow) {
         card.hidden = false;
@@ -58,18 +67,25 @@
     });
 
     // Highlight/dim service cards
+    let highlightFilters = new Set(activeFilters);
+    if (hasSectorFilter) {
+      const mappedCats = sectorMap[activeSector] || [];
+      mappedCats.forEach(c => highlightFilters.add(c));
+    }
+    const hasHighlights = highlightFilters.size > 0;
+
     serviceCards.forEach(card => {
       const cat = card.dataset.category;
-      const isMatch = !hasFilters || cat === 'all' || activeFilters.has(cat);
+      const isMatch = !hasHighlights || cat === 'all' || highlightFilters.has(cat);
 
-      card.classList.toggle('cv-service-card--active', isMatch && hasFilters);
-      card.classList.toggle('cv-service-card--dimmed', !isMatch && hasFilters);
+      card.classList.toggle('cv-service-card--active', isMatch && hasHighlights);
+      card.classList.toggle('cv-service-card--dimmed', !isMatch && hasHighlights);
     });
 
     // Update filter button states
     filterButtons.forEach(btn => {
       const filter = btn.dataset.cvFilter;
-      const isActive = (!hasFilters && filter === 'all') || activeFilters.has(filter);
+      const isActive = (!hasCategoryFilters && filter === 'all') || activeFilters.has(filter);
       btn.classList.toggle('active', isActive);
       btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
@@ -98,6 +114,7 @@
 
       // Clear sector active state
       sectorButtons.forEach(s => s.classList.remove('is-active'));
+      activeSector = 'all';
 
       applyFilter();
     });
@@ -113,11 +130,11 @@
 
       if (sector === 'all') {
         activeFilters.clear();
+        activeSector = 'all';
       } else {
         btn.classList.add('is-active');
         activeFilters.clear();
-        const categories = sectorMap[sector] || [];
-        categories.forEach(c => activeFilters.add(c));
+        activeSector = sector;
       }
 
       applyFilter();

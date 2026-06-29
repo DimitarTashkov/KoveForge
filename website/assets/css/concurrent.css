@@ -379,22 +379,44 @@
 
 .cv-project-link {
   margin-top: auto;
-  padding-top: var(--sp-3);
-  color: var(--accent-violet-light);
+  min-height: 40px;
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--glass-bg);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
   font-weight: 700;
   font-size: var(--fs-xs);
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-1);
-  transition: color var(--dur-fast) ease;
+  justify-content: center;
+  gap: var(--sp-2);
+  transition:
+    transform var(--dur-normal) var(--ease-out-expo),
+    border-color var(--dur-fast) ease,
+    background var(--dur-fast) ease,
+    color var(--dur-fast) ease,
+    box-shadow var(--dur-normal) var(--ease-out-expo);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  text-decoration: none;
 }
 
 .cv-project-link:hover {
-  color: var(--text-primary);
+  border-color: var(--accent-violet);
+  background: rgb(var(--accent-violet-rgb) / 0.1);
+  color: var(--accent-violet-light);
+  box-shadow: 0 0 16px rgb(var(--accent-violet-rgb) / 0.2);
+  transform: translateY(-2px);
 }
 
 .cv-project-link::after {
   content: "→";
+  transition: transform var(--dur-fast) ease;
+}
+
+.cv-project-link:hover::after {
+  transform: translateX(3px);
 }
 
 /* ─── TECH-TAG PILLS (colour-coded) ─── */
@@ -409,8 +431,8 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.01em;
@@ -525,6 +547,34 @@
 }
 .tech-tag--ghpages::before { background: var(--tag-ghpages); }
 
+.tech-tag--react {
+  background: rgb(97 218 251 / 0.12);
+  color: #008bb2;
+  border-color: rgb(97 218 251 / 0.3);
+}
+.tech-tag--react::before { background: var(--tag-react); }
+
+.tech-tag--ts {
+  background: rgb(49 120 198 / 0.12);
+  color: #2b6cb0;
+  border-color: rgb(49 120 198 / 0.25);
+}
+.tech-tag--ts::before { background: var(--tag-ts); }
+
+.tech-tag--supabase {
+  background: rgb(62 207 142 / 0.12);
+  color: #208b5c;
+  border-color: rgb(62 207 142 / 0.25);
+}
+.tech-tag--supabase::before { background: var(--tag-supabase); }
+
+.tech-tag--winforms {
+  background: rgb(0 150 255 / 0.12);
+  color: #0066cc;
+  border-color: rgb(0 150 255 / 0.25);
+}
+.tech-tag--winforms::before { background: var(--tag-winforms); }
+
 /* Dark mode adjustments for JS yellow tag readability */
 html.dark-theme .tech-tag--js {
   color: var(--tag-js);
@@ -534,6 +584,22 @@ html.dark-theme .tech-tag--ghpages {
   color: #c9d1d9;
   background: rgb(200 210 220 / 0.08);
   border-color: rgb(200 210 220 / 0.15);
+}
+
+html.dark-theme .tech-tag--react {
+  color: var(--tag-react);
+}
+
+html.dark-theme .tech-tag--ts {
+  color: var(--tag-ts);
+}
+
+html.dark-theme .tech-tag--supabase {
+  color: var(--tag-supabase);
+}
+
+html.dark-theme .tech-tag--winforms {
+  color: var(--tag-winforms);
 }
 
 /* ─── FEATURE TAGS (inside project cards) ─── */

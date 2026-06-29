@@ -242,6 +242,10 @@
   --tag-oop:      #68217A;
   --tag-rtdb:     #FFA000;
   --tag-game:     #E34F26;
+  --tag-react:    #61DAFB;
+  --tag-ts:       #3178C6;
+  --tag-supabase: #3ECF8E;
+  --tag-winforms: #0096FF;
 
   /* ─── CONCURRENT VIEW LAYOUT ─── */
   --split-pane-gap: 2rem;
