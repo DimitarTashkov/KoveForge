@@ -2,6 +2,8 @@ const contactForm = document.querySelector("[data-contact-form]");
 
 if (contactForm) {
   const submitButton = contactForm.querySelector('button[type="submit"]');
+  const successMessage = document.getElementById("contact-success");
+  const errorMessage = contactForm.querySelector("[data-contact-error]");
 
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -13,6 +15,9 @@ if (contactForm) {
     const originalButtonText = submitButton.textContent;
     submitButton.textContent = "Изпращане...";
     submitButton.disabled = true;
+    if (errorMessage) {
+      errorMessage.hidden = true;
+    }
 
     try {
       const response = await fetch("/api/contact", {
@@ -27,11 +32,16 @@ if (contactForm) {
         throw new Error(`Contact form request failed with status ${response.status}`);
       }
 
-      alert("Успешно изпратихте запитването! Ще се свържем с вас скоро.");
       contactForm.reset();
+      contactForm.hidden = true;
+      if (successMessage) {
+        successMessage.hidden = false;
+      }
     } catch (error) {
       console.error("Contact form submission failed:", error);
-      alert("Не успяхме да изпратим запитването. Моля, опитайте отново или ни пишете директно по имейл.");
+      if (errorMessage) {
+        errorMessage.hidden = false;
+      }
     } finally {
       submitButton.textContent = originalButtonText;
       submitButton.disabled = false;

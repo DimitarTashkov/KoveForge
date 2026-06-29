@@ -21,7 +21,7 @@ const jsonResponse = (body, status) => new Response(JSON.stringify(body), {
   },
 });
 
-const buildEmailHtml = ({ name, email, businessType, projectType, budget, message }) => {
+const buildEmailHtml = ({ name, email, message }) => {
   const messageHtml = escapeHtml(message).replace(/\r?\n/g, "<br>");
   const replyToUrl = encodeURIComponent(email);
 
@@ -34,16 +34,13 @@ const buildEmailHtml = ({ name, email, businessType, projectType, budget, messag
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:640px; background-color:#ffffff; border-radius:16px; overflow:hidden; box-shadow:0 8px 24px rgba(15,23,42,.12);">
               <tr><td style="padding:28px 32px; background-color:#312e81; background-image:linear-gradient(135deg,#4f46e5,#6366f1 55%,#0ea5e9); color:#ffffff;">
                 <p style="margin:0 0 10px; color:#c7d2fe; font-size:12px; font-weight:700; letter-spacing:1.4px; text-transform:uppercase;">KoveForge · Ново запитване</p>
-                <h1 style="margin:0; color:#ffffff; font-size:26px; line-height:1.25; font-weight:700;">Имате нов потенциален проект</h1>
+                <h1 style="margin:0; color:#ffffff; font-size:26px; line-height:1.25; font-weight:700;">Ново запитване за система</h1>
               </td></tr>
               <tr><td style="padding:32px;">
                 <p style="margin:0 0 24px; color:#475569; font-size:16px; line-height:1.6;">Изпратено е ново запитване през контактната форма на сайта.</p>
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%; border:1px solid #e2e8f0; border-radius:12px; border-collapse:separate; overflow:hidden;">
                   <tr><td style="width:38%; padding:14px 16px; border-bottom:1px solid #e2e8f0; background-color:#f8fafc; color:#64748b; font-size:13px; font-weight:700;">Име</td><td style="padding:14px 16px; border-bottom:1px solid #e2e8f0; color:#0f172a; font-size:15px; font-weight:600;">${escapeHtml(name)}</td></tr>
-                  <tr><td style="padding:14px 16px; border-bottom:1px solid #e2e8f0; background-color:#f8fafc; color:#64748b; font-size:13px; font-weight:700;">Имейл</td><td style="padding:14px 16px; border-bottom:1px solid #e2e8f0; color:#0f172a; font-size:15px; font-weight:600;"><a href="mailto:${replyToUrl}" style="color:#4f46e5; text-decoration:none;">${escapeHtml(email)}</a></td></tr>
-                  <tr><td style="padding:14px 16px; border-bottom:1px solid #e2e8f0; background-color:#f8fafc; color:#64748b; font-size:13px; font-weight:700;">Тип бизнес</td><td style="padding:14px 16px; border-bottom:1px solid #e2e8f0; color:#0f172a; font-size:15px; font-weight:600;">${escapeHtml(businessType)}</td></tr>
-                  <tr><td style="padding:14px 16px; border-bottom:1px solid #e2e8f0; background-color:#f8fafc; color:#64748b; font-size:13px; font-weight:700;">Тип проект</td><td style="padding:14px 16px; border-bottom:1px solid #e2e8f0; color:#0f172a; font-size:15px; font-weight:600;">${escapeHtml(projectType)}</td></tr>
-                  <tr><td style="padding:14px 16px; background-color:#f8fafc; color:#64748b; font-size:13px; font-weight:700;">Бюджет</td><td style="padding:14px 16px; color:#0f172a; font-size:15px; font-weight:600;">${escapeHtml(budget)}</td></tr>
+                  <tr><td style="padding:14px 16px; background-color:#f8fafc; color:#64748b; font-size:13px; font-weight:700;">Имейл</td><td style="padding:14px 16px; color:#0f172a; font-size:15px; font-weight:600;"><a href="mailto:${replyToUrl}" style="color:#4f46e5; text-decoration:none;">${escapeHtml(email)}</a></td></tr>
                 </table>
                 <div style="margin-top:28px;"><p style="margin:0 0 10px; color:#64748b; font-size:13px; font-weight:700; letter-spacing:.5px; text-transform:uppercase;">Съобщение</p><div style="padding:20px; border-left:4px solid #6366f1; border-radius:0 10px 10px 0; background-color:#f8fafc; color:#334155; font-size:15px; line-height:1.65;">${messageHtml}</div></div>
                 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:28px;"><tr><td style="border-radius:8px; background-color:#4f46e5;"><a href="mailto:${replyToUrl}" style="display:inline-block; padding:13px 20px; color:#ffffff; font-size:15px; font-weight:700; text-decoration:none;">Отговори на ${escapeHtml(name)}</a></td></tr></table>
@@ -65,12 +62,13 @@ export async function onRequestPost(context) {
     }
 
     const formData = await context.request.formData();
-    const name = fallback(formData.get("Име"), "Не е посочено");
-    const email = fallback(formData.get("Имейл"), "Не е посочено");
-    const businessType = fallback(formData.get("Тип бизнес"), "Не е посочен");
-    const projectType = fallback(formData.get("Тип проект"), "Не е посочен");
-    const budget = fallback(formData.get("Бюджет"), "Не е уточнен");
-    const message = fallback(formData.get("Съобщение"), "Няма съобщение");
+    const name = fallback(formData.get("Име"), "");
+    const email = fallback(formData.get("Имейл"), "");
+    const message = fallback(formData.get("Съобщение"), "Няма допълнително съобщение.");
+
+    if (!name || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return jsonResponse({ error: "Name and a valid email are required." }, 400);
+    }
 
     const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -82,9 +80,9 @@ export async function onRequestPost(context) {
         from: "Website Form <studio@koveforge.tech>",
         to: ["studio@koveforge.tech", "hello@koveforge.tech"],
         reply_to: email,
-        subject: `Ново запитване от сайта: ${projectType}`,
-        html: buildEmailHtml({ name, email, businessType, projectType, budget, message }),
-        text: `Ново запитване от сайта\n\nИме: ${name}\nИмейл: ${email}\nТип бизнес: ${businessType}\nТип проект: ${projectType}\nБюджет: ${budget}\n\nСъобщение:\n${message}`,
+        subject: "Ново запитване от сайта за система",
+        html: buildEmailHtml({ name, email, message }),
+        text: `Ново запитване от сайта за система\n\nИме: ${name}\nИмейл: ${email}\n\nСъобщение:\n${message}`,
       }),
     });
 
