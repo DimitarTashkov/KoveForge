@@ -1,2 +1,5 @@
 # Local Wrangler cache, state, and preview bundles
 .wrangler/
+
+# Visual Studio metadata
+.vs/
