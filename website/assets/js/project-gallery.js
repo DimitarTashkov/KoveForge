@@ -36,6 +36,20 @@ const projectGalleries = {
       "24-screenshot-settings-1773095479960.png"
     ]
   },
+  "dental-booking": {
+    "title": "DentalBooking",
+    "sector": "Дентална клиника / резервации",
+    "images": [
+      "01-dental-booking-screen.png",
+      "02-dental-booking-screen.png",
+      "03-dental-booking-screen.png",
+      "04-dental-booking-screen.png",
+      "05-dental-booking-screen.png",
+      "06-dental-booking-screen.png",
+      "07-dental-booking-screen.png",
+      "08-dental-booking-screen.png"
+    ]
+  },
   "dentora": {
     "title": "Dentora",
     "sector": "Клиника / резервации",
@@ -69,6 +83,20 @@ const projectGalleries = {
     "sector": "Прототип за онлайн магазин",
     "images": [
       "01-fitness-application.svg"
+    ]
+  },
+  "fitness-center": {
+    "title": "Fitness Center",
+    "sector": "Фитнес / здраве",
+    "images": [
+      "01-fitness-center-screen.png",
+      "02-fitness-center-screen.png",
+      "03-fitness-center-screen.png",
+      "04-fitness-center-screen.png",
+      "05-fitness-center-screen.png",
+      "06-fitness-center-screen.png",
+      "07-fitness-center-screen.png",
+      "08-fitness-center-screen.png"
     ]
   },
   "gocetransportapp": {
@@ -136,6 +164,16 @@ const projectGalleries = {
       "19-screenshot-2026-01-27-180326.png",
       "20-shop-form.png",
       "21-users-form.png"
+    ]
+  },
+  "restaurant-salaries": {
+    "title": "RestaurantSalaries",
+    "sector": "Ресторантьорство / управление",
+    "images": [
+      "01-restaurant-salaries-screen.png",
+      "02-restaurant-salaries-screen.png",
+      "03-restaurant-salaries-screen.png",
+      "04-restaurant-salaries-screen.png"
     ]
   },
   "resurs11": {
@@ -230,6 +268,15 @@ const projectGalleries = {
       "18-stage-nova-bg.png",
       "19-throw-pillows-blankets-featured.jpg",
       "20-users-form.png"
+    ]
+  },
+  "toy-shop": {
+    "title": "ToyShop",
+    "sector": "Магазин / търговия",
+    "images": [
+      "01-toy-shop-screen.png",
+      "02-toy-shop-screen.png",
+      "03-toy-shop-screen.png"
     ]
   },
   "zoozen": {
