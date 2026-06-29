@@ -2300,6 +2300,38 @@
   color: var(--text-secondary);
 }
 
+/* ─── Cal.com Booking Card ─── */
+.contact-booking-card {
+  padding: var(--sp-8);
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.contact-booking-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.contact-booking-header .icon-box {
+  margin-bottom: 0;
+}
+
+.contact-booking-card h2 {
+  font-size: var(--fs-lg);
+}
+
+.contact-booking-card > p {
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+}
+
+.btn-cal {
+  width: 100%;
+  gap: var(--sp-2);
+  justify-content: center;
+}
+
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    AI AGENTS PAGE

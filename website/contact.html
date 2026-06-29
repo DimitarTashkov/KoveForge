@@ -138,7 +138,28 @@
         </div>
       </article>
 
-      <aside class="contact-sidebar" aria-label="Имейли за връзка">
+      <aside class="contact-sidebar" aria-label="Консултация и имейли за връзка">
+        <div class="contact-booking-card glass-panel">
+          <div class="contact-booking-header">
+            <span class="icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </span>
+            <p class="eyebrow">БЕЗПЛАТНА КОНСУЛТАЦИЯ</p>
+          </div>
+          <h2>Запази разговор директно.</h2>
+          <p>Избери удобен час от календара и ще се свържем на живо.</p>
+          <button
+            id="cal-booking-btn"
+            class="btn btn-primary btn-cal"
+            type="button"
+            data-cal-link="kove-forge/free-consultation"
+            data-cal-namespace="free-consultation"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
+          >
+            Запази безплатна консултация
+          </button>
+        </div>
+
         <div class="contact-sidebar-card glass-panel">
           <p class="eyebrow">ИМЕЙЛИ</p>
           <h2>Пиши директно, ако ти е по-удобно.</h2>
@@ -186,5 +207,15 @@
     </div>
     <div class="footer-bottom"><p>&copy; 2026 KoveForge. Уебсайтове и софтуер по поръчка.</p></div>
   </footer>
+
+  <!-- Cal.com element-click embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
+    Cal("init", "free-consultation", {origin:"https://app.cal.eu"});
+    Cal.config = Cal.config || {};
+    Cal.config.forwardQueryParams = true;
+    Cal.ns["free-consultation"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#6366f1"},"dark":{"cal-brand":"#a78bfa"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+  <!-- Cal.com element-click embed code ends -->
 </body>
 </html>
