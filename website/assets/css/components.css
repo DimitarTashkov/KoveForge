@@ -603,10 +603,19 @@
 /* â”€â”€â”€ FOOTER COMPONENTS â”€â”€â”€ */
 .footer-brand {
   display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
   margin-bottom: var(--sp-4);
   color: var(--text-primary);
   font-size: var(--fs-lg);
   font-weight: 800;
+}
+
+.footer-brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(1.1) drop-shadow(0 0 12px rgb(var(--accent-violet-rgb) / 0.2));
 }
 
 .footer-brand-block p {
