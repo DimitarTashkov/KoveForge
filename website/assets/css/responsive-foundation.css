@@ -393,6 +393,23 @@ textarea {
 
 /* 1024px: desktop navigation and multi-column compositions. */
 @media (min-width: 64rem) {
+  .brand-hero-with-media {
+    grid-template-columns: minmax(0, 1.08fr) minmax(22rem, 0.92fr);
+  }
+
+  .ai-hero.brand-hero-with-media {
+    grid-template-columns: minmax(0, 1.28fr) minmax(20rem, 0.72fr);
+    align-items: start;
+  }
+
+  .ai-hero.brand-hero-with-media h1 {
+    font-size: clamp(2.75rem, 4.2vw, 3.75rem);
+  }
+
+  .ai-hero.brand-hero-with-media .brand-hero-media {
+    margin-top: var(--sp-16);
+  }
+
   .contact-method-selector {
     grid-template-columns: minmax(15rem, 0.65fr) minmax(0, 1.35fr);
     align-items: center;

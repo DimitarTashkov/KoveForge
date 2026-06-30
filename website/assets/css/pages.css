@@ -102,6 +102,43 @@
   pointer-events: none;
 }
 
+.home-page .hero-media-frame {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse 82% 82% at 50% 50%, #000 48%, rgb(0 0 0 / 0.82) 68%, transparent 94%);
+  mask-image: radial-gradient(ellipse 82% 82% at 50% 50%, #000 48%, rgb(0 0 0 / 0.82) 68%, transparent 94%);
+}
+
+.home-page .hero-media-frame:hover {
+  box-shadow: none;
+}
+
+.home-page .hero-media-frame::after {
+  content: none;
+}
+
+.home-page .hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+  filter: brightness(1.05) saturate(1.08) contrast(1.05);
+}
+
+html.dark-theme .home-page .hero-media-frame {
+  opacity: 0.94;
+  mix-blend-mode: screen;
+}
+
+html.dark-theme .home-page .hero-image {
+  filter: saturate(1.12) contrast(1.06) brightness(1.05);
+}
+
 .hero-media {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -1310,6 +1347,53 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-3);
+}
+
+.brand-hero-with-media {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.brand-hero-copy {
+  min-width: 0;
+}
+
+.brand-hero-media {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 16 / 10;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse 78% 74% at 50% 50%, #000 42%, rgb(0 0 0 / 0.8) 58%, transparent 86%);
+  mask-image: radial-gradient(ellipse 78% 74% at 50% 50%, #000 42%, rgb(0 0 0 / 0.8) 58%, transparent 86%);
+}
+
+.brand-hero-media::after {
+  content: none;
+}
+
+.brand-hero-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(1.07) saturate(1.12) contrast(1.08);
+}
+
+html.dark-theme .brand-hero-media {
+  opacity: 0.92;
+  mix-blend-mode: screen;
+}
+
+html.dark-theme .brand-hero-media img {
+  filter: invert(1) hue-rotate(180deg) saturate(1.25) brightness(1.2) contrast(1.1);
 }
 
 /* Brand Metrics */
