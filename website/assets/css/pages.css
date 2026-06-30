@@ -502,7 +502,7 @@
 .featured-card:hover {
   transform: translateY(-4px);
   border-color: rgb(var(--accent-violet-rgb) / 0.25);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: var(--shadow-card);
 }
 
 .featured-card:hover::before {
@@ -516,14 +516,15 @@
 .featured-card-image img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   background: var(--surface-600);
   border-bottom: 1px solid var(--border-subtle);
   transition: transform var(--dur-slow) var(--ease-out-expo);
 }
 
 .featured-card:hover .featured-card-image img {
-  transform: scale(1.03);
+  transform: none;
 }
 
 .featured-card-body {
@@ -1071,7 +1072,8 @@
   width: 100%;
   max-height: 620px;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 /* â”€â”€â”€ Case Story â”€â”€â”€ */
@@ -1395,6 +1397,14 @@
 
 .process-step .icon-box {
   margin-bottom: var(--sp-4);
+}
+
+.about-page .process-step:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.about-page .process-step:hover::after {
+  opacity: 0;
 }
 
 .service-feature {
