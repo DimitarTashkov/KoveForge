@@ -490,7 +490,7 @@
   min-height: 38px;
   padding: 8px 14px;
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-sm);
+  border-radius: 9999px;
   background: var(--glass-bg);
   color: var(--text-primary);
   font-weight: 700;
@@ -498,17 +498,37 @@
   transition:
     transform var(--dur-fast) ease,
     border-color var(--dur-fast) ease,
-    background var(--dur-fast) ease,
     color var(--dur-fast) ease,
     box-shadow var(--dur-normal) ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.project-actions a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-accent);
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform var(--dur-fast) ease;
+  border-radius: inherit;
 }
 
 .project-actions a:hover {
   transform: translateY(-1px);
+  background: transparent;
   border-color: var(--accent-violet);
-  background: linear-gradient(135deg, var(--accent-violet), var(--accent-indigo));
   color: white;
-  box-shadow: 0 0 16px rgb(var(--accent-violet-rgb) /  0.2);
+  box-shadow: 0 0 16px rgb(var(--accent-violet-rgb) / 0.4);
+}
+
+.project-actions a:hover::before {
+  transform: translateY(0);
 }
 
 .case-study-list {

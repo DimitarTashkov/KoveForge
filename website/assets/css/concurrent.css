@@ -383,7 +383,7 @@
   padding: var(--sp-2) var(--sp-4);
   background: var(--glass-bg);
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-sm);
+  border-radius: 9999px;
   color: var(--text-primary);
   font-weight: 700;
   font-size: var(--fs-xs);
@@ -394,20 +394,40 @@
   transition:
     transform var(--dur-normal) var(--ease-out-expo),
     border-color var(--dur-fast) ease,
-    background var(--dur-fast) ease,
     color var(--dur-fast) ease,
     box-shadow var(--dur-normal) var(--ease-out-expo);
   backdrop-filter: var(--glass-blur-light);
   -webkit-backdrop-filter: var(--glass-blur-light);
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cv-project-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-accent);
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform var(--dur-normal) var(--ease-out-expo);
+  border-radius: inherit;
 }
 
 .cv-project-link:hover {
+  background: transparent;
   border-color: var(--accent-violet);
-  background: rgb(var(--accent-violet-rgb) / 0.1);
-  color: var(--accent-violet-light);
-  box-shadow: 0 0 16px rgb(var(--accent-violet-rgb) / 0.2);
+  color: white;
+  box-shadow: 0 0 16px rgb(var(--accent-violet-rgb) / 0.4);
   transform: translateY(-2px);
+}
+
+.cv-project-link:hover::before {
+  transform: translateY(0);
 }
 
 .cv-project-link::after {
