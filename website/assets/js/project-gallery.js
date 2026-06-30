@@ -331,9 +331,9 @@ galleries.forEach((gallery) => {
         <h2>Галерия на ${project.title}</h2>
         <p>Снимки от реалните екрани на проекта: основни страници, администраторски панели, форми и работни потоци.</p>
       </div>
-      <div class="gallery-controls" aria-label="Контроли за галерията">
+      <div class="gallery-controls" role="group" aria-label="Контроли за галерията">
         <button class="gallery-control" type="button" aria-label="Предишна снимка" data-gallery-prev>←</button>
-        <button class="gallery-control gallery-play" type="button" aria-label="${isPlaying ? "Пауза на слайдшоуто" : "Стартирай слайдшоуто"}" data-gallery-toggle>${isPlaying ? "Пауза" : "Старт"}</button>
+        <button class="gallery-control gallery-play" type="button" aria-label="${isPlaying ? "Пауза на слайдшоуто" : "Стартирай слайдшоуто"}" aria-pressed="${isPlaying}" data-gallery-toggle>${isPlaying ? "Пауза" : "Старт"}</button>
         <button class="gallery-control" type="button" aria-label="Следваща снимка" data-gallery-next>→</button>
       </div>
     </div>
@@ -350,7 +350,7 @@ galleries.forEach((gallery) => {
           <p data-gallery-counter></p>
         </div>
       </div>
-      <div class="gallery-thumbs" role="list" aria-label="Снимки от ${project.title}" data-gallery-thumbs></div>
+      <div class="gallery-thumbs" role="group" aria-label="Снимки от ${project.title}" data-gallery-thumbs></div>
     </div>
   `;
 
@@ -438,6 +438,17 @@ galleries.forEach((gallery) => {
     isPlaying = !isPlaying;
     toggleButton.textContent = isPlaying ? "Пауза" : "Старт";
     toggleButton.setAttribute("aria-label", isPlaying ? "Пауза на слайдшоуто" : "Стартирай слайдшоуто");
+    toggleButton.setAttribute("aria-pressed", String(isPlaying));
+    startSlideshow();
+  });
+
+  gallery.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") {
+      return;
+    }
+
+    event.preventDefault();
+    updateGallery(activeIndex + (event.key === "ArrowRight" ? 1 : -1));
     startSlideshow();
   });
 

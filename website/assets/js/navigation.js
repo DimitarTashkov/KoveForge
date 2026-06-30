@@ -1,22 +1,85 @@
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelector("[data-nav-links]");
 const siteHeader = document.querySelector(".site-header");
+const mainContent = document.querySelector("main");
+
+if (mainContent) {
+  mainContent.id ||= "main-content";
+  mainContent.tabIndex = -1;
+
+  if (!document.querySelector(".skip-link")) {
+    const skipLink = document.createElement("a");
+    skipLink.className = "skip-link";
+    skipLink.href = `#${mainContent.id}`;
+    skipLink.textContent = "Към основното съдържание";
+    document.body.prepend(skipLink);
+  }
+}
 
 if (navToggle && navLinks) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("is-open");
+  const desktopNavigation = window.matchMedia("(min-width: 64rem)");
+  navLinks.id ||= "site-navigation";
+  navToggle.setAttribute("aria-controls", navLinks.id);
 
+  const setNavigationState = (isOpen, { returnFocus = false } = {}) => {
+    navLinks.classList.toggle("is-open", isOpen);
     navToggle.classList.toggle("is-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Затвори меню" : "Отвори меню");
+
+    const isMobile = !desktopNavigation.matches;
+    navLinks.inert = isMobile && !isOpen;
+    navLinks.toggleAttribute("aria-hidden", isMobile && !isOpen);
+
+    if (returnFocus) {
+      navToggle.focus();
+    }
+  };
+
+  const syncNavigationMode = () => {
+    if (desktopNavigation.matches) {
+      navLinks.inert = false;
+      navLinks.removeAttribute("aria-hidden");
+      navLinks.classList.remove("is-open");
+      navToggle.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Отвори меню");
+      return;
+    }
+
+    setNavigationState(navLinks.classList.contains("is-open"));
+  };
+
+  navToggle.addEventListener("click", () => {
+    setNavigationState(!navLinks.classList.contains("is-open"));
   });
 
   navLinks.addEventListener("click", (event) => {
     if (event.target instanceof HTMLAnchorElement) {
-      navLinks.classList.remove("is-open");
-      navToggle.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
+      setNavigationState(false);
     }
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navLinks.classList.contains("is-open")) {
+      setNavigationState(false, { returnFocus: true });
+    }
+  });
+
+  document.addEventListener("pointerdown", (event) => {
+    if (
+      !desktopNavigation.matches &&
+      navLinks.classList.contains("is-open") &&
+      event.target instanceof Node &&
+      !navLinks.contains(event.target) &&
+      !navToggle.contains(event.target)
+    ) {
+      setNavigationState(false);
+    }
+  });
+
+  desktopNavigation.addEventListener("change", syncNavigationMode);
+  syncNavigationMode();
 }
 
 if (siteHeader) {

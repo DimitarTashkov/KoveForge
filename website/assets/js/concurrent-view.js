@@ -15,6 +15,7 @@
   const statNumbers = document.querySelectorAll('.cv-stat-number');
   const stepper = document.querySelector('[data-cv-stepper]');
   const concurrentView = document.getElementById('concurrent-view');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Early exit if concurrent-view section doesn't exist on this page
   if (!concurrentView) return;
@@ -113,7 +114,10 @@
       }
 
       // Clear sector active state
-      sectorButtons.forEach(s => s.classList.remove('is-active'));
+      sectorButtons.forEach(s => {
+        s.classList.remove('is-active');
+        s.setAttribute('aria-pressed', String(s.dataset.sector === 'all'));
+      });
       activeSector = 'all';
 
       applyFilter();
@@ -122,11 +126,16 @@
 
   // ─── SECTOR BUTTON CLICK ───
   sectorButtons.forEach(btn => {
+    btn.setAttribute('aria-pressed', String(btn.dataset.sector === 'all'));
+
     btn.addEventListener('click', () => {
       const sector = btn.dataset.sector;
 
       // Clear all sector active states
-      sectorButtons.forEach(s => s.classList.remove('is-active'));
+      sectorButtons.forEach(s => {
+        s.classList.remove('is-active');
+        s.setAttribute('aria-pressed', 'false');
+      });
 
       if (sector === 'all') {
         activeFilters.clear();
@@ -137,10 +146,12 @@
         activeSector = sector;
       }
 
+      btn.setAttribute('aria-pressed', 'true');
+
       applyFilter();
 
       // Smooth scroll to concurrent view
-      concurrentView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      concurrentView.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
     });
   });
 

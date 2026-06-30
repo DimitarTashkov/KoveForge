@@ -15,6 +15,7 @@ if (contactForm) {
     const originalButtonText = submitButton.textContent;
     submitButton.textContent = "Изпращане...";
     submitButton.disabled = true;
+    contactForm.setAttribute("aria-busy", "true");
     if (errorMessage) {
       errorMessage.hidden = true;
     }
@@ -36,6 +37,8 @@ if (contactForm) {
       contactForm.hidden = true;
       if (successMessage) {
         successMessage.hidden = false;
+        successMessage.tabIndex = -1;
+        successMessage.focus();
       }
     } catch (error) {
       console.error("Contact form submission failed:", error);
@@ -45,6 +48,7 @@ if (contactForm) {
     } finally {
       submitButton.textContent = originalButtonText;
       submitButton.disabled = false;
+      contactForm.removeAttribute("aria-busy");
     }
   });
 }

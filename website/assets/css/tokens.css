@@ -189,24 +189,24 @@
   --ls-wide:    0.06em;
   --ls-caps:    0.1em;
 
-  --sp-1:   4px;
-  --sp-2:   8px;
-  --sp-3:  12px;
-  --sp-4:  16px;
-  --sp-5:  20px;
-  --sp-6:  24px;
-  --sp-8:  32px;
-  --sp-10: 40px;
-  --sp-12: 48px;
-  --sp-16: 64px;
-  --sp-20: 80px;
-  --sp-24: 96px;
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
 
-  --radius-sm:   8px;
-  --radius-md:  12px;
-  --radius-lg:  16px;
-  --radius-xl:  24px;
-  --radius-full: 9999px;
+  --radius-sm:   0.5rem;
+  --radius-md:   0.75rem;
+  --radius-lg:   1rem;
+  --radius-xl:   1.5rem;
+  --radius-full: 100vmax;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -223,8 +223,8 @@
   --gpu-transform: transform, opacity;
   --contain-layout: layout style;
 
-  --max-width: 1200px;
-  --header-height: 100px;
+  --max-width: 75rem;
+  --header-height: 6.25rem;
 
   /* ─── TECH-STACK BRAND COLOURS ─── */
   --tag-dotnet:   #512BD4;
@@ -249,7 +249,7 @@
 
   /* ─── CONCURRENT VIEW LAYOUT ─── */
   --split-pane-gap: 2rem;
-  --split-services-width: 360px;
+  --split-services-width: 22.5rem;
 }
 
 /* ─── DARK MODE ─── */

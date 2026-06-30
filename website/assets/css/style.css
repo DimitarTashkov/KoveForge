@@ -10,5 +10,6 @@
 @import url("./concurrent.css");
 @import url("./responsive.css");
 @import url("./button-system.css");
+@import url("./responsive-foundation.css");
 html:not(.dark-theme) .dark-only { display: none !important; }
 html.dark-theme .light-only { display: none !important; }
