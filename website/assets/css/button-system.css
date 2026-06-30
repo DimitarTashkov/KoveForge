@@ -228,3 +228,99 @@
   cursor: not-allowed;
   opacity: 0.4;
 }
+
+/* Round and compact hover targets use the same rising gradient fill. */
+:is(
+  .footer-social-link,
+  .icon-box,
+  .cv-step-circle,
+  .cv-service-icon,
+  .capability-icon,
+  .case-feature-icon,
+  .faq-toggle,
+  .pill,
+  .tech-tag
+) {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform var(--dur-fast) ease,
+    border-color var(--dur-fast) ease,
+    color var(--dur-fast) ease,
+    box-shadow var(--dur-normal) ease,
+    background var(--dur-fast) ease;
+}
+
+:is(
+  .footer-social-link,
+  .icon-box,
+  .cv-step-circle,
+  .cv-service-icon,
+  .capability-icon,
+  .case-feature-icon,
+  .faq-toggle,
+  .pill,
+  .tech-tag
+)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--gradient-accent);
+  transform: translateY(100%);
+  transition: transform var(--dur-fast) ease;
+}
+
+:is(
+  .footer-social-link:hover,
+  .info-card:hover .icon-box,
+  .service-card:hover .icon-box,
+  .process-step:hover .icon-box,
+  .cv-step:hover .cv-step-circle,
+  .cv-service-card:hover .cv-service-icon,
+  .capability-card:hover .capability-icon,
+  .case-feature-item:hover .case-feature-icon,
+  .faq-item summary:hover .faq-toggle,
+  .faq-item[open] .faq-toggle,
+  .pill:hover,
+  .tech-tag:hover
+) {
+  border-color: var(--accent-violet);
+  background: transparent;
+  color: white;
+  box-shadow: 0 0 16px rgb(var(--accent-violet-rgb) / 0.4);
+}
+
+:is(
+  .footer-social-link:hover,
+  .info-card:hover .icon-box,
+  .service-card:hover .icon-box,
+  .process-step:hover .icon-box,
+  .cv-step:hover .cv-step-circle,
+  .cv-service-card:hover .cv-service-icon,
+  .capability-card:hover .capability-icon,
+  .case-feature-item:hover .case-feature-icon,
+  .faq-item summary:hover .faq-toggle,
+  .faq-item[open] .faq-toggle,
+  .pill:hover,
+  .tech-tag:hover
+)::after {
+  transform: translateY(0);
+}
+
+:is(
+  .footer-social-link svg,
+  .icon-box svg,
+  .cv-service-icon svg
+) {
+  position: relative;
+  z-index: 1;
+}
+
+.faq-toggle::before,
+.tech-tag::before {
+  position: relative;
+  z-index: 1;
+}
