@@ -85,18 +85,23 @@ code,
 /* â”€â”€â”€ EYEBROW / OVERLINE â”€â”€â”€ */
 .eyebrow {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 0.5rem 0.875rem;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-full);
-  background: rgb(var(--accent-violet-rgb) /  0.08);
-  color: var(--accent-violet-light);
+  background: linear-gradient(135deg, var(--accent-violet-light), var(--accent-cyan), var(--accent-teal));
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
   font-family: var(--ff-mono);
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   font-weight: 700;
-  letter-spacing: var(--ls-caps);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 1.25;
   margin-bottom: var(--sp-4);
+  animation: gradient-shift 4s ease infinite alternate;
 }
 
 /* â”€â”€â”€ SELECTION â”€â”€â”€ */

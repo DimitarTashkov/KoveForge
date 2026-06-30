@@ -154,6 +154,15 @@ pre {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.projects-toolbar .filter-bar {
+  grid-column: 1 / -1;
+}
+
+.projects-toolbar .project-count {
+  grid-column: 1;
+  margin-top: 0;
+}
+
 .project-grid-featured .project-card:first-child {
   grid-template-columns: minmax(0, 1fr);
 }
@@ -331,6 +340,22 @@ textarea {
 
 /* 768px: tablets. */
 @media (min-width: 48rem) {
+  .projects-toolbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  .projects-toolbar .filter-bar {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .projects-toolbar .project-count {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
   :is(.benefit-grid, .service-grid, .project-grid, .featured-grid, .case-ps-grid, .case-features-grid) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -428,9 +453,13 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .projects-toolbar,
   .projects-preview-header {
     grid-template-columns: minmax(13.75rem, 0.55fr) minmax(0, 1fr);
+  }
+
+  .projects-toolbar .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .case-layout {

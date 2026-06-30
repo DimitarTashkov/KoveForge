@@ -215,14 +215,15 @@ main > section {
   width: min(100% - var(--sp-8), var(--max-width));
   margin: 0 auto;
   display: grid;
-  gap: var(--sp-12);
+  gap: var(--sp-8);
   align-items: start;
   padding: var(--sp-16) 0 var(--sp-10);
 }
 
 .footer-links-grid {
   display: grid;
-  gap: var(--sp-8);
+  gap: var(--sp-6);
+  align-items: start;
 }
 
 .footer-bottom {

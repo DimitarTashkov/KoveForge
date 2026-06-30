@@ -353,7 +353,8 @@
   .stagger-reveal > *,
   .hover-lift,
   .glow-orb--animated,
-  .text-gradient {
+  .text-gradient,
+  .eyebrow {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;

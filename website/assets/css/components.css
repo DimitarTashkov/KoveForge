@@ -697,11 +697,13 @@
 
 .footer-contact {
   display: grid;
-  gap: var(--sp-3);
+  gap: 0;
+  align-content: start;
 }
 
 .footer-contact h2,
 .footer-column h2 {
+  margin-bottom: var(--sp-2);
   color: var(--text-primary);
   font-size: var(--fs-sm);
   font-weight: 800;
@@ -722,7 +724,8 @@
 
 .footer-column {
   display: grid;
-  gap: var(--sp-2);
+  gap: 0;
+  align-content: start;
 }
 
 /* Footer tags inherit dark style automatically via tokens */

@@ -1051,6 +1051,10 @@
   line-height: var(--lh-body);
 }
 
+.case-hero .eyebrow {
+  color: transparent;
+}
+
 .case-actions {
   margin-top: var(--sp-8);
 }
@@ -2836,6 +2840,7 @@
 @media (prefers-reduced-motion: reduce) {
   .glow-blob,
   .text-gradient,
+  .eyebrow,
   .hero-media-frame::before,
   .hero-dashboard,
   .hero-metrics div,
