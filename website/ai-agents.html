@@ -100,9 +100,40 @@
       </article>
 
       <div class="ai-metric-grid">
-        <div class="brand-metric glass-panel"><strong>24/7</strong><span>Отговори извън работно време</span></div>
-        <div class="brand-metric glass-panel"><strong>1 място</strong><span>Събрани запитвания и контекст</span></div>
-        <div class="brand-metric glass-panel"><strong>по-малко</strong><span>Ръчни уточняващи разговори</span></div>
+        <article class="brand-metric ai-metric ai-metric-always-on glass-panel">
+          <div class="ai-metric-visual" aria-hidden="true">
+            <svg viewBox="0 0 120 120" focusable="false">
+              <circle class="metric-ring-track" cx="60" cy="60" r="43"></circle>
+              <circle class="metric-ring-value" cx="60" cy="60" r="43"></circle>
+              <path class="metric-clock" d="M60 34v27l18 11"></path>
+              <circle class="metric-clock-dot" cx="60" cy="61" r="4"></circle>
+            </svg>
+            <span class="ai-status-pill"><i></i> активен</span>
+          </div>
+          <div class="ai-metric-copy"><strong>24/7</strong><span>Отговори извън работно време</span></div>
+        </article>
+        <article class="brand-metric ai-metric ai-metric-hub glass-panel">
+          <div class="ai-metric-visual" aria-hidden="true">
+            <svg viewBox="0 0 180 110" focusable="false">
+              <path class="metric-route" d="M24 23h38c20 0 17 32 34 32h18"></path>
+              <path class="metric-route" d="M24 87h38c20 0 17-32 34-32h18"></path>
+              <path class="metric-route" d="M24 55h90"></path>
+              <circle class="metric-source" cx="20" cy="23" r="6"></circle>
+              <circle class="metric-source" cx="20" cy="55" r="6"></circle>
+              <circle class="metric-source" cx="20" cy="87" r="6"></circle>
+              <rect class="metric-hub-box" x="114" y="32" width="46" height="46" rx="13"></rect>
+              <path class="metric-inbox" d="M126 50h22v14h-22zm0 7h6l3 4h4l3-4h6"></path>
+            </svg>
+          </div>
+          <div class="ai-metric-copy"><strong>1 място</strong><span>Събрани запитвания и контекст</span></div>
+        </article>
+        <article class="brand-metric ai-metric ai-metric-less glass-panel">
+          <div class="ai-metric-visual" aria-hidden="true">
+            <div class="metric-bars"><i></i><i></i><i></i><i></i><i></i></div>
+            <svg viewBox="0 0 100 54" focusable="false"><path class="metric-trend" d="M7 9l25 17 21-8 36 27"></path><path class="metric-trend-arrow" d="M77 44h12V32"></path></svg>
+          </div>
+          <div class="ai-metric-copy"><strong>по-малко</strong><span>Ръчни уточняващи разговори</span></div>
+        </article>
       </div>
     </section>
 
@@ -188,11 +219,27 @@
           <p>Започваме от реалните въпроси на клиентите, подреждаме знанията на бизнеса и настройваме ясни граници: кога агентът отговаря сам, кога задава уточняващ въпрос и кога предава случая към човек.</p>
         </article>
 
-        <div class="mini-timeline ai-timeline">
-          <div><span>01</span><h3>Карта на въпросите</h3><p>Събираме типичните въпроси, услуги, правила, цени, ограничения и ситуациите, в които клиентът има нужда от насочване.</p></div>
-          <div><span>02</span><h3>База знания</h3><p>Подготвяме отговори, тон на комуникация и ясни правила какво агентът може да казва и какво трябва да предаде към човек.</p></div>
-          <div><span>03</span><h3>Внедряване</h3><p>Свързваме агента със сайт, форма, имейл, календар, каталог или вътрешен панел според реалния процес.</p></div>
-          <div><span>04</span><h3>Тест и развитие</h3><p>Проверяваме реални сценарии, коригираме слабите отговори и добавяме нови случаи след първите разговори.</p></div>
+        <div class="mini-timeline ai-timeline" aria-label="Четири етапа на услугата">
+          <article class="ai-timeline-step">
+            <div class="ai-step-head"><span>01</span><i>Вход</i></div>
+            <div class="ai-step-visual ai-step-map" aria-hidden="true"><b></b><b></b><b></b><b></b><i></i><i></i><i></i></div>
+            <h3>Карта на въпросите</h3><p>Събираме типичните въпроси, услуги, правила, цени, ограничения и ситуациите, в които клиентът има нужда от насочване.</p>
+          </article>
+          <article class="ai-timeline-step">
+            <div class="ai-step-head"><span>02</span><i>Знание</i></div>
+            <div class="ai-step-visual ai-step-knowledge" aria-hidden="true"><b></b><b></b><b></b><span>Q → A</span></div>
+            <h3>База знания</h3><p>Подготвяме отговори, тон на комуникация и ясни правила какво агентът може да казва и какво трябва да предаде към човек.</p>
+          </article>
+          <article class="ai-timeline-step">
+            <div class="ai-step-head"><span>03</span><i>Връзки</i></div>
+            <div class="ai-step-visual ai-step-connect" aria-hidden="true"><b>AI</b><span></span><i></i><i></i><i></i></div>
+            <h3>Внедряване</h3><p>Свързваме агента със сайт, форма, имейл, календар, каталог или вътрешен панел според реалния процес.</p>
+          </article>
+          <article class="ai-timeline-step">
+            <div class="ai-step-head"><span>04</span><i>Цикъл</i></div>
+            <div class="ai-step-visual ai-step-loop" aria-hidden="true"><svg viewBox="0 0 120 70" focusable="false"><path d="M23 38a30 24 0 0 1 52-16"></path><path d="M73 11l4 13-14-1"></path><path d="M97 32a30 24 0 0 1-52 16"></path><path d="M47 59l-4-13 14 1"></path><circle cx="60" cy="35" r="9"></circle><path d="M56 35l3 3 6-7"></path></svg></div>
+            <h3>Тест и развитие</h3><p>Проверяваме реални сценарии, коригираме слабите отговори и добавяме нови случаи след първите разговори.</p>
+          </article>
         </div>
       </div>
     </section>
