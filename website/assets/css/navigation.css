@@ -1,0 +1,55 @@
+/* Original navigation treatment, kept separate from the minified site bundle. */
+.nav-links.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.nav-links a {
+  position: relative;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  transition: color var(--dur-fast) ease, background var(--dur-fast) ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--text-primary);
+  background: rgb(var(--accent-violet-rgb) / 0.1);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  bottom: 4px;
+  left: 14px;
+  height: 2px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--accent-violet), var(--accent-cyan));
+  background-position: 0% 50%;
+  background-size: 200% 100%;
+  opacity: 0;
+  transform: scaleX(0);
+  transition:
+    opacity var(--dur-normal) var(--ease-out-expo),
+    transform var(--dur-normal) var(--ease-out-expo),
+    background-position var(--dur-slow) ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a[aria-current="page"]::after {
+  background-position: 100% 50%;
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+@media (min-width: 64rem) {
+  .nav-links a {
+    padding: 8px 12px;
+  }
+}
