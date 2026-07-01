@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Страницата не е намерена | KoveForge</title>
   <link rel="canonical" href="https://www.koveforge.tech/">
-  <link rel="icon" href="assets/images/brand/koveforge-logo-hq.png">
+  <link rel="icon" href="assets/images/brand/koveforge-logo-hq.webp">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Към основното съдържание</a>
-  <main id="main-content" tabindex="-1" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;padding:2rem;text-align:center;">
-    <p style="font-size:5rem;font-weight:800;line-height:1;color:var(--accent-violet)">404</p>
-    <h1 style="font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;color:var(--text-primary)">Страницата <span class="text-gradient">не е намерена</span></h1>
-    <p style="color:var(--text-secondary);max-width:480px">Адресът, който търсиш, не съществува или е преместен.</p>
-    <div class="not-found-visual" aria-label="Диаграма на липсваща страница"><span>Начало</span><i>→</i><span>Страница</span><i>→</i><b>404</b></div>
-    <a href="/" style="display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:var(--accent-violet);color:#fff;border-radius:var(--radius-md);font-weight:600;text-decoration:none;">← Обратно към началото</a>
+  <main class="error-page" id="main-content" tabindex="-1">
+    <p class="error-code">404</p>
+    <h1>Страницата <span class="text-gradient">не е намерена</span></h1>
+    <p class="error-copy">Адресът, който търсиш, не съществува или е преместен.</p>
+    <div class="not-found-visual" role="img" aria-label="Диаграма на липсваща страница"><span>Начало</span><i>→</i><span>Страница</span><i>→</i><b>404</b></div>
+    <a class="error-home" href="/">← Обратно към началото</a>
   </main>
 </body>
 </html>
