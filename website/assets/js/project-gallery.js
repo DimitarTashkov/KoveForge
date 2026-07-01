@@ -1,1 +1,493 @@
-const projectGalleries={"bulgarian-talk-norms":{title:"Bulgarian Talk Norms",sector:"Образователен уебсайт",images:["01-bulgarian-talk-norms.svg"]},"chat-app":{title:"Chat App",sector:"Комуникация в реално време",images:["01-app-demo-clean-1773094435078.webp","02-browse-rooms-modal-1773093310522.webp","03-dashboard-after-registration-1773092538335.webp","04-dashboard-rooms-test-1773092793216.webp","05-friend-system-test-1773092992832.webp","06-friends-list-showing-testuser1-1773093443185.webp","07-general-chat-room-messages-1773093424045.webp","08-login.webp","09-login-empty-submission-1773092489736.webp","10-logout-success-login-page-1773093516813.webp","11-private-chat-stuck-error-1773093499224.webp","12-register-edge-case-email-only-1773092516487.webp","13-register-existing-email-error-1773092599496.webp","14-register-form-initial-1773092497627.webp","15-register-invalid-inputs-1773092562461.webp","16-register-short-password-error-1773092613771.webp","17-rooms-list-after-joining-1773093393793.webp","18-screenshot-chat-1773095426958.webp","19-screenshot-create-room-1773095507134.webp","20-screenshot-dashboard-1773095407704.webp","21-screenshot-friends-1773095459526.webp","22-screenshot-login-1773095333523.webp","23-screenshot-login-1773095363939.webp","24-screenshot-settings-1773095479960.webp"]},"dental-booking":{title:"DentalBooking",sector:"Дентална клиника / резервации",images:["01-dental-booking-screen.webp","02-dental-booking-screen.webp","03-dental-booking-screen.webp","04-dental-booking-screen.webp","05-dental-booking-screen.webp","06-dental-booking-screen.webp","07-dental-booking-screen.webp","08-dental-booking-screen.webp"]},dentora:{title:"Dentora",sector:"Клиника / резервации",images:["01-about-us-form.webp","02-app-backround.webp","03-book-appointment-form.webp","04-contact-us-form.webp","05-daily-report-pdf.webp","06-daily-report.webp","07-db-diagram.png","08-dentora-logo.webp","09-edit-inventory.webp","10-edit-patient.webp","11-edit-treatment.webp","12-home-doctor-form.webp","13-home-patient-form.webp","14-inventory-form.webp","15-login-form.webp","16-patient-appointments.webp","17-patient-history-form.webp","18-patients-form.webp","19-register-form.webp","20-reviews-form.webp","21-schedules-form.webp","22-treatments-form.webp"]},"fitness-application":{title:"Fitness Application",sector:"Прототип за онлайн магазин",images:["01-fitness-application.svg"]},"fitness-center":{title:"Fitness Center",sector:"Фитнес / здраве",images:["01-fitness-center-screen.webp","02-fitness-center-screen.webp","03-fitness-center-screen.webp","04-fitness-center-screen.webp","05-fitness-center-screen.webp","06-fitness-center-screen.webp","07-fitness-center-screen.webp","08-fitness-center-screen.webp"]},gocetransportapp:{title:"GoceTransportApp",sector:"Транспортна платформа",images:["01-screenshot-2026-04-16-101330.webp","Screenshot 2026-06-22 230749.webp","Screenshot 2026-06-22 230802.webp","Screenshot 2026-06-22 230815.webp","Screenshot 2026-06-22 230832.webp","Screenshot 2026-06-22 230846.webp","Screenshot 2026-06-22 231049.webp"]},"hotel-oazis":{title:"Hotel Oazis",sector:"Хотелски мениджмънт",images:["01-image10.webp","02-image11.webp","03-image12.webp","04-image13.webp","05-image14.webp","06-image15.webp","07-image16.webp","08-image17.webp","09-image18.png","10-image19.webp","11-image2.png","12-image20.webp","13-image21.png","14-image22.webp","15-image3.png","16-image4.png","17-image5.webp","18-image6.webp","19-image7.webp","20-image8.webp","21-image9.webp"]},"prizma-studio":{title:"Prisma Studio",sector:"Фото студио / магазин",images:["01-about-us-form.webp","02-architecture1-4-1.webp","03-architecture1-4-2.webp","04-architecture1-4-3.webp","05-architecture1-4-4.webp","06-book-session-form.webp","07-cart-form-invoice.webp","08-cart-form-validation-test.webp","09-cart-from.webp","10-contact-us-form.webp","11-db-diagram.webp","12-home-form.webp","13-login-form.webp","14-manageproducts-form.webp","15-profie-form.webp","16-register-form.webp","17-screenshot-2026-01-27-180304.webp","18-screenshot-2026-01-27-180317.webp","19-screenshot-2026-01-27-180326.webp","20-shop-form.webp","21-users-form.webp"]},"restaurant-salaries":{title:"RestaurantSalaries",sector:"Ресторантьорство / управление",images:["01-restaurant-salaries-screen.webp","02-restaurant-salaries-screen.webp","03-restaurant-salaries-screen.webp","04-restaurant-salaries-screen.webp"]},resurs11:{title:"Resurs 11",sector:"Бизнес уебсайт / търсачки",images:["01-scene1-homepage-desktop.webp","02-scene2-products-desktop.webp","03-scene3-mobile-ux.webp","04-scene4-gallery.webp","05-scene5-contacts.webp"]},retrorides:{title:"RetroRides",sector:"Музей / резервации",images:["01-about-us-form.webp","02-add-edit-form.webp","03-add-edit-vehicle-form.webp","04-architecture-1.webp","05-architecture-2.webp","06-architecture-3.webp","07-architecture-4.webp","08-architecture-5.webp","09-book-visit-form-invoice.webp","10-book-visit-form.webp","11-catalog-form.webp","12-checkout-form.webp","13-contact-us-form.webp","14-db-diagram.png","15-forms.webp","16-home-form.webp","17-images-1.jpg","18-login-form.webp","19-login-responsive.webp","20-manage-store-form.webp","21-manage-vehicles-form.webp","22-orders-form-invoice.webp","23-orders-form-orders.webp","24-orders-form-reservations.webp","25-profile-form.webp","26-register-form.webp","27-register-responsive.webp","28-responsive-image.webp","29-responsive-initial-image.webp","30-retrorides-logo.webp","31-souvenirs.webp","32-store-form.webp","33-users-form.webp"]},"shooter-game":{title:"Shooter Game",sector:"Интерактивно приложение",images:["01-game-map.webp","02-hard-difficutly-blackout.webp","03-leaderboard.webp","04-menu.webp","05-orc-mini-game.webp","06-setup.webp","07-shotgun-jam-effect.webp","08-sniper-delay-effect.webp","09-tank-mini-game.webp","10-uml-diagram.webp","11-warrior-mini-game.webp","12-wizard-mini-game.webp"]},stagenova:{title:"StageNova",sector:"Театър / билети",images:["01-about-form.webp","02-addedit-merch-form.webp","03-addedit-play-form.webp","04-bookvisit-form.webp","05-contact-form.webp","06-db-diagram.png","07-drama-background-wt956l4ngvrqc6w5.jpg","08-index-form.webp","09-login-form.webp","10-manage-merch-form.webp","11-manage-plays-form.webp","12-my-bookins-tickets-form.webp","13-my-bookins-merch-form.webp","14-plays-form.webp","15-profile-form.webp","16-register-form.webp","17-shop-form.webp","18-stage-nova-bg.webp","19-throw-pillows-blankets-featured.webp","20-users-form.webp"]},"toy-shop":{title:"ToyShop",sector:"Магазин / търговия",images:["01-toy-shop-screen.webp","02-toy-shop-screen.webp","03-toy-shop-screen.webp"]},zoozen:{title:"ZooZen",sector:"Зоомагазин / онлайн магазин",images:["01-about-us-form.webp","02-background.webp","03-catalog-form.webp","04-checkout-form.webp","05-contact-us-form.webp","06-db-diagram.webp","07-home-page-img1.webp","08-home-page-img2.jpg","09-login-form.webp","10-logo.webp","11-orders-form.png","12-product-management-form.png","13-profile-form.webp","14-promotions-form.webp","15-receipt-image.webp","16-receipt-location.webp","17-register-form.webp","18-users-form.png"]}},galleries=document.querySelectorAll("[data-project-gallery]"),prefersReducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches,formatCaption=e=>`Снимка ${e+1}`;galleries.forEach(e=>{const t=e.dataset.currentProject,r=projectGalleries[t];if(!r||!r.images.length)return void(e.hidden=!0);const a=e.dataset.assetRoot||`../assets/images/projects/${t}/`;let o,s=0,n=!prefersReducedMotion&&r.images.length>1,i=!1;e.innerHTML=`\n    <div class="case-gallery-heading">\n      <div>\n        <p class="eyebrow">ГАЛЕРИЯ НА ПРОЕКТА</p>\n        <h2>Галерия на ${r.title}</h2>\n        <p>Снимки от реалните екрани на проекта: основни страници, администраторски панели, форми и работни потоци.</p>\n      </div>\n      <div class="gallery-controls" role="group" aria-label="Контроли за галерията">\n        <button class="gallery-control" type="button" aria-label="Предишна снимка" data-gallery-prev>←</button>\n        <button class="gallery-control gallery-play" type="button" aria-label="${n?"Пауза на слайдшоуто":"Стартирай слайдшоуто"}" aria-pressed="${n}" data-gallery-toggle>${n?"Пауза":"Старт"}</button>\n        <button class="gallery-control" type="button" aria-label="Следваща снимка" data-gallery-next>→</button>\n      </div>\n    </div>\n    <div class="gallery-shell">\n      <div class="gallery-stage">\n        <a class="gallery-main-link" href="#" target="_blank" rel="noopener" data-gallery-link>\n          <img alt="" loading="lazy" decoding="async" fetchpriority="low" data-gallery-image>\n        </a>\n        <div class="gallery-caption">\n          <div>\n            <span data-gallery-sector></span>\n            <strong data-gallery-title></strong>\n          </div>\n          <p data-gallery-counter></p>\n        </div>\n      </div>\n      <div class="gallery-thumbs" role="group" aria-label="Снимки от ${r.title}" data-gallery-thumbs></div>\n    </div>\n  `;const p=e.querySelector("[data-gallery-image]"),l=e.querySelector("[data-gallery-link]"),b=e.querySelector("[data-gallery-title]"),c=e.querySelector("[data-gallery-sector]"),g=e.querySelector("[data-gallery-counter]"),m=e.querySelector("[data-gallery-thumbs]"),w=e.querySelector("[data-gallery-prev]"),d=e.querySelector("[data-gallery-next]"),u=e.querySelector("[data-gallery-toggle]");r.images.length<2&&(w.disabled=!0,d.disabled=!0,u.disabled=!0);const f=e=>`${a}${e}`,h=t=>{s=(t+r.images.length)%r.images.length;const a=r.images[s],o=formatCaption(s),n=f(a);p.src=n,p.alt=`${r.title}: ${o}`,l.href=n,l.setAttribute("aria-label",`Отвори ${o} в пълен размер`),b.textContent=o,c.textContent=r.sector,g.textContent=`${s+1} / ${r.images.length}`,e.querySelectorAll("[data-gallery-thumb]").forEach((e,t)=>{const r=t===s;e.classList.toggle("is-active",r),e.setAttribute("aria-current",r?"true":"false")})},y=()=>{window.clearInterval(o),o=void 0},v=()=>{y(),!i||!n||r.images.length<2||document.hidden||(o=window.setInterval(()=>h(s+1),5200))};if(w.addEventListener("click",()=>{h(s-1),v()}),d.addEventListener("click",()=>{h(s+1),v()}),u.addEventListener("click",()=>{n=!n,u.textContent=n?"Пауза":"Старт",u.setAttribute("aria-label",n?"Пауза на слайдшоуто":"Стартирай слайдшоуто"),u.setAttribute("aria-pressed",String(n)),v()}),e.addEventListener("keydown",e=>{"ArrowLeft"!==e.key&&"ArrowRight"!==e.key||(e.preventDefault(),h(s+("ArrowRight"===e.key?1:-1)),v())}),e.addEventListener("click",e=>{if(!(e.target instanceof Element))return;const t=e.target.closest("[data-gallery-thumb]");t&&(h(Number(t.dataset.galleryThumb)),v())}),e.addEventListener("mouseenter",y),e.addEventListener("mouseleave",v),e.addEventListener("focusin",y),e.addEventListener("focusout",v),document.addEventListener("visibilitychange",()=>{document.hidden?y():v()}),(()=>{m.innerHTML=r.images.map((e,t)=>{const r=formatCaption(t);return`\n          <button class="gallery-thumb" type="button" data-gallery-thumb="${t}" aria-label="Покажи ${r}">\n            <img alt="" loading="lazy" decoding="async" data-src="${f(e)}">\n            <span>${r}</span>\n          </button>\n        `}).join("");const e=m.querySelectorAll("img[data-src]");if(!("IntersectionObserver"in window))return void e.forEach(e=>{e.src=e.dataset.src,delete e.dataset.src});const t=new IntersectionObserver((e,t)=>{e.forEach(e=>{if(!e.isIntersecting)return;const r=e.target;r.src=r.dataset.src,delete r.dataset.src,t.unobserve(r)})},{rootMargin:"300px 0px"});e.forEach(e=>t.observe(e))})(),c.textContent=r.sector,b.textContent=formatCaption(s),g.textContent=`${s+1} / ${r.images.length}`,"IntersectionObserver"in window){new IntersectionObserver(([e])=>{i=e.isIntersecting,i?(p.hasAttribute("src")||h(s),v()):y()},{rootMargin:"400px 0px"}).observe(e.querySelector(".gallery-stage"))}else i=!0,h(s),v()});
+const shot = (src, title, description, kind = "Екран от проекта") => ({
+  src,
+  title,
+  description,
+  kind,
+});
+
+const projectGalleries = {
+  "bulgarian-talk-norms": {
+    title: "Bulgarian Talk Norms",
+    sector: "Образователен уебсайт",
+    images: [
+      shot("01-bulgarian-talk-norms.svg", "Начална страница", "Образователният интерфейс и основната тема на проекта.", "Уебсайт"),
+    ],
+  },
+  "chat-app": {
+    title: "Chat App",
+    sector: "Комуникация в реално време",
+    images: [
+      shot("18-screenshot-chat-1773095426958.webp", "Разговор в реално време", "Основният чат изглед с активна стая и поток от съобщения.", "Основен поток"),
+      shot("20-screenshot-dashboard-1773095407704.webp", "Табло със стаи", "Работното табло за преглед и избор на чат стаи."),
+      shot("19-screenshot-create-room-1773095507134.webp", "Създаване на стая", "Диалогът за създаване на ново пространство за разговор.", "Действие"),
+      shot("21-screenshot-friends-1773095459526.webp", "Приятели и контакти", "Списъкът с контакти и достъпът до директни разговори."),
+      shot("24-screenshot-settings-1773095479960.webp", "Настройки", "Потребителски настройки и персонализиране на профила."),
+      shot("22-screenshot-login-1773095333523.webp", "Вход", "Защитен вход към приложението.", "Автентикация"),
+      shot("14-register-form-initial-1773092497627.webp", "Регистрация", "Създаване на нов потребителски профил.", "Автентикация"),
+    ],
+  },
+  "dental-booking": {
+    title: "DentalBooking",
+    sector: "Дентална клиника / резервации",
+    images: [
+      shot("06-dental-booking-screen.webp", "Начална страница", "Ясно представяне на клиниката и директен път към записване на час.", "Уебсайт"),
+      shot("03-dental-booking-screen.webp", "Екип от специалисти", "Търсене и избор на зъболекар според специалността."),
+      shot("04-dental-booking-screen.webp", "Каталог с услуги", "Услуги, цени, продължителност и директно записване."),
+      shot("02-dental-booking-screen.webp", "Календар за записване", "Филтриране по специалист и услуга с календар за свободни часове.", "Резервации"),
+      shot("08-dental-booking-screen.webp", "Избран ден и специалист", "Конкретен избор на дата и зареждане на наличните часове.", "Резервации"),
+      shot("01-dental-booking-screen.webp", "Вход в системата", "Достъп до пациентския профил и предстоящите резервации.", "Автентикация"),
+    ],
+  },
+  dentora: {
+    title: "Dentora",
+    sector: "Клиника / резервации",
+    images: [
+      shot("12-home-doctor-form.webp", "Табло за лекар", "Централен преглед на леченията и бързите действия.", "Основно табло"),
+      shot("13-home-patient-form.webp", "Пациентско начало", "Начален изглед с най-важната информация за пациента."),
+      shot("03-book-appointment-form.webp", "Записване на час", "Работен поток за избор и потвърждаване на посещение.", "Резервации"),
+      shot("21-schedules-form.webp", "Графици", "Организиране на работното време и наличните часове."),
+      shot("16-patient-appointments.webp", "Часове на пациента", "Преглед на предстоящи и минали посещения."),
+      shot("18-patients-form.webp", "Пациенти", "Управление и бързо откриване на пациентски профили."),
+      shot("22-treatments-form.webp", "Лечения", "Управление на лечебните дейности и свързаните данни."),
+      shot("14-inventory-form.webp", "Наличности", "Проследяване на материали и консумативи."),
+      shot("06-daily-report.webp", "Дневен отчет", "Обобщение на дневната работа и ключовите показатели.", "Отчети"),
+      shot("07-db-diagram.png", "Архитектура на данните", "Диаграма на основните обекти и връзки в системата.", "Архитектура"),
+    ],
+  },
+  "fitness-application": {
+    title: "Fitness Application",
+    sector: "Прототип за онлайн магазин",
+    images: [
+      shot("01-fitness-application.svg", "Продуктов прототип", "Основният визуален прототип на фитнес приложението.", "Прототип"),
+    ],
+  },
+  "fitness-center": {
+    title: "Fitness Center",
+    sector: "Фитнес / здраве",
+    images: [
+      shot("02-fitness-center-screen.webp", "Начално табло", "Главната навигация към профил, програми и хранителни режими.", "Основно табло"),
+      shot("03-fitness-center-screen.webp", "Фитнес програми", "Създаване на тренировъчна програма според избрани мускулни групи."),
+      shot("04-fitness-center-screen.webp", "Хранителен план", "Персонализиране на хранителен режим според целите на потребителя."),
+      shot("05-fitness-center-screen.webp", "Потребителски профил", "Преглед на профилната информация и ролята в системата."),
+      shot("06-fitness-center-screen.webp", "Администраторско табло", "Бърз достъп до административните функции."),
+      shot("07-fitness-center-screen.webp", "Управление на потребители", "Добавяне, редактиране и премахване на профили.", "Администрация"),
+    ],
+  },
+  gocetransportapp: {
+    title: "GoceTransportApp",
+    sector: "Транспортна платформа",
+    images: [
+      shot("01-screenshot-2026-04-16-101330.webp", "Търсене на пътуване", "Началната страница събира маршрут, дата и основни действия в един екран.", "Основен поток"),
+      shot("Screenshot 2026-06-22 230749.webp", "Разписания", "Преглед и филтриране на наличните транспортни връзки."),
+      shot("Screenshot 2026-06-22 230802.webp", "Детайли за маршрут", "Подробна информация за избраното пътуване."),
+      shot("Screenshot 2026-06-22 230815.webp", "Резервация на билет", "Потокът за избор и потвърждаване на билет.", "Резервации"),
+      shot("Screenshot 2026-06-22 230832.webp", "Потребителско табло", "Централен преглед на действията и пътуванията."),
+      shot("Screenshot 2026-06-22 230846.webp", "Управление на транспорт", "Оперативен изглед за транспортни данни.", "Администрация"),
+      shot("Screenshot 2026-06-22 231049.webp", "Административен панел", "Разширени инструменти за управление на платформата.", "Администрация"),
+    ],
+  },
+  "hotel-oazis": {
+    title: "Hotel Oazis",
+    sector: "Хотелски мениджмънт",
+    images: [
+      shot("19-image7.webp", "Начална страница", "Вход към стаите, услугите и основните хотелски потоци.", "Основно табло"),
+      shot("20-image8.webp", "Каталог със стаи", "Свободни стаи, цени и действия за резервация."),
+      shot("01-image10.webp", "Детайли за стая", "Информация за тип, цена, наличност и описание."),
+      shot("07-image16.webp", "Нова резервация", "Избор на период за настаняване и напускане.", "Резервации"),
+      shot("14-image22.webp", "Потребителски профил", "Редактиране на лични данни и управление на акаунта."),
+      shot("10-image19.webp", "Управление на потребители", "Административен преглед на потребителските роли.", "Администрация"),
+      shot("21-image9.webp", "Редактиране на стая", "Промяна на цена, тип, снимка и наличност.", "Администрация"),
+      shot("12-image20.webp", "Контакти", "Контактни данни и работно време на хотела.", "Информация"),
+    ],
+  },
+  "prizma-studio": {
+    title: "Prisma Studio",
+    sector: "Фото студио / магазин",
+    images: [
+      shot("12-home-form.webp", "Начална страница", "Директен достъп до фотографските услуги и магазина.", "Основно табло"),
+      shot("20-shop-form.webp", "Онлайн магазин", "Каталог с продукти и действия за покупка."),
+      shot("06-book-session-form.webp", "Запазване на сесия", "Резервация на фотографска услуга.", "Резервации"),
+      shot("09-cart-from.webp", "Количка", "Преглед на избраните продукти преди поръчка."),
+      shot("07-cart-form-invoice.webp", "Фактура", "Финализиране на поръчка и издаване на документ.", "Поръчки"),
+      shot("15-profie-form.webp", "Профил", "Управление на личните данни и предпочитанията."),
+      shot("14-manageproducts-form.webp", "Управление на продукти", "Административни действия върху продуктовия каталог.", "Администрация"),
+      shot("21-users-form.webp", "Потребители", "Управление на достъпа и профилите.", "Администрация"),
+      shot("11-db-diagram.webp", "Архитектура на данните", "Основните обекти и връзки в приложението.", "Архитектура"),
+    ],
+  },
+  "restaurant-salaries": {
+    title: "RestaurantSalaries",
+    sector: "Ресторантьорство / управление",
+    images: [
+      shot("01-restaurant-salaries-screen.webp", "Начално табло", "Обобщение на възможностите за служители, заплати и отчети.", "Основно табло"),
+      shot("02-restaurant-salaries-screen.webp", "Служители", "Регистър и управление на служителите."),
+      shot("03-restaurant-salaries-screen.webp", "Изчисляване на заплати", "Работен поток за автоматизирано изчисление."),
+      shot("04-restaurant-salaries-screen.webp", "Справки и отчети", "Обобщени данни за възнагражденията.", "Отчети"),
+    ],
+  },
+  resurs11: {
+    title: "Resurs 11",
+    sector: "Бизнес уебсайт / търсачки",
+    images: [
+      shot("01-scene1-homepage-desktop.webp", "Начална страница", "Силен продуктов фокус и ясни действия за клиентите.", "Уебсайт"),
+      shot("02-scene2-products-desktop.webp", "Продуктов каталог", "Категории и продуктови карти за бързо сравнение."),
+      shot("04-scene4-gallery.webp", "Галерия", "Визуално представяне на продуктите и дейността."),
+      shot("05-scene5-contacts.webp", "Контакти", "Контактна информация и достъп до запитване."),
+      shot("03-scene3-mobile-ux.webp", "Мобилно изживяване", "Адаптиран интерфейс за малък екран.", "Мобилен изглед"),
+    ],
+  },
+  retrorides: {
+    title: "RetroRides",
+    sector: "Музей / резервации",
+    images: [
+      shot("16-home-form.webp", "Начална страница", "Вход към автомобилната колекция и магазина.", "Основно табло"),
+      shot("11-catalog-form.webp", "Каталог с автомобили", "Преглед на колекцията и детайлите за експонатите."),
+      shot("10-book-visit-form.webp", "Резервация за посещение", "Избор и потвърждаване на посещение.", "Резервации"),
+      shot("32-store-form.webp", "Магазин за сувенири", "Каталог с продукти, свързани с музея."),
+      shot("12-checkout-form.webp", "Завършване на поръчка", "Потвърждение на данните и покупката.", "Поръчки"),
+      shot("25-profile-form.webp", "Потребителски профил", "Лични данни, резервации и поръчки."),
+      shot("20-manage-store-form.webp", "Управление на магазина", "Административен контрол върху сувенирите.", "Администрация"),
+      shot("21-manage-vehicles-form.webp", "Управление на автомобилите", "Добавяне и редактиране на експонати.", "Администрация"),
+      shot("23-orders-form-orders.webp", "Управление на поръчки", "Проследяване на клиентските поръчки.", "Администрация"),
+      shot("14-db-diagram.png", "Архитектура на данните", "Диаграма на ключовите обекти в системата.", "Архитектура"),
+    ],
+  },
+  "shooter-game": {
+    title: "Shooter Game",
+    sector: "Интерактивно приложение",
+    images: [
+      shot("04-menu.webp", "Главно меню", "Начална точка за избор и стартиране на игра.", "Навигация"),
+      shot("06-setup.webp", "Настройване на игра", "Избор на параметри преди началото."),
+      shot("01-game-map.webp", "Игрова карта", "Основният тактически екран с карта, статус и действия.", "Игрови процес"),
+      shot("03-leaderboard.webp", "Класация", "Резултати и сравнение между играчите."),
+      shot("05-orc-mini-game.webp", "Орк мини игра", "Специално интерактивно предизвикателство.", "Мини игра"),
+      shot("09-tank-mini-game.webp", "Танк мини игра", "Допълнителен игрови режим.", "Мини игра"),
+      shot("11-warrior-mini-game.webp", "Воин мини игра", "Бързо предизвикателство с различна механика.", "Мини игра"),
+      shot("12-wizard-mini-game.webp", "Магьосник мини игра", "Алтернативна мини игра с тематични правила.", "Мини игра"),
+      shot("07-shotgun-jam-effect.webp", "Ефект на оръжие", "Пример за динамична логика и състояние на оръжието."),
+      shot("10-uml-diagram.webp", "Архитектура на играта", "UML преглед на основните класове и връзки.", "Архитектура"),
+    ],
+  },
+  stagenova: {
+    title: "StageNova",
+    sector: "Театър / билети",
+    images: [
+      shot("08-index-form.webp", "Начална страница", "Директен вход към репертоара и театралния магазин.", "Основно табло"),
+      shot("14-plays-form.webp", "Репертоар", "Каталог с постановки и ключова информация."),
+      shot("04-bookvisit-form.webp", "Резервация на билет", "Избор и запазване на посещение.", "Резервации"),
+      shot("17-shop-form.webp", "Магазин", "Театрални продукти и действия за покупка."),
+      shot("12-my-bookins-tickets-form.webp", "Моите билети", "История и статус на резервираните билети."),
+      shot("13-my-bookins-merch-form.webp", "Моите поръчки", "Преглед на покупките от магазина."),
+      shot("15-profile-form.webp", "Профил", "Управление на личните данни."),
+      shot("10-manage-merch-form.webp", "Управление на продукти", "Административен контрол върху магазина.", "Администрация"),
+      shot("11-manage-plays-form.webp", "Управление на постановки", "Добавяне и редактиране на репертоара.", "Администрация"),
+      shot("06-db-diagram.png", "Архитектура на данните", "Основните обекти и връзки в платформата.", "Архитектура"),
+    ],
+  },
+  "toy-shop": {
+    title: "ToyShop",
+    sector: "Магазин / търговия",
+    images: [
+      shot("01-toy-shop-screen.webp", "Продуктов каталог", "Търсене, продукти и бързи административни действия.", "Основно табло"),
+      shot("02-toy-shop-screen.webp", "Количка и поръчка", "Работният поток за покупка на избрани продукти."),
+      shot("03-toy-shop-screen.webp", "Управление на магазина", "Административен изглед за продукти и потребители.", "Администрация"),
+    ],
+  },
+  zoozen: {
+    title: "ZooZen",
+    sector: "Зоомагазин / онлайн магазин",
+    images: [
+      shot("09-login-form.webp", "Вход в ZooZen", "Представяне на основните възможности и защитен достъп.", "Основен екран"),
+      shot("03-catalog-form.webp", "Продуктов каталог", "Категории, търсене, наличности и добавяне в количка."),
+      shot("04-checkout-form.webp", "Завършване на поръчка", "Данни за доставка, промо код и крайна сума.", "Поръчки"),
+      shot("14-promotions-form.webp", "Промоции", "Филтриран каталог с активни предложения."),
+      shot("13-profile-form.webp", "Потребителски профил", "Лични данни и управление на акаунта."),
+      shot("11-orders-form.png", "Поръчки", "История и управление на направените поръчки."),
+      shot("12-product-management-form.png", "Управление на продукти", "Административен контрол на каталога.", "Администрация"),
+      shot("18-users-form.png", "Управление на потребители", "Потребителски роли и достъп.", "Администрация"),
+      shot("06-db-diagram.webp", "Архитектура на данните", "Диаграма на основните обекти в магазина.", "Архитектура"),
+    ],
+  },
+};
+
+const galleries = document.querySelectorAll("[data-project-gallery]");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+galleries.forEach((gallery) => {
+  const slug = gallery.dataset.currentProject;
+  const project = projectGalleries[slug];
+
+  if (!project?.images.length) {
+    gallery.hidden = true;
+    return;
+  }
+
+  const assetRoot = gallery.dataset.assetRoot || `../assets/images/projects/${slug}/`;
+  let activeIndex = 0;
+  let isPlaying = false;
+  let isVisible = false;
+  let intervalId;
+  let pointerStart;
+  let returnFocus;
+  let suppressExpand = false;
+
+  gallery.innerHTML = `
+    <div class="case-gallery-heading">
+      <div>
+        <p class="eyebrow">ГАЛЕРИЯ НА ПРОЕКТА</p>
+        <h2>Галерия на ${project.title}</h2>
+        <p>Подбрани реални екрани, подредени от основното изживяване към работните потоци и администрацията.</p>
+      </div>
+      <div class="gallery-controls" role="group" aria-label="Контроли за галерията">
+        <button class="gallery-control" type="button" aria-label="Предишен екран" data-gallery-prev>←</button>
+        <button class="gallery-control gallery-play" type="button" aria-label="Стартирай слайдшоуто" aria-pressed="false" data-gallery-toggle>Старт</button>
+        <button class="gallery-control" type="button" aria-label="Следващ екран" data-gallery-next>→</button>
+        <button class="gallery-control" type="button" aria-label="Отвори на цял екран" data-gallery-expand>↗</button>
+      </div>
+    </div>
+    <div class="gallery-shell">
+      <div class="gallery-stage">
+        <button class="gallery-main-link" type="button" aria-label="Отвори активния екран в голям размер" data-gallery-main>
+          <img alt="" decoding="async" data-gallery-image>
+        </button>
+        <div class="gallery-caption" aria-live="polite">
+          <div class="gallery-caption-copy">
+            <span data-gallery-kind></span>
+            <strong data-gallery-title></strong>
+            <p class="gallery-caption-description" data-gallery-description></p>
+          </div>
+          <p data-gallery-counter></p>
+        </div>
+      </div>
+      <div class="gallery-thumbs" role="list" aria-label="Екрани от ${project.title}" data-gallery-thumbs></div>
+    </div>
+    <dialog class="gallery-dialog" aria-label="Голям преглед на галерията" data-gallery-dialog>
+      <div class="gallery-dialog-inner">
+        <div class="gallery-dialog-bar">
+          <strong>${project.title}</strong>
+          <button class="gallery-dialog-button" type="button" aria-label="Затвори големия преглед" data-dialog-close>✕</button>
+        </div>
+        <div class="gallery-dialog-stage">
+          <button class="gallery-dialog-button" type="button" aria-label="Предишен екран" data-dialog-prev>←</button>
+          <img class="gallery-dialog-image" alt="" decoding="async" data-dialog-image>
+          <button class="gallery-dialog-button" type="button" aria-label="Следващ екран" data-dialog-next>→</button>
+        </div>
+        <div class="gallery-dialog-caption">
+          <strong data-dialog-title></strong>
+          <span data-dialog-counter></span>
+        </div>
+      </div>
+    </dialog>
+  `;
+
+  const image = gallery.querySelector("[data-gallery-image]");
+  const mainButton = gallery.querySelector("[data-gallery-main]");
+  const title = gallery.querySelector("[data-gallery-title]");
+  const description = gallery.querySelector("[data-gallery-description]");
+  const kind = gallery.querySelector("[data-gallery-kind]");
+  const counter = gallery.querySelector("[data-gallery-counter]");
+  const thumbs = gallery.querySelector("[data-gallery-thumbs]");
+  const previousButton = gallery.querySelector("[data-gallery-prev]");
+  const nextButton = gallery.querySelector("[data-gallery-next]");
+  const toggleButton = gallery.querySelector("[data-gallery-toggle]");
+  const expandButton = gallery.querySelector("[data-gallery-expand]");
+  const dialog = gallery.querySelector("[data-gallery-dialog]");
+  const dialogImage = gallery.querySelector("[data-dialog-image]");
+  const dialogTitle = gallery.querySelector("[data-dialog-title]");
+  const dialogCounter = gallery.querySelector("[data-dialog-counter]");
+
+  const sourceFor = (item) => `${assetRoot}${item.src}`;
+
+  const preloadAdjacent = () => {
+    if (project.images.length < 2) return;
+    [-1, 1].forEach((offset) => {
+      const item = project.images[(activeIndex + offset + project.images.length) % project.images.length];
+      const preload = new Image();
+      preload.src = sourceFor(item);
+    });
+  };
+
+  const renderThumbs = () => {
+    thumbs.innerHTML = project.images.map((item, index) => `
+      <button class="gallery-thumb" type="button" role="listitem" data-gallery-thumb="${index}" aria-label="Покажи: ${item.title}">
+        <img alt="" loading="lazy" decoding="async" data-src="${sourceFor(item)}">
+        <span class="gallery-thumb-copy">
+          <span>${item.title}</span>
+          <small>${item.kind}</small>
+        </span>
+      </button>
+    `).join("");
+
+    const lazyImages = thumbs.querySelectorAll("img[data-src]");
+    if (!("IntersectionObserver" in window)) {
+      lazyImages.forEach((thumbImage) => {
+        thumbImage.src = thumbImage.dataset.src;
+        delete thumbImage.dataset.src;
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.src = entry.target.dataset.src;
+        delete entry.target.dataset.src;
+        observer.unobserve(entry.target);
+      });
+    }, { root: thumbs, rootMargin: "240px" });
+
+    lazyImages.forEach((thumbImage) => observer.observe(thumbImage));
+  };
+
+  const updateGallery = (nextIndex, { moveThumb = true } = {}) => {
+    activeIndex = (nextIndex + project.images.length) % project.images.length;
+    const item = project.images[activeIndex];
+    const source = sourceFor(item);
+
+    image.src = source;
+    image.alt = `${project.title}: ${item.title}`;
+    mainButton.style.setProperty("--gallery-backdrop", `url("${source.replaceAll('"', "%22")}")`);
+    title.textContent = item.title;
+    description.textContent = item.description;
+    kind.textContent = `${project.sector} · ${item.kind}`;
+    counter.textContent = `${activeIndex + 1} / ${project.images.length}`;
+    dialogImage.src = source;
+    dialogImage.alt = `${project.title}: ${item.title}`;
+    dialogTitle.textContent = item.title;
+    dialogCounter.textContent = `${activeIndex + 1} / ${project.images.length}`;
+
+    gallery.querySelectorAll("[data-gallery-thumb]").forEach((thumb, index) => {
+      const isActive = index === activeIndex;
+      thumb.classList.toggle("is-active", isActive);
+      thumb.setAttribute("aria-current", isActive ? "true" : "false");
+      if (isActive && moveThumb) thumb.scrollIntoView({ block: "nearest", inline: "nearest" });
+    });
+
+    preloadAdjacent();
+  };
+
+  const stopTimer = () => {
+    window.clearInterval(intervalId);
+    intervalId = undefined;
+  };
+
+  const syncTimer = () => {
+    stopTimer();
+    if (!isPlaying || !isVisible || dialog.open || document.hidden || reducedMotion.matches || project.images.length < 2) return;
+    intervalId = window.setInterval(() => updateGallery(activeIndex + 1), 5600);
+  };
+
+  const setPlaying = (playing) => {
+    isPlaying = playing && !reducedMotion.matches && project.images.length > 1;
+    toggleButton.textContent = isPlaying ? "Пауза" : "Старт";
+    toggleButton.setAttribute("aria-pressed", String(isPlaying));
+    toggleButton.setAttribute("aria-label", isPlaying ? "Пауза на слайдшоуто" : "Стартирай слайдшоуто");
+    syncTimer();
+  };
+
+  const openDialog = (trigger) => {
+    if (typeof dialog.showModal !== "function") return;
+    returnFocus = trigger;
+    stopTimer();
+    dialog.showModal();
+    gallery.querySelector("[data-dialog-close]").focus();
+  };
+
+  const closeDialog = () => {
+    dialog.close();
+  };
+
+  const step = (offset) => {
+    updateGallery(activeIndex + offset);
+    syncTimer();
+  };
+
+  previousButton.addEventListener("click", () => step(-1));
+  nextButton.addEventListener("click", () => step(1));
+  toggleButton.addEventListener("click", () => setPlaying(!isPlaying));
+  expandButton.addEventListener("click", () => openDialog(expandButton));
+  mainButton.addEventListener("click", () => {
+    if (!suppressExpand) openDialog(mainButton);
+  });
+  gallery.querySelector("[data-dialog-prev]").addEventListener("click", () => step(-1));
+  gallery.querySelector("[data-dialog-next]").addEventListener("click", () => step(1));
+  gallery.querySelector("[data-dialog-close]").addEventListener("click", closeDialog);
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) closeDialog();
+  });
+
+  dialog.addEventListener("close", () => {
+    returnFocus?.focus();
+    syncTimer();
+  });
+
+  thumbs.addEventListener("click", (event) => {
+    const thumb = event.target.closest("[data-gallery-thumb]");
+    if (thumb) {
+      updateGallery(Number(thumb.dataset.galleryThumb));
+      syncTimer();
+    }
+  });
+
+  mainButton.addEventListener("pointerdown", (event) => {
+    pointerStart = { x: event.clientX, y: event.clientY };
+  });
+
+  mainButton.addEventListener("pointerup", (event) => {
+    if (!pointerStart) return;
+    const deltaX = event.clientX - pointerStart.x;
+    const deltaY = event.clientY - pointerStart.y;
+    pointerStart = undefined;
+
+    if (Math.abs(deltaX) > 44 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      event.preventDefault();
+      suppressExpand = true;
+      step(deltaX < 0 ? 1 : -1);
+      window.setTimeout(() => { suppressExpand = false; }, 0);
+    }
+  });
+
+  mainButton.addEventListener("pointercancel", () => {
+    pointerStart = undefined;
+  });
+
+  gallery.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      step(event.key === "ArrowRight" ? 1 : -1);
+    }
+  });
+
+  gallery.addEventListener("mouseenter", stopTimer);
+  gallery.addEventListener("mouseleave", syncTimer);
+  gallery.addEventListener("focusin", stopTimer);
+  gallery.addEventListener("focusout", (event) => {
+    if (!gallery.contains(event.relatedTarget)) syncTimer();
+  });
+
+  document.addEventListener("visibilitychange", syncTimer);
+  reducedMotion.addEventListener("change", () => {
+    if (reducedMotion.matches) setPlaying(false);
+  });
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      syncTimer();
+    }, { rootMargin: "300px 0px" }).observe(gallery);
+  } else {
+    isVisible = true;
+  }
+
+  if (project.images.length < 2) {
+    previousButton.disabled = true;
+    nextButton.disabled = true;
+    toggleButton.disabled = true;
+    gallery.querySelector("[data-dialog-prev]").disabled = true;
+    gallery.querySelector("[data-dialog-next]").disabled = true;
+  }
+
+  renderThumbs();
+  updateGallery(0, { moveThumb: false });
+});
