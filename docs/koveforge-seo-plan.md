@@ -127,7 +127,6 @@ Must include all indexable pages. Based on current site inventory:
   <url><loc>https://www.koveforge.tech/projects/zoozen.html</loc><priority>0.6</priority></url>
   <url><loc>https://www.koveforge.tech/projects/chat-app.html</loc><priority>0.5</priority></url>
   <url><loc>https://www.koveforge.tech/projects/shooter-game.html</loc><priority>0.4</priority></url>
-  <url><loc>https://www.koveforge.tech/projects/fitness-application.html</loc><priority>0.5</priority></url>
   <url><loc>https://www.koveforge.tech/projects/bulgarian-talk-norms.html</loc><priority>0.4</priority></url>
 
 </urlset>
@@ -219,7 +218,7 @@ Max 60 characters. Write in Bulgarian.
 |------|--------------|-----------------|
 | `index.html` | KoveForge \| Софтуерни системи за бизнеси | Уебсайтове и Бизнес Системи по Поръчка \| KoveForge |
 | `services.html` | Услуги \| KoveForge | Услуги: Сайтове, Резервации, Магазини \| KoveForge |
-| `projects.html` | Проекти \| KoveForge портфолио | Портфолио: 12 Проекта за Бизнеси \| KoveForge |
+| `projects.html` | Проекти \| KoveForge портфолио | Портфолио: 17 Проекта за Бизнеси \| KoveForge |
 | `ai-agents.html` | (fetch to confirm) | ИИ Агенти за Бизнес Автоматизация \| KoveForge |
 | `for-clinics.html` | (fetch to confirm) | Уебсайт и Система за Стоматологични Клиники \| KoveForge |
 | `for-hotels.html` | (fetch to confirm) | Хотелска Система за Резервации и Управление \| KoveForge |
@@ -239,7 +238,7 @@ Max 155 characters. Must differ from title. Must not duplicate across pages.
 |------|---------------------------|
 | `index.html` | KoveForge изгражда уебсайтове, резервационни системи и онлайн магазини за малки бизнеси в България. Говорим за вашия процес — после го правим. |
 | `services.html` | Бизнес сайт, резервации, онлайн магазин, ИИ агент или вътрешен панел. Изберете обхвата и обсъдим как да започнем. |
-| `projects.html` | 12 проекта за клиники, хотели, ресторанти, магазини и локални бизнеси. Разгледайте примери от реална работа. |
+| `projects.html` | 17 проекта за клиники, хотели, ресторанти, магазини и локални бизнеси. Разгледайте примери от реална работа. |
 | `ai-agents.html` | ИИ агенти за автоматично обработване на запитвания, резервации и повтаряеми въпроси — 24/7 без допълнителен персонал. |
 | `for-clinics.html` | Онлайн записване на часове, пациентски профили и административен панел за стоматологични клиники и здравни центрове. |
 | `for-hotels.html` | Хотелска система за стаи, резервации, отзиви и управление. Вижте реален пример с Hotel Oazis. |
