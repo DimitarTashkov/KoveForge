@@ -19,11 +19,12 @@
   <link rel="icon" href="assets/images/brand/koveforge-logo-hq.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="assets/css/style.css?v=20260705">
+  <link rel="preload" as="style" href="assets/css/style.css?v=20260723">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260705">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260723">
   <link rel="stylesheet" href="assets/css/visual-refresh.css?v=20260705">
   <script src="assets/js/navigation.js?v=20260705" defer></script>
+  <script src="assets/js/scroll-reveal.js?v=20260723" defer></script>
   <script>"dark"===localStorage.getItem("koveforge-theme")?document.documentElement.classList.add("dark-theme"):document.documentElement.classList.remove("dark-theme"),document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll(".theme-toggle"),t=()=>{const t=document.documentElement.classList.contains("dark-theme");e.forEach(e=>{e.innerHTML=t?'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><span class="sr-only">Смени на светла тема</span>':'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span class="sr-only">Смени на тъмна тема</span>'})};t(),e.forEach(e=>{e.addEventListener("click",()=>{document.documentElement.classList.toggle("dark-theme");const e=document.documentElement.classList.contains("dark-theme");localStorage.setItem("koveforge-theme",e?"dark":"light"),t()})})});</script>
   <script src="assets/js/concurrent-view.js?v=20260705" defer></script>
   <script type="application/ld+json">
@@ -139,11 +140,11 @@
 
     <!-- ═══ SECTOR STRIP ═══ -->
     <section class="section" id="sector-section">
-      <div class="section-heading section-heading-centered">
+      <div class="section-heading section-heading-centered" data-reveal>
         <p class="eyebrow">ЗА КАКЪВ БИЗНЕС ТЪРСИТЕ?</p>
         <h2>Изберете сектор и вижте какво можем да изградим.</h2>
       </div>
-      <nav id="sector-strip" aria-label="Филтър по бизнес сектор">
+      <nav id="sector-strip" aria-label="Филтър по бизнес сектор" data-reveal-group>
         <button class="sector-btn" type="button" data-sector="all">Всички</button>
         <button class="sector-btn" type="button" data-sector="клиники">🏥 Клиники</button>
         <button class="sector-btn" type="button" data-sector="салони">💇 Салони</button>
@@ -482,12 +483,12 @@
     </section>
 
     <section class="section section-full section-tint" id="why">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="eyebrow">ЗАЩО KOVEFORGE</p>
         <h2>Подхождаме към проекта като към работен процес и лесен интерфейс.</h2>
         <p>Преди дизайн и код изясняваме какво трябва да прави решението, а после го превръщаме в удобен интерфейс, който клиентите и екипът ви разбират без излишно чудене.</p>
       </div>
-      <div class="benefit-grid">
+      <div class="benefit-grid" data-reveal-group>
         <article class="info-card glass-panel">
           <span class="icon-box">01</span>
           <h3>Разбираме процеса</h3>
@@ -512,12 +513,12 @@
     </section>
 
     <section class="section" id="for-whom">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="eyebrow">ЗА КОГО Е ПОДХОДЯЩО?</p>
         <h2>За бизнеси, които искат по-малко ръчна работа и по-ясен път за клиента.</h2>
         <p>Най-често помагаме на екипи, които приемат запитвания, резервации, поръчки или повтаряеми въпроси всеки ден.</p>
       </div>
-      <div class="service-grid">
+      <div class="service-grid" data-reveal-group>
         <article class="service-card glass-panel"><h3>Стоматологични клиники</h3><p>Онлайн записване, пациентски потоци, ясни услуги и по-малко телефонни уточнения.</p></article>
         <article class="service-card glass-panel"><h3>Козметични салони</h3><p>Списък с услуги, свободни часове, запитвания и лесен път до резервация.</p></article>
         <article class="service-card glass-panel"><h3>Ресторанти</h3><p>Меню, резервации, събития, запитвания и бърз контакт от мобилен телефон.</p></article>
@@ -529,12 +530,12 @@
     </section>
 
     <section class="section" id="services">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="eyebrow">УСЛУГИ</p>
         <h2>Как можем да помогнем</h2>
         <p>Изработваме решения за бизнеси, които искат по-подредено онлайн присъствие, по-удобни резервации, по-ясни продажби или по-добра вътрешна организация.</p>
       </div>
-      <div class="service-grid">
+      <div class="service-grid" data-reveal-group>
         <article class="service-card glass-panel">
           <div class="icon-box">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
