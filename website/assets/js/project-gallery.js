@@ -263,7 +263,12 @@ galleries.forEach((gallery) => {
     return;
   }
 
-  const assetRoot = gallery.dataset.assetRoot || `../assets/images/projects/${slug}/`;
+  // Root-relative on purpose. This path also lands in a custom property
+  // (--gallery-backdrop) that visual-refresh.css consumes via var(), and browsers
+  // resolve url() inside a substituted custom property against the *consuming*
+  // stylesheet - /assets/css/ - not this document. A "../assets/..." value
+  // therefore became "/assets/assets/..." and 404'd on every project page.
+  const assetRoot = gallery.dataset.assetRoot || `/assets/images/projects/${slug}/`;
   let activeIndex = 0;
   let isPlaying = false;
   let isVisible = false;

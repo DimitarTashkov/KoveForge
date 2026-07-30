@@ -1,6 +1,6 @@
 /* KoveForge visual refresh: navigation restoration, ambient glass, projects and galleries. */
 :root {
-  --ambient-art: url("../images/visuals/ambient-glass-light.webp");
+  --ambient-art: url("../images/visuals/ambient-glass-light.webp?v=20260730");
   --ambient-wash: rgb(248 250 252 / 0.72);
   --ambient-panel: rgb(255 255 255 / 0.68);
   --ambient-line: rgb(99 102 241 / 0.2);
@@ -8,7 +8,7 @@
 }
 
 html.dark-theme {
-  --ambient-art: url("../images/visuals/ambient-glass-dark.webp");
+  --ambient-art: url("../images/visuals/ambient-glass-dark.webp?v=20260730");
   --ambient-wash: rgb(6 7 11 / 0.7);
   --ambient-panel: rgb(10 13 24 / 0.7);
   --ambient-line: rgb(129 140 248 / 0.26);
