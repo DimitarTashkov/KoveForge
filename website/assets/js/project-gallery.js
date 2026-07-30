@@ -263,12 +263,18 @@ galleries.forEach((gallery) => {
     return;
   }
 
-  // Root-relative on purpose. This path also lands in a custom property
-  // (--gallery-backdrop) that visual-refresh.css consumes via var(), and browsers
-  // resolve url() inside a substituted custom property against the *consuming*
-  // stylesheet - /assets/css/ - not this document. A "../assets/..." value
-  // therefore became "/assets/assets/..." and 404'd on every project page.
-  const assetRoot = gallery.dataset.assetRoot || `/assets/images/projects/${slug}/`;
+  // Resolved to an absolute URL against this document, on purpose. This path also
+  // lands in a custom property (--gallery-backdrop) that visual-refresh.css
+  // consumes via var(), and browsers resolve url() inside a substituted custom
+  // property against the *consuming* stylesheet - /assets/css/ - not this
+  // document. A bare "../assets/..." value therefore became "/assets/assets/..."
+  // and 404'd on every project page. An absolute URL has nothing left to resolve,
+  // so it is immune - and unlike a root-relative "/assets/...", it still works
+  // when the page is opened straight off disk as a file:// URL.
+  const assetRoot = new URL(
+    gallery.dataset.assetRoot || `../assets/images/projects/${slug}/`,
+    document.baseURI
+  ).href;
   let activeIndex = 0;
   let isPlaying = false;
   let isVisible = false;
