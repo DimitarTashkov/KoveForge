@@ -222,8 +222,12 @@ rendering. Left undone deliberately; see checklist note.
 - **P1 total is now 46 KiB, not 66 KiB** — several image commits landed since the
   original report. Current: hero **20.5 KiB** (was 24.9), Hotel Oazis `19-image7.webp`
   **17.0 KiB** (unchanged), logo **8.5 KiB** (was 15.9 + 20.5 = 36.4, already partly resized).
-- **P3 is already resolved** — `unused-css-rules` now scores 1 with no reported savings.
-  The 13 KiB is gone. No work required.
+- ~~**P3 is already resolved** — `unused-css-rules` now scores 1 with no reported savings.~~
+  **Retracted — this was a measurement artifact.** That run returned score 1 with *no
+  detail items at all*, i.e. the coverage gatherer produced nothing; it did not mean
+  zero unused CSS. The final live run reports **13.7 KiB unused of 21.4 KiB**, matching
+  the plan's original 13 KiB almost exactly. P3 stands. See the final section for why
+  it was still not actioned.
 
 ---
 
@@ -293,6 +297,50 @@ keep `?v=20260730`. New image variants ship with `?v=20260803`.
 
 ---
 
+## 🏁 Final verification — live, post-deploy (Aug 3 2026, 18:58 UTC)
+
+Commit `8475949` deployed via GitHub Pages and confirmed serving before measuring:
+`style.css?v=20260803`, `navigation.js?v=20260803`, all seven new image variants
+returning 200, zero `<h4>` left on the homepage. Lighthouse 13.4.1, mobile.
+
+| | Original PSI (Aug 3) | Final (live) |
+|---|---|---|
+| **Performance** | 61 | **99** |
+| **Accessibility** | 98 | **100** |
+| Best Practices | 100 | 100 |
+| SEO | 100 | 100 |
+| **CLS** | **1.000** | **0** |
+| **FCP** | 2.9 s | **1.2 s** |
+| **LCP** | 3.2 s | **1.8 s** |
+| **Speed Index** | 4.4 s | **2.5 s** |
+| TBT | 0 ms | 0 ms |
+| **Render-blocking** | **2,050 ms** | **230 ms** |
+| **Image savings** | 66 KiB (46 re-measured) | **6 KiB** |
+
+Whole page is now **18 requests / 267.4 KiB**. The `layout-shifts` audit remains
+`notApplicable` with zero culprits, and `heading-order` passes.
+
+Confirmed the browser picks the new rungs on the real origin, not just in theory:
+`koveforge-logo-128.webp`, `hero_dashboard_ui_light_...-768.webp` and
+`19-image7-660.webp` are what actually came down the wire.
+
+### Two things deliberately left open
+
+**1. Logo — 5.8 KiB.** The only remaining image finding. Lighthouse asks for more
+compression on a 128×128 WebP that already carries an alpha channel; a quality sweep
+showed q60 buys roughly 1 KiB against visible degradation. The estimate is a generic
+heuristic that does not hold for WebP+alpha. Not worth the quality cost.
+
+**2. P3 unused CSS — 13.7 KiB of 21.4 KiB.** Real, and still there. Not actioned,
+for the reason the plan itself gives: coverage is measured on *one* page at *one*
+viewport, while this stylesheet serves 28 pages plus hover, focus, open-menu,
+dark-mode and print states that a single homepage trace never exercises. Trimming on
+that evidence risks deleting rules other pages need, to win 13 KiB on a page already
+scoring 99. The safe version of this is a coverage pass across all 28 pages at several
+viewports — a real task, which is precisely what the plan says P3 does not justify.
+
+---
+
 ## ✅ Definition of done
 
 ```
@@ -318,14 +366,20 @@ keep `?v=20260730`. New image variants ship with `?v=20260803`.
 [x] Heading hierarchy gap found and fixed (quick accessibility win)
         -> index.html h2->h4 fixed (17 titles, computed styles verified identical);
            services.html h1->h3 also found and fixed. Accessibility 98 -> 100
-[x] P3 unused CSS (13 KiB) — no longer applicable
-        -> unused-css-rules now scores 1 with no reported savings; nothing to trim
-[~] Full PSI re-run afterward; Performance score improvement documented before/after
-        -> P0 documented live (61 -> 99). P1/P2 verified in lab against a local server;
-           a live re-run is still owed once this deploys
+[ ] P3 unused CSS (13 KiB) — NOT done, and an earlier "resolved" call here was wrong
+        -> 13.7 KiB of 21.4 KiB still unused. The run that showed zero had returned no
+           coverage items at all. Left open on purpose: single-page coverage cannot see
+           what the other 27 pages and their hover/focus/dark/print states need
+[x] Full PSI re-run afterward; Performance score improvement documented before/after
+        -> live, post-deploy: Performance 61 -> 99, Accessibility 98 -> 100,
+           CLS 1.000 -> 0, render-blocking 2,050ms -> 230ms, images 66 KiB -> 6 KiB
 [~] Fallback font metrics matched via size-adjust
-        -> still deliberately not done; see the P0 section for why
+        -> still deliberately not done; CLS is 0 with nothing left to win. See P0 section
 ```
+
+**Scorecard: 8 of 10 done, 2 open by decision** — the `size-adjust` fallback (no
+remaining target) and P3 unused CSS (needs a multi-page coverage pass to do safely).
+Both are documented above rather than quietly ticked.
 
 ---
 
