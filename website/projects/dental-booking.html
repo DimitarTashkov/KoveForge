@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="../assets/css/style.css?v=20260730">
   <link rel="stylesheet" href="../assets/css/visual-refresh.css?v=20260730">
   <script src="../assets/js/navigation.js?v=20260705" defer></script>
+  <script src="../assets/js/scroll-reveal.js?v=20260723" defer></script>
   <script src="../assets/js/project-gallery.js?v=20260730" defer></script>
   <script>"dark"===localStorage.getItem("koveforge-theme")?document.documentElement.classList.add("dark-theme"):document.documentElement.classList.remove("dark-theme"),document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll(".theme-toggle"),t=()=>{const t=document.documentElement.classList.contains("dark-theme");e.forEach(e=>{e.innerHTML=t?'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><span class="sr-only">Смени на светла тема</span>':'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span class="sr-only">Смени на тъмна тема</span>'})};t(),e.forEach(e=>{e.addEventListener("click",()=>{document.documentElement.classList.toggle("dark-theme");const e=document.documentElement.classList.contains("dark-theme");localStorage.setItem("koveforge-theme",e?"dark":"light"),t()})})});</script>
   <script type="application/ld+json">
@@ -72,7 +73,7 @@
       <img src="../assets/images/projects/dental-booking/06-dental-booking-screen.webp" srcset="../assets/images/projects/dental-booking/06-dental-booking-screen-480.webp 480w, ../assets/images/projects/dental-booking/06-dental-booking-screen-800.webp 800w, ../assets/images/projects/dental-booking/06-dental-booking-screen-1200.webp 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1023px) 50vw, 520px" alt="Преглед на системата за записване DentalBooking" width="1200" height="675" loading="lazy" decoding="async">
     </figure>
 
-    <section class="case-overview">
+    <section class="case-overview" data-reveal>
       <div class="section-heading">
         <p class="eyebrow">ЗА ПРОЕКТА</p>
         <h2>Какво представлява DentalBooking?</h2>
@@ -80,7 +81,7 @@
       <p class="case-overview-text">DentalBooking е модерно уеб приложение за зъболекарска практика, чрез което пациентите могат да разглеждат услуги и зъболекари, да избират дата и час за посещение и да управляват своите записвания. Зъболекарите разполагат с панел за график, пациенти и история на посещенията, а администраторите могат да управляват потребители, пациенти, зъболекари, часове и справки.</p>
     </section>
 
-    <div class="case-ps-grid">
+    <div class="case-ps-grid" data-reveal-group>
       <article class="case-ps-card case-ps-card--problem">
         <span class="case-ps-label">Проблемът</span>
         <h3>Хаотична организация на записванията</h3>
@@ -93,12 +94,12 @@
       </article>
     </div>
 
-    <section class="case-features">
+    <section class="case-features" data-reveal>
       <div class="section-heading">
         <p class="eyebrow">ФУНКЦИОНАЛНОСТИ</p>
         <h2>Ключови функции</h2>
       </div>
-      <div class="case-features-grid">
+      <div class="case-features-grid" data-reveal-group>
         <div class="case-feature-item">
           <div class="case-feature-icon">📅</div>
           <h3>Записване на часове</h3>
@@ -132,12 +133,12 @@
       </div>
     </section>
 
-    <section class="case-flow">
+    <section class="case-flow" data-reveal>
       <div class="section-heading">
         <p class="eyebrow">ПРОЦЕС</p>
         <h2>Как работи системата</h2>
       </div>
-      <div class="case-flow-steps">
+      <div class="case-flow-steps" data-reveal-group>
         <div class="case-flow-step">
           <span class="case-flow-num">01</span>
           <strong>Пациент се регистрира</strong>
@@ -161,12 +162,12 @@
       </div>
     </section>
 
-    <section class="case-tech">
+    <section class="case-tech" data-reveal>
       <div class="section-heading">
         <p class="eyebrow">ТЕХНОЛОГИИ</p>
         <h2>Технологичен стек</h2>
       </div>
-      <div class="tech-list">
+      <div class="tech-list" data-reveal-group>
         <span>React 18</span>
         <span>TypeScript</span>
         <span>Vite</span>
@@ -176,9 +177,9 @@
       </div>
     </section>
 
-    <section class="case-gallery" data-project-gallery data-current-project="dental-booking" aria-label="Галерия със снимки от проекта"></section>
+    <section class="case-gallery" data-reveal data-project-gallery data-current-project="dental-booking" aria-label="Галерия със снимки от проекта"></section>
 
-    <section class="case-layout">
+    <section class="case-layout" data-reveal-group>
       <aside class="case-panel case-meta glass-panel">
         <div>
           <span>Сектор</span>
@@ -215,7 +216,7 @@
       </article>
     </section>
 
-    <section class="case-demonstrates">
+    <section class="case-demonstrates" data-reveal>
       <h2>Какво демонстрира този проект?</h2>
       <p>DentalBooking показва, че KoveForge може да изгради система за клиника или практика, която се нуждае от:</p>
       <ul>
